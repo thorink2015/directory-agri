@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogHub() {
-  const sortedPosts = [...blogPosts].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  // Only show Romania posts here. Moldova posts are on /moldova (separate directory)
+  const roPosts = blogPosts.filter((p) => !p.country || p.country === 'RO');
+  const sortedPosts = [...roPosts].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const featured = sortedPosts[0];
   const rest = sortedPosts.slice(1);
 

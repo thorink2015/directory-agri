@@ -12,7 +12,7 @@ interface Props {
  */
 export default function WhatsAppChannel({
   href = 'https://whatsapp.com/channel/droneagricol',
-  label = 'Alătură-te canalului WhatsApp',
+  label = 'Canal WhatsApp',
   className = '',
 }: Props) {
   return (
