@@ -40,7 +40,7 @@ const mdNav = [
       { href: '/moldova/ghid', label: 'Ghiduri Moldova', description: 'ANSA, AIPA, cum devii operator' },
       { href: '/moldova/blog', label: 'Blog Moldova', description: 'Topuri și noutăți din Moldova' },
       { href: '/moldova/preturi', label: 'Prețuri MDL/ha', description: 'Tarife în lei moldovenești' },
-      { href: '/unelte', label: 'Calculatoare', description: 'Calculator preț, hectare' },
+      { href: '/moldova/unelte', label: 'Calculatoare', description: 'Calculator preț MDL, hectare' },
     ],
   },
 ];

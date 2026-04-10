@@ -181,10 +181,10 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/unelte/calculator-pret-pulverizare"
+                      href="/moldova/unelte/calculator-pret-pulverizare"
                       className="hover:text-white transition-colors"
                     >
-                      Calculator preț
+                      Calculator preț MDL
                     </Link>
                   </li>
                   <li>
@@ -381,7 +381,7 @@ export default function Footer() {
 
         <div
           className={`border-t ${accent.border} mt-4 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm ${
-            isMd ? 'text-blue-400' : 'text-green-400'
+            isMd ? 'text-blue-200' : 'text-white'
           }`}
         >
           <p>© 2026 DroneAgricol.ro — Toate drepturile rezervate</p>
