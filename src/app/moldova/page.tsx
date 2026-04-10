@@ -1,0 +1,120 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { MapPin, ArrowRight } from 'lucide-react';
+import { getMdOperators } from '@/data/operators';
+import { moldovaRegions } from '@/data/regions-moldova';
+import Breadcrumb from '@/components/layout/Breadcrumb';
+import OperatorCard from '@/components/operators/OperatorCard';
+import FAQAccordion from '@/components/ui/FAQAccordion';
+
+export const metadata: Metadata = {
+  title: 'Drone Agricole Moldova | Operatori și Servicii 2026',
+  description:
+    'Director complet de operatori de drone agricole din Republica Moldova. Servicii de pulverizare, fertilizare și monitorizare. Prețuri în MDL.',
+};
+
+const moldovaFaqs = [
+  {
+    question: 'Cât costă pulverizarea cu drona în Moldova?',
+    answer: 'Prețurile pentru pulverizarea cu drona în Republica Moldova sunt de 170–240 MDL/ha (~€8.50–12/ha). Principalul operator, DRON Assistance, practică tarife competitive cu suport din programele UNDP și EU4Moldova.',
+  },
+  {
+    question: 'Există subvenții pentru drone agricole în Moldova?',
+    answer: 'Da. Agenția de Intervenție și Plăți pentru Agricultură (AIPA) oferă subvenții de 50% din costul dronei, plafonate la 200.000 MDL (~€10.000) per beneficiar, în cadrul Programului de subvenționare pentru echipamente de precizie (Anexa 3). Cererile se depun la AIPA Chișinău sau cele 9 birouri regionale.',
+  },
+  {
+    question: 'Care sunt operatorii de drone agricole din Moldova?',
+    answer: 'Principalii operatori din Republica Moldova sunt: DRON Assistance (droneagro.md) — liderul pieței cu 16 drone și 14 piloți certificați, susținut de UNDP; BOSAL Solutions — distribuitor autorizat DJI; AgroDron.md; DroneX Moldova. Piața este în creștere rapidă, cu estimativ 50.000+ ha tratate anual.',
+  },
+];
+
+export default function MoldovaPage() {
+  const mdOps = getMdOperators();
+
+  return (
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <Breadcrumb items={[{ label: 'Moldova' }]} />
+
+      {/* Header */}
+      <div className="mb-8">
+        <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full mb-3">
+          <MapPin className="w-3.5 h-3.5" />
+          Republica Moldova
+        </div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-3">
+          Drone Agricole în Republica Moldova
+        </h1>
+        <p className="text-gray-600 text-lg">
+          {mdOps.length} operatori verificați. Acoperire națională. Prețuri 170–240 MDL/ha.
+        </p>
+      </div>
+
+      {/* Moldova context */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h2 className="font-semibold text-gray-900 mb-3">Piața de drone agricole din Moldova</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4 text-center">
+          {[
+            { value: '50K+', label: 'ha tratate/an' },
+            { value: '100K', label: 'ha viticole' },
+            { value: '50%', label: 'subvenție AIPA' },
+            { value: '200K MDL', label: 'plafon subvenție' },
+          ].map((s) => (
+            <div key={s.label}>
+              <div className="text-2xl font-bold text-blue-800">{s.value}</div>
+              <div className="text-xs text-blue-600">{s.label}</div>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-600">
+          Moldova are peste 100.000 ha de viticultură și un teren agricol de 1,8 mil. ha, din care o parte semnificativă este tratată cu drone. Programele UNDP și EU4Moldova finanțează parțial adoptarea tehnologiei.
+        </p>
+      </div>
+
+      {/* Operators */}
+      <div className="mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Operatori din Moldova</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {mdOps.map((op) => (
+            <OperatorCard key={op.slug} operator={op} />
+          ))}
+        </div>
+      </div>
+
+      {/* Regions */}
+      <div className="mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Regiuni viticole și agricole din Moldova</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {moldovaRegions.map((region) => (
+            <Link
+              key={region.slug}
+              href={`/moldova/${region.slug}`}
+              className="p-4 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all text-center group"
+            >
+              <div className="font-medium text-gray-900 group-hover:text-blue-700 text-sm">{region.name}</div>
+              {region.vineyardHa && (
+                <div className="text-xs text-gray-500 mt-1">{(region.vineyardHa / 1000).toFixed(0)}K ha vii</div>
+              )}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Întrebări frecvente — Moldova</h2>
+        <FAQAccordion faqs={moldovaFaqs} />
+      </div>
+
+      <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
+        <h2 className="font-semibold text-gray-900 mb-2">Ești operator de drone din Moldova?</h2>
+        <p className="text-sm text-gray-600 mb-4">Adaugă-te gratuit în directorul nostru și ajunge la fermieri din toată țara.</p>
+        <Link
+          href="/adauga-operator"
+          className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
+        >
+          Adaugă-te gratuit <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  );
+}
