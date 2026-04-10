@@ -31,6 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/moldova/preturi`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: `${BASE_URL}/moldova/ghid`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE_URL}/moldova/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.75 },
+    { url: `${BASE_URL}/moldova/unelte`, lastModified: now, changeFrequency: 'monthly', priority: 0.72 },
+    { url: `${BASE_URL}/moldova/unelte/calculator-pret-pulverizare`, lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: `${BASE_URL}/moldova/unelte/calculator-hectare`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/moldova/unelte/comparator-drone`, lastModified: now, changeFrequency: 'monthly', priority: 0.68 },
+    { url: `${BASE_URL}/moldova/unelte/calendar-tratamente`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
     { url: `${BASE_URL}/preturi-pulverizare-drona`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/ghid`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/unelte`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -135,12 +140,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  // ─── Guide pages (6) ─────────────────────────────────────────────────────
+  // ─── Guide pages ─────────────────────────────────────────────────────────
   const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
     url: `${BASE_URL}/ghid/${g.slug}`,
     lastModified: new Date(g.lastUpdated),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
+  }));
+
+  // ─── Moldova guide detail pages (MD guides only) ─────────────────────────
+  const moldovaGuidePages: MetadataRoute.Sitemap = guides
+    .filter((g) => g.country === 'MD')
+    .map((g) => ({
+      url: `${BASE_URL}/moldova/ghid/${g.slug}`,
+      lastModified: new Date(g.lastUpdated),
+      changeFrequency: 'monthly' as const,
+      priority: 0.78,
+    }));
+
+  // ─── Moldova service detail pages ────────────────────────────────────────
+  const moldovaServiceDetailPages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${BASE_URL}/moldova/servicii/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.72,
   }));
 
   // ─── Tools pages (4) ─────────────────────────────────────────────────────
@@ -175,10 +198,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dronePages,         // 5
     ...cityPages,          // ~18
     ...wineRegionPages,    // 6
-    ...moldovaPages,       // 35
-    ...guidePages,         // 6
-    ...toolPages,          // 4
-    ...blogPages,          // 12
-    // Total: ~960+ URLs
+    ...moldovaPages,              // 35
+    ...guidePages,                // 6
+    ...moldovaGuidePages,         // 3 (MD guides)
+    ...moldovaServiceDetailPages, // 10
+    ...toolPages,                 // 4
+    ...blogPages,                 // 12
+    // Total: ~985+ URLs
   ];
 }

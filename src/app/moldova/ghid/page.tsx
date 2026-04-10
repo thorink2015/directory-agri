@@ -57,7 +57,7 @@ export default function MoldovaGhidPage() {
               {categoryGuides.map((guide) => (
                 <Link
                   key={guide.slug}
-                  href={`/ghid/${guide.slug}`}
+                  href={`/moldova/ghid/${guide.slug}`}
                   className="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition-all"
                 >
                   <div className="flex items-start gap-4">
