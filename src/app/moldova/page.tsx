@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { MapPin, ArrowRight, Clock } from 'lucide-react';
 import { getMdOperators } from '@/data/operators';
 import { moldovaRegions, MOLDOVA_MACRO_REGIONS } from '@/data/regions-moldova';
+import { blogPosts } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -132,6 +133,38 @@ export default function MoldovaPage() {
           );
         })}
       </section>
+
+      {/* Moldova Blog Posts */}
+      {(() => {
+        const mdPosts = blogPosts.filter((p) => p.country === 'MD');
+        if (mdPosts.length === 0) return null;
+        return (
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-5">Articole despre drone în Moldova</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {mdPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-white border border-blue-100 rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 text-xs text-blue-500 mb-2">
+                    <span className="px-2 py-0.5 bg-blue-50 rounded-full font-medium uppercase tracking-wide">Moldova</span>
+                    <span className="flex items-center gap-1 text-gray-400">
+                      <Clock className="w-3 h-3" /> {post.readMinutes} min
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 flex-1 mb-3">{post.description}</p>
+                  <span className="text-sm text-blue-700 font-medium group-hover:underline">Citește →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* FAQ */}
       <section className="mb-10">

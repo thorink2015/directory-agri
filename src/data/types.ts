@@ -129,6 +129,7 @@ export interface BlogPost {
   title: string;
   description: string;
   category: 'top-lists' | 'guide' | 'news' | 'case-study' | 'legislation';
+  country?: 'RO' | 'MD';       // defaults to 'RO' if absent
   publishedAt: string;          // ISO date
   updatedAt?: string;
   author: string;
