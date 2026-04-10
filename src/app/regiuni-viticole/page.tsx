@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Drone agricole pentru viticultura din România: Dealu Mare, Murfatlar, Cotnari, Drăgășani, Odobești, Recaș. Tratamente fungicide cu drona pentru viță de vie.',
   alternates: {
-    canonical: 'https://droneagricol.ro/regiuni-viticole',
+    canonical: '/regiuni-viticole',
   },
 };
 

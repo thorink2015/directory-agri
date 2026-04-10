@@ -1,9 +1,15 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import { defaultMetadata } from '@/lib/seo';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#2D6A4F',
+};
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -16,21 +22,14 @@ export const metadata: Metadata = {
     title: 'Directorul Operatorilor de Drone Agricole din România și Moldova',
     description:
       'Găsește rapid operatori verificați de drone agricole în județul tău. Servicii de pulverizare, fertilizare, cartografiere și monitorizare.',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'DroneAgricol.ro — Directorul Operatorilor de Drone Agricole',
-      },
-    ],
+    images: ['/opengraph-image'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Directorul Operatorilor de Drone Agricole | DroneAgricol.ro',
     description:
       'Găsește operatori verificați de drone agricole în România și Moldova.',
-    images: ['/images/og-image.png'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
@@ -52,8 +51,8 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <meta name="theme-color" content="#2D6A4F" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://formspree.io" />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">
         <a

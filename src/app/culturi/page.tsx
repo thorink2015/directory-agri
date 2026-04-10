@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Tratamente cu Drona după Cultură | Ghiduri Complete 2026',
   description:
     'Ghiduri complete pentru tratamentele cu drona agricolă pe fiecare tip de cultură: grâu, porumb, rapiță, floarea soarelui, viță de vie, livezi și altele.',
+  alternates: { canonical: '/culturi' },
 };
 
 export default function CulturiPage() {

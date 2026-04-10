@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Adaugă Operator de Drone Agricole | Listare Gratuită',
   description:
     'Adaugă afacerea ta de drone agricole în directorul nostru gratuit. Procesare în 48 de ore. Acoperire în toată România și Moldova.',
+  alternates: { canonical: '/adauga-operator' },
 };
 
 export default function AdaugaOperatorPage() {

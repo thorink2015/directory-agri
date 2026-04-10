@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: 'Drone Agricole după Județ | Toate cele 41 de Județe',
   description:
     'Găsește operatori de drone agricole în oricare dintre cele 41 de județe ale României. Filtrare după regiune și servicii disponibile.',
+  alternates: { canonical: '/judete' },
+  openGraph: {
+    title: 'Drone Agricole — Toate cele 41 de Județe | DroneAgricol.ro',
+    description: 'Harta completă a operatorilor de drone agricole din România. Selectează județul tău.',
+    url: 'https://droneagricol.ro/judete',
+  },
 };
 
 const regions = Array.from(new Set(counties.map((c) => c.region))).sort();

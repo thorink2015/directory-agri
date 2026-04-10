@@ -5,7 +5,7 @@ import { Send, CheckCircle } from 'lucide-react';
 import { counties } from '@/data/counties';
 import { SERVICE_LABELS } from '@/data/types';
 
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // Replace with actual Formspree form ID
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 
 export default function SubmitForm() {
   const [submitted, setSubmitted] = useState(false);

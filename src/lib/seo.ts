@@ -8,10 +8,16 @@ const SITE_NAME = 'DroneAgricol.ro';
 export function buildOperatorMetadata(operator: Operator): Metadata {
   const price = operator.priceMinRon
     ? `Prețuri de la ${operator.priceMinRon} RON/ha. `
+    : operator.priceMinMdl
+    ? `Prețuri de la ${operator.priceMinMdl} MDL/ha. `
     : '';
+  const coverage = operator.country === 'MD'
+    ? `Acoperire în ${operator.moldovaRaioane?.length || 'toate'} raioane din Moldova.`
+    : `Acoperire în ${operator.counties.length} județe din România.`;
   return {
     title: `${operator.name} | Servicii Drone Agricole ${operator.city} | Prețuri și Contact`,
-    description: `${operator.name} — operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. Acoperire în ${operator.counties.length} județe. Contact direct.`,
+    description: `${operator.name} — operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. ${coverage} Contact direct.`,
+    alternates: { canonical: `/operatori/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | DroneAgricol.ro`,
       description: operator.description.slice(0, 155),
@@ -19,20 +25,32 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
       siteName: SITE_NAME,
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${operator.name} | Drone Agricole ${operator.city}`,
+      description: operator.description.slice(0, 155),
+    },
   };
 }
 
 export function buildCountyMetadata(county: County, operatorCount: number): Metadata {
   const crops = county.mainCrops.slice(0, 3).join(', ');
+  const desc = `Găsești ${operatorCount} operatori de drone agricole în județul ${county.name}. Prețuri pulverizare, recenzii și contact direct. Servicii pentru ${crops} și alte culturi.`;
   return {
     title: `Drone Agricole ${county.name} | Operatori și Prețuri 2026`,
-    description: `Găsești ${operatorCount} operatori de drone agricole în județul ${county.name}. Prețuri pulverizare, recenzii și contact direct. Servicii pentru ${crops} și alte culturi.`,
+    description: desc,
+    alternates: { canonical: `/judete/${county.slug}` },
     openGraph: {
       title: `Drone Agricole ${county.name} | DroneAgricol.ro`,
       description: `Operatori verificați de drone agricole în ${county.name}. Pulverizare, cartografiere și monitorizare pentru fermieri.`,
       url: `${SITE_URL}/judete/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Drone Agricole ${county.name} | Operatori și Prețuri 2026`,
+      description: desc,
     },
   };
 }

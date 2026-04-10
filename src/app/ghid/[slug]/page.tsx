@@ -18,12 +18,12 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
+  return guides.filter((g) => !g.country || g.country === 'RO').map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug);
-  if (!guide) return {};
+  if (!guide || guide.country === 'MD') return {};
   return {
     title: `${guide.title} | DroneAgricol.ro`,
     description: guide.description,
@@ -39,10 +39,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function GuidePage({ params }: Props) {
   const guide = getGuideBySlug(params.slug);
-  if (!guide) notFound();
+  if (!guide || guide.country === 'MD') notFound();
 
   const content = guideContent[guide.slug];
-  const otherGuides = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
+  const otherGuides = guides
+    .filter((g) => g.slug !== guide.slug && (!g.country || g.country === 'RO'))
+    .slice(0, 3);
   const categoryMeta = GUIDE_CATEGORIES[guide.category];
 
   return (
@@ -61,7 +63,7 @@ export default function GuidePage({ params }: Props) {
             publisher: {
               '@type': 'Organization',
               name: 'DroneAgricol.ro',
-              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/images/og-image.png' },
+              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/opengraph-image' },
             },
           }),
         }}

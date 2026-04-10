@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.nameRo} ${county.name} | Operatori Drone Agricole 2026`,
     description: `Servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}. Preț: ${formatPrice(service.priceMinRon, service.priceMaxRon, service.priceUnit.replace('RON/', '') === 'ha' ? 'RON' : 'RON')} — operatori verificați, contact direct.`,
     alternates: {
-      canonical: `https://droneagricol.ro/judete/${params.slug}/servicii/${params.service}`,
+      canonical: `/judete/${params.slug}/servicii/${params.service}`,
     },
   };
 }

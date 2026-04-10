@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `Tratamente cu Drona pentru ${crop.name} — Ghid Complet 2026`,
     description: `Ghid complet pentru tratamentele cu drona agricolă pe ${crop.name.toLowerCase()}. Prețuri ${crop.priceMinRon}–${crop.priceMaxRon} RON/ha, calendar de tratamente, operatori disponibili.`,
+    alternates: { canonical: `/culturi/${params.slug}` },
   };
 }
 

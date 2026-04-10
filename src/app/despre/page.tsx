@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Despre DroneAgricol.ro | Directorul Operatorilor de Drone Agricole',
   description:
     'DroneAgricol.ro este primul director complet de operatori de drone agricole din România și Moldova. Misiunea noastră: conectăm fermierii cu operatorii de drone agricole verificați.',
+  alternates: { canonical: '/despre' },
 };
 
 export default function DesprePage() {

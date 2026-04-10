@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { counties, getCountyBySlug } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
@@ -13,12 +14,13 @@ export async function generateStaticParams() {
   return counties.map((c) => ({ slug: c.slug }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountyBySlug(params.slug);
   if (!county) return {};
   return {
     title: `Operatori Drone Agricole ${county.name} | Listă Completă`,
     description: `Lista tuturor operatorilor de drone agricole din județul ${county.name}. Contacte directe și prețuri.`,
+    alternates: { canonical: `/judete/${params.slug}/operatori` },
   };
 }
 
