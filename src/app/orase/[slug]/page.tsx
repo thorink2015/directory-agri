@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Drone Agricole ${city.name} | Operatori și Prețuri 2026`,
     description: `Operatori de drone agricole în ${city.name}, ${city.countyName}. Servicii de pulverizare, fertilizare și monitorizare. Contacte și prețuri directe.`,
     alternates: {
-      canonical: `https://droneagricol.ro/orase/${params.slug}`,
+      canonical: `/orase/${params.slug}`,
     },
   };
 }

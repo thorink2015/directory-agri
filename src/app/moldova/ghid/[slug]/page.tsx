@@ -65,7 +65,7 @@ export default function MoldovaGuidePage({ params }: Props) {
             publisher: {
               '@type': 'Organization',
               name: 'DroneAgricol.md',
-              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/images/og-image.png' },
+              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/opengraph-image' },
             },
           }),
         }}

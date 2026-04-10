@@ -2,13 +2,13 @@
 
 > Directorul complet al operatorilor de drone agricole din România și Republica Moldova.
 
-DroneAgricol.ro este primul și cel mai complet director de operatori de drone agricole din România (41 de județe) și Republica Moldova (35 de raioane). Platforma listează operatori verificați care oferă servicii de pulverizare, fertilizare, monitorizare NDVI, cartografiere, training și închiriere drone.
+DroneAgricol.ro este primul și cel mai complet director de operatori de drone agricole din România (41 de județe) și Republica Moldova (36 de raioane și municipalități). Platforma listează operatori verificați care oferă servicii de pulverizare, fertilizare, monitorizare NDVI, cartografiere, training și închiriere drone.
 
 ## Ce găsești pe DroneAgricol.ro
 
-- **23 operatori verificați** din România și Moldova, cu date de contact, prețuri, floote și certificări
+- **20 operatori listați** (17 verificați) din România și Moldova, cu date de contact, prețuri, flotă și certificări
 - **41 pagini de județe** cu operatorii activi în fiecare județ din România
-- **35 pagini de raioane** pentru Republica Moldova (separat de România)
+- **36 pagini de raioane** pentru Republica Moldova (separat de România)
 - **8 pagini de culturi**: viță de vie, grâu, porumb, rapiță, floarea-soarelui, livezi, soia, cereale
 - **10 servicii**: pulverizare, fertilizare, monitorizare NDVI, cartografiere, training, închiriere, vânzare, semănat, consultanță, intervenție rapidă
 - **Prețuri actualizate 2026**: 70–200 RON/ha în România, 170–240 MDL/ha în Moldova

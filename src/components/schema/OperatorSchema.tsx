@@ -28,7 +28,10 @@ export default function OperatorSchema({ operator }: Props) {
           longitude: operator.lng,
         }
       : undefined,
-    areaServed: operator.counties.map((c) => ({
+    areaServed: (operator.counties.length > 0
+      ? operator.counties
+      : operator.moldovaRaioane || []
+    ).map((c) => ({
       '@type': 'AdministrativeArea',
       name: c,
     })),

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Drone Agricole ${region.name} | Pulverizare Viță de Vie 2026`,
     description: `Operatori de drone agricole în podgoria ${region.name}. Tratamente fungicide viță de vie — preț ${formatPrice(120, 200)}. Contacte directe.`,
     alternates: {
-      canonical: `https://droneagricol.ro/regiuni-viticole/${params.slug}`,
+      canonical: `/regiuni-viticole/${params.slug}`,
     },
   };
 }

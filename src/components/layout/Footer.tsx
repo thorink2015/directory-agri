@@ -65,7 +65,7 @@ export default function Footer() {
 
             <p className={`text-sm ${accent.muted} leading-relaxed max-w-xs`}>
               {isMd
-                ? 'Directorul operatorilor de drone agricole din Republica Moldova. Acoperire în toate cele 35 de raioane. Prețuri 170–240 MDL/ha.'
+                ? `Directorul operatorilor de drone agricole din Republica Moldova. Acoperire în toate cele ${moldovaRegions.length} raioane și municipalități. Prețuri 170–240 MDL/ha.`
                 : 'Directorul operatorilor de drone agricole din România. Peste 20 de operatori verificați în toate cele 41 de județe.'}
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/ghid/legislatie-ansa-moldova"
+                      href="/moldova/ghid/legislatie-ansa-moldova"
                       className="hover:text-white transition-colors"
                     >
                       Legislație ANSA
@@ -168,7 +168,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/ghid/subventii-moldova-aipa"
+                      href="/moldova/ghid/subventii-moldova-aipa"
                       className="hover:text-white transition-colors"
                     >
                       Subvenții AIPA

@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: Props) {
             publisher: {
               '@type': 'Organization',
               name: 'DroneAgricol.ro',
-              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/images/og-image.png' },
+              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/opengraph-image' },
             },
             keywords: post.tags.join(', '),
           }),

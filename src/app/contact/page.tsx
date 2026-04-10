@@ -6,6 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Contact | DroneAgricol.ro',
   description: 'Contactează echipa DroneAgricol.ro pentru întrebări, sugestii sau adăugarea unui nou operator în director.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {

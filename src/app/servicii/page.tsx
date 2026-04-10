@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Toate serviciile de drone agricole disponibile în România: pulverizare, fertilizare, monitorizare NDVI, cartografiere, formare piloți și închiriere.',
   alternates: {
-    canonical: 'https://droneagricol.ro/servicii',
+    canonical: '/servicii',
   },
 };
 

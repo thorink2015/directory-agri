@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Drone Agricole România și Moldova | Director Operatori Verificați 2026',
+  description:
+    'Cel mai complet director de operatori de drone agricole din România și Moldova. 23 operatori verificați în 41 județe. Pulverizare, fertilizare, monitorizare NDVI.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'DroneAgricol.ro — Directorul Operatorilor de Drone Agricole',
+    description: '23 operatori verificați în toate cele 41 de județe. Prețuri actualizate, recenzii și contact direct.',
+    url: 'https://droneagricol.ro',
+  },
+};
 import {
   ArrowRight, MapPin, CheckCircle, Sprout, BarChart3, Plane, Leaf,
   Droplets, Eye, Map, Search,

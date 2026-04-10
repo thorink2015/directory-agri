@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${drone.name} | Dronă Agricolă ${drone.manufacturer} — Specificații și Operatori`,
     description: `${drone.name}: capacitate rezervor ${drone.tankCapacityL}L, acoperire ${drone.coverageHaPerHour} ha/h. Găsește operatori care folosesc ${drone.name} în România.`,
     alternates: {
-      canonical: `https://droneagricol.ro/drone/${params.slug}`,
+      canonical: `/drone/${params.slug}`,
     },
   };
 }

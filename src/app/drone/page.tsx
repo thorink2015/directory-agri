@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Comparație drone agricole disponibile în România: DJI Agras T50, T25P, T100, XAG P100 Pro, ADT Falcon 50P. Specificații, prețuri și operatori.',
   alternates: {
-    canonical: 'https://droneagricol.ro/drone',
+    canonical: '/drone',
   },
 };
 

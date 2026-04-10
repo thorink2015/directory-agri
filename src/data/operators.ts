@@ -388,8 +388,8 @@ export const operators: Operator[] = [
     description:
       'Magazin online specializat în drone și echipamente conexe, cu informații despre legislația dronelor în România și ghiduri pentru licența de pilot. Dronshop acoperă și echipamente pentru drone agricole.',
     country: 'RO',
-    counties: ['bucuresti', 'ilfov'],
-    city: 'Oradea',
+    counties: ['bucuresti', 'ilfov', 'bihor'],
+    city: 'București',
     website: 'https://dronshop.ro',
     services: ['sales'],
     drones: ['dji-agras-t50', 'dji-agras-t25p'],
