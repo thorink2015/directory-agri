@@ -2,15 +2,11 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Plane, ChevronDown } from 'lucide-react';
 
-interface NavItem {
-  href?: string;
-  label: string;
-  dropdown?: { href: string; label: string; description?: string }[];
-}
-
-const nav: NavItem[] = [
+// ─── Romania nav ─────────────────────────────────────────────────────────────
+const roNav = [
   { href: '/operatori', label: 'Operatori' },
   { href: '/judete', label: 'Județe' },
   {
@@ -23,22 +19,43 @@ const nav: NavItem[] = [
     ],
   },
   {
-    label: 'Ghiduri & Unelte',
+    label: 'Resurse',
     dropdown: [
-      { href: '/ghid', label: 'Ghiduri', description: 'Legislație, AFIR, licență pilot' },
-      { href: '/blog', label: 'Blog', description: 'Topuri, studii de caz, știri' },
+      { href: '/ghid', label: 'Ghiduri', description: 'Legislație AACR, AFIR, licență pilot' },
+      { href: '/blog', label: 'Blog', description: 'Topuri, studii de caz, știri RO' },
       { href: '/unelte', label: 'Calculatoare', description: 'Preț, hectare, comparator' },
-      { href: '/preturi-pulverizare-drona', label: 'Prețuri', description: 'Tarife RON/ha actualizate' },
+      { href: '/preturi-pulverizare-drona', label: 'Prețuri RON/ha', description: 'Tarife actualizate 2026' },
     ],
   },
 ];
 
+// ─── Moldova nav ──────────────────────────────────────────────────────────────
+const mdNav = [
+  { href: '/moldova/operatori', label: 'Operatori' },
+  { href: '/moldova', label: 'Raioane' },
+  { href: '/moldova/servicii', label: 'Servicii' },
+  {
+    label: 'Informații',
+    dropdown: [
+      { href: '/moldova/ghid', label: 'Ghiduri Moldova', description: 'ANSA, AIPA, cum devii operator' },
+      { href: '/moldova/blog', label: 'Blog Moldova', description: 'Topuri și noutăți din Moldova' },
+      { href: '/moldova/preturi', label: 'Prețuri MDL/ha', description: 'Tarife în lei moldovenești' },
+      { href: '/unelte', label: 'Calculatoare', description: 'Calculator preț, hectare' },
+    ],
+  },
+];
+
+type NavItem = { href?: string; label: string; dropdown?: { href: string; label: string; description?: string }[] };
+
 export default function Header() {
+  const pathname = usePathname();
+  const isMd = pathname?.startsWith('/moldova') ?? false;
   const [open, setOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown on outside click
+  const nav: NavItem[] = isMd ? mdNav : roNav;
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -49,17 +66,24 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => { setOpen(false); }, [pathname]);
+
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header className={`sticky top-0 z-50 bg-white shadow-sm ${isMd ? 'border-b-2 border-blue-500' : 'border-b border-gray-200'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="w-8 h-8 bg-green-700 rounded-lg flex items-center justify-center">
+          <Link href={isMd ? '/moldova' : '/'} className="flex items-center gap-2 group flex-shrink-0">
+            <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${isMd ? 'bg-blue-700' : 'bg-green-700'}`}>
               <Plane className="w-5 h-5 text-white rotate-45" />
             </div>
-            <span className="font-bold text-xl text-green-900 group-hover:text-green-700 transition-colors">
-              DroneAgricol<span className="text-yellow-500">.ro</span>
+            <span className={`font-bold text-xl ${isMd ? 'text-blue-900' : 'text-green-900'} group-hover:opacity-80 transition-opacity`}>
+              DroneAgricol
+              <span className={isMd ? 'text-blue-500' : 'text-yellow-500'}>
+                {isMd ? '.md' : '.ro'}
+              </span>
             </span>
           </Link>
 
@@ -70,7 +94,7 @@ export default function Header() {
                 <div key={item.label} className="relative">
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-green-700 transition-colors"
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors ${isMd ? 'text-blue-700 hover:text-blue-900' : 'text-gray-600 hover:text-green-700'}`}
                     aria-expanded={activeDropdown === item.label}
                     aria-haspopup="true"
                   >
@@ -84,7 +108,7 @@ export default function Header() {
                           key={sub.href}
                           href={sub.href}
                           onClick={() => setActiveDropdown(null)}
-                          className="block p-3 rounded-lg hover:bg-green-50 transition-colors"
+                          className={`block p-3 rounded-lg transition-colors ${isMd ? 'hover:bg-blue-50' : 'hover:bg-green-50'}`}
                         >
                           <div className="font-semibold text-sm text-gray-900">{sub.label}</div>
                           {sub.description && (
@@ -99,25 +123,35 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href!}
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-green-700 transition-colors"
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${isMd ? 'text-blue-700 hover:text-blue-900' : 'text-gray-600 hover:text-green-700'}`}
                 >
                   {item.label}
                 </Link>
               )
             )}
 
-            {/* Moldova — distinct blue treatment (per user request) */}
-            <Link
-              href="/moldova"
-              className="ml-1 px-3 py-2 text-sm font-medium text-blue-700 hover:text-blue-900 border-l border-gray-200 flex items-center gap-1.5"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-              Moldova
-            </Link>
+            {/* Cross-country switcher */}
+            {isMd ? (
+              <Link
+                href="/"
+                className="ml-2 px-3 py-1.5 text-xs font-semibold text-green-700 border border-green-300 rounded-lg hover:bg-green-50 transition-colors flex items-center gap-1.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                România
+              </Link>
+            ) : (
+              <Link
+                href="/moldova"
+                className="ml-1 px-3 py-2 text-sm font-medium text-blue-700 hover:text-blue-900 border-l border-gray-200 flex items-center gap-1.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                Moldova
+              </Link>
+            )}
 
             <Link
               href="/adauga-operator"
-              className="ml-2 px-4 py-2 bg-green-700 text-white text-sm font-semibold rounded-lg hover:bg-green-800 transition-colors"
+              className={`ml-2 px-4 py-2 text-white text-sm font-semibold rounded-lg transition-colors ${isMd ? 'bg-blue-700 hover:bg-blue-800' : 'bg-green-700 hover:bg-green-800'}`}
             >
               + Adaugă operator
             </Link>
@@ -136,11 +170,16 @@ export default function Header() {
         {/* Mobile menu */}
         {open && (
           <div className="lg:hidden pb-4 border-t border-gray-100 mt-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
-            <nav className="flex flex-col gap-1 pt-3">
+            {isMd && (
+              <div className="mx-3 mt-3 mb-2 px-3 py-2 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-700 font-medium">
+                Director Moldova — DroneAgricol.md
+              </div>
+            )}
+            <nav className="flex flex-col gap-1 pt-2">
               {nav.map((item) =>
                 item.dropdown ? (
                   <details key={item.label} className="group">
-                    <summary className="cursor-pointer px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-green-50 rounded-lg flex items-center justify-between">
+                    <summary className={`cursor-pointer px-3 py-2 text-sm font-semibold rounded-lg flex items-center justify-between ${isMd ? 'text-blue-800 hover:bg-blue-50' : 'text-gray-900 hover:bg-green-50'}`}>
                       {item.label}
                       <ChevronDown className="w-4 h-4 group-open:rotate-180 transition-transform" />
                     </summary>
@@ -149,7 +188,7 @@ export default function Header() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700 rounded-lg"
+                          className={`block px-3 py-1.5 text-sm rounded-lg ${isMd ? 'text-blue-600 hover:bg-blue-50' : 'text-gray-600 hover:bg-green-50 hover:text-green-700'}`}
                           onClick={() => setOpen(false)}
                         >
                           {sub.label}
@@ -161,7 +200,7 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href!}
-                    className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-colors"
+                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isMd ? 'text-blue-700 hover:bg-blue-50' : 'text-gray-700 hover:bg-green-50 hover:text-green-700'}`}
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
@@ -169,18 +208,24 @@ export default function Header() {
                 )
               )}
 
-              <Link
-                href="/moldova"
-                className="px-3 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50 rounded-lg transition-colors flex items-center gap-1.5 mt-2 border-t border-gray-100 pt-3"
-                onClick={() => setOpen(false)}
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                Moldova (director separat)
-              </Link>
+              {/* Cross-country link */}
+              <div className="border-t border-gray-100 mt-2 pt-3 px-3">
+                {isMd ? (
+                  <Link href="/" className="flex items-center gap-2 text-sm text-green-700 font-medium" onClick={() => setOpen(false)}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    Mergi la DroneAgricol.ro (România)
+                  </Link>
+                ) : (
+                  <Link href="/moldova" className="flex items-center gap-2 text-sm text-blue-700 font-medium" onClick={() => setOpen(false)}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    Moldova (director separat)
+                  </Link>
+                )}
+              </div>
 
               <Link
                 href="/adauga-operator"
-                className="mt-3 mx-3 px-4 py-2 bg-green-700 text-white text-sm font-semibold rounded-lg text-center hover:bg-green-800 transition-colors"
+                className={`mt-3 mx-3 px-4 py-2 text-white text-sm font-semibold rounded-lg text-center transition-colors ${isMd ? 'bg-blue-700 hover:bg-blue-800' : 'bg-green-700 hover:bg-green-800'}`}
                 onClick={() => setOpen(false)}
               >
                 + Adaugă operator

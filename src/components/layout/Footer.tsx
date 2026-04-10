@@ -6,8 +6,6 @@ import { usePathname } from 'next/navigation';
 import { Plane, ChevronDown } from 'lucide-react';
 import { counties } from '@/data/counties';
 import { moldovaRegions } from '@/data/regions-moldova';
-import NewsletterForm from '@/components/ui/NewsletterForm';
-import WhatsAppChannel from '@/components/ui/WhatsAppChannel';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -15,8 +13,22 @@ export default function Footer() {
   const [showAll, setShowAll] = useState(false);
 
   const accent = isMd
-    ? { bg: 'bg-blue-900', border: 'border-blue-800', muted: 'text-blue-200', highlight: 'text-blue-300', hover: 'hover:text-blue-200', toggle: 'hover:text-blue-300' }
-    : { bg: 'bg-green-900', border: 'border-green-800', muted: 'text-green-300', highlight: 'text-yellow-400', hover: 'hover:text-yellow-300', toggle: 'hover:text-yellow-300' };
+    ? {
+        bg: 'bg-blue-900',
+        border: 'border-blue-800',
+        muted: 'text-blue-200',
+        highlight: 'text-blue-300',
+        hover: 'hover:text-blue-200',
+        toggle: 'hover:text-blue-300',
+      }
+    : {
+        bg: 'bg-green-900',
+        border: 'border-green-800',
+        muted: 'text-green-300',
+        highlight: 'text-yellow-400',
+        hover: 'hover:text-yellow-300',
+        toggle: 'hover:text-yellow-300',
+      };
 
   return (
     <footer className={`${accent.bg} text-white mt-16`}>
@@ -35,10 +47,10 @@ export default function Footer() {
         )}
 
         {/* Upper grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 
-          {/* Brand + newsletter + WhatsApp */}
-          <div className="lg:col-span-2">
+          {/* Brand */}
+          <div className="lg:col-span-1">
             <Link href={isMd ? '/moldova' : '/'} className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                 <Plane className="w-5 h-5 text-white rotate-45" />
@@ -51,34 +63,87 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className={`text-sm ${accent.muted} leading-relaxed mb-5 max-w-sm`}>
+            <p className={`text-sm ${accent.muted} leading-relaxed max-w-xs`}>
               {isMd
                 ? 'Directorul operatorilor de drone agricole din Republica Moldova. Acoperire în toate cele 35 de raioane. Prețuri 170–240 MDL/ha.'
                 : 'Directorul operatorilor de drone agricole din România. Peste 20 de operatori verificați în toate cele 41 de județe.'}
             </p>
-
-            {/* Newsletter + WhatsApp side by side */}
-            <p className={`text-xs ${accent.muted} mb-2`}>Abonează-te pentru prețuri și oferte lunare:</p>
-            <NewsletterForm />
-            <div className="mt-3">
-              <WhatsAppChannel label="WhatsApp" />
-            </div>
           </div>
 
           {/* Servicii */}
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Servicii</h3>
             <ul className={`space-y-2 text-sm ${accent.muted}`}>
-              <li><Link href="/servicii/spraying" className="hover:text-white transition-colors">Pulverizare</Link></li>
-              <li><Link href="/servicii/spreading" className="hover:text-white transition-colors">Fertilizare</Link></li>
-              <li><Link href="/servicii/monitoring" className="hover:text-white transition-colors">Monitorizare NDVI</Link></li>
-              <li><Link href="/servicii/mapping" className="hover:text-white transition-colors">Cartografiere</Link></li>
-              <li><Link href="/servicii/training" className="hover:text-white transition-colors">Cursuri piloți</Link></li>
-              <li>
-                <Link href="/preturi-pulverizare-drona" className="hover:text-white transition-colors">
-                  {isMd ? 'Prețuri MDL/ha' : 'Prețuri RON/ha'}
-                </Link>
-              </li>
+              {isMd ? (
+                <>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Toate serviciile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Pulverizare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Fertilizare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Monitorizare NDVI
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Cartografiere
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/preturi" className="hover:text-white transition-colors">
+                      Prețuri MDL/ha
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link href="/servicii/spraying" className="hover:text-white transition-colors">
+                      Pulverizare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/servicii/spreading" className="hover:text-white transition-colors">
+                      Fertilizare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/servicii/monitoring" className="hover:text-white transition-colors">
+                      Monitorizare NDVI
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/servicii/mapping" className="hover:text-white transition-colors">
+                      Cartografiere
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/servicii/training" className="hover:text-white transition-colors">
+                      Cursuri piloți
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/preturi-pulverizare-drona"
+                      className="hover:text-white transition-colors"
+                    >
+                      Prețuri RON/ha
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
@@ -88,21 +153,84 @@ export default function Footer() {
             <ul className={`space-y-2 text-sm ${accent.muted}`}>
               {isMd ? (
                 <>
-                  <li><Link href="/ghid/subventii-moldova-aipa" className="hover:text-white transition-colors">Subvenții AIPA</Link></li>
-                  <li><Link href="/blog/top-5-operatori-drone-moldova-2026" className="hover:text-white transition-colors">Top operatori Moldova</Link></li>
-                  <li><Link href="/blog/top-regiuni-viticole-moldova-drone" className="hover:text-white transition-colors">Regiuni viticole</Link></li>
-                  <li><Link href="/unelte/calculator-pret-pulverizare" className="hover:text-white transition-colors">Calculator preț</Link></li>
-                  <li><Link href="/unelte" className="hover:text-white transition-colors">Toate calculatoarele</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                  <li>
+                    <Link href="/moldova/ghid" className="hover:text-white transition-colors">
+                      Toate ghidurile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/ghid/legislatie-ansa-moldova"
+                      className="hover:text-white transition-colors"
+                    >
+                      Legislație ANSA
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/ghid/subventii-moldova-aipa"
+                      className="hover:text-white transition-colors"
+                    >
+                      Subvenții AIPA
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/blog" className="hover:text-white transition-colors">
+                      Blog Moldova
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/unelte/calculator-pret-pulverizare"
+                      className="hover:text-white transition-colors"
+                    >
+                      Calculator preț
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:text-white transition-colors">
+                      Contact
+                    </Link>
+                  </li>
                 </>
               ) : (
                 <>
-                  <li><Link href="/ghid" className="hover:text-white transition-colors">Toate ghidurile</Link></li>
-                  <li><Link href="/ghid/legislatie-drone-agricole" className="hover:text-white transition-colors">Legislație AACR</Link></li>
-                  <li><Link href="/ghid/fonduri-afir-drone" className="hover:text-white transition-colors">Fonduri AFIR</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors">Blog & noutăți</Link></li>
-                  <li><Link href="/unelte" className="hover:text-white transition-colors">Calculatoare gratuite</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                  <li>
+                    <Link href="/ghid" className="hover:text-white transition-colors">
+                      Toate ghidurile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/ghid/legislatie-drone-agricole"
+                      className="hover:text-white transition-colors"
+                    >
+                      Legislație AACR
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/ghid/fonduri-afir-drone"
+                      className="hover:text-white transition-colors"
+                    >
+                      Fonduri AFIR
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:text-white transition-colors">
+                      Blog & noutăți
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/unelte" className="hover:text-white transition-colors">
+                      Calculatoare gratuite
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:text-white transition-colors">
+                      Contact
+                    </Link>
+                  </li>
                 </>
               )}
             </ul>
@@ -114,20 +242,64 @@ export default function Footer() {
             <ul className={`space-y-2 text-sm ${accent.muted}`}>
               {isMd ? (
                 <>
-                  <li><Link href="/operatori" className="hover:text-white transition-colors">Toți operatorii</Link></li>
-                  <li><Link href="/moldova" className="hover:text-white transition-colors">Toate raioanele</Link></li>
-                  <li><Link href="/culturi" className="hover:text-white transition-colors">Culturi tratate</Link></li>
-                  <li><Link href="/adauga-operator" className="hover:text-white transition-colors">Adaugă operator</Link></li>
-                  <li><Link href="/despre" className="hover:text-white transition-colors">Despre noi</Link></li>
+                  <li>
+                    <Link href="/moldova/operatori" className="hover:text-white transition-colors">
+                      Toți operatorii
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova" className="hover:text-white transition-colors">
+                      Toate raioanele
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/moldova/servicii" className="hover:text-white transition-colors">
+                      Servicii disponibile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/adauga-operator" className="hover:text-white transition-colors">
+                      Adaugă operator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/despre" className="hover:text-white transition-colors">
+                      Despre noi
+                    </Link>
+                  </li>
                 </>
               ) : (
                 <>
-                  <li><Link href="/operatori" className="hover:text-white transition-colors">Toți operatorii</Link></li>
-                  <li><Link href="/judete" className="hover:text-white transition-colors">Toate județele</Link></li>
-                  <li><Link href="/culturi" className="hover:text-white transition-colors">Toate culturile</Link></li>
-                  <li><Link href="/drone" className="hover:text-white transition-colors">Modele drone</Link></li>
-                  <li><Link href="/adauga-operator" className="hover:text-white transition-colors">Adaugă operator</Link></li>
-                  <li><Link href="/despre" className="hover:text-white transition-colors">Despre noi</Link></li>
+                  <li>
+                    <Link href="/operatori" className="hover:text-white transition-colors">
+                      Toți operatorii
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/judete" className="hover:text-white transition-colors">
+                      Toate județele
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/culturi" className="hover:text-white transition-colors">
+                      Toate culturile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/drone" className="hover:text-white transition-colors">
+                      Modele drone
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/adauga-operator" className="hover:text-white transition-colors">
+                      Adaugă operator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/despre" className="hover:text-white transition-colors">
+                      Despre noi
+                    </Link>
+                  </li>
                 </>
               )}
             </ul>
@@ -150,7 +322,9 @@ export default function Footer() {
           </button>
 
           {showAll ? (
-            <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-1 text-xs ${accent.muted}`}>
+            <div
+              className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-1 text-xs ${accent.muted}`}
+            >
               {(isMd ? moldovaRegions : counties).map((item) => (
                 <Link
                   key={item.slug}
@@ -162,7 +336,9 @@ export default function Footer() {
               ))}
             </div>
           ) : (
-            <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-4 gap-y-1 text-xs ${accent.muted}`}>
+            <div
+              className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-4 gap-y-1 text-xs ${accent.muted}`}
+            >
               {(isMd ? moldovaRegions.slice(0, 10) : counties.slice(0, 12)).map((item) => (
                 <Link
                   key={item.slug}
@@ -203,7 +379,11 @@ export default function Footer() {
           )}
         </div>
 
-        <div className={`border-t ${accent.border} mt-4 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm ${isMd ? 'text-blue-400' : 'text-green-400'}`}>
+        <div
+          className={`border-t ${accent.border} mt-4 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm ${
+            isMd ? 'text-blue-400' : 'text-green-400'
+          }`}
+        >
           <p>© 2026 DroneAgricol.ro — Toate drepturile rezervate</p>
           <p>
             {isMd
