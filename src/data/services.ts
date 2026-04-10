@@ -204,6 +204,128 @@ export const services: ServiceDefinition[] = [
       },
     ],
   },
+  {
+    slug: 'sales',
+    name: 'Vânzare drone',
+    nameRo: 'Vânzare drone agricole',
+    description: 'Vânzare drone agricole DJI, XAG, ADT — dealeri autorizați România și Moldova.',
+    longDescription:
+      'Dealerii autorizați DJI Agras, XAG și ADT din România și Moldova comercializează drone agricole noi cu garanție producător, service post-vânzare și consultanță pentru eligibilitatea AFIR. Prețurile variază de la 45.000 EUR (DJI Agras T25P) până la 120.000 EUR (pachete complete DJI Agras T100 + stații de încărcare).',
+    icon: '🛒',
+    priceMinRon: 200000,
+    priceMaxRon: 600000,
+    priceUnit: 'RON/unitate',
+    keywords: [
+      'vanzare drona agricola',
+      'dealer dji romania',
+      'xag romania',
+      'drona t50 pret',
+      'drona afir',
+    ],
+    faqs: [
+      {
+        question: 'Care sunt prețurile dronelor agricole în 2026?',
+        answer:
+          'În 2026, DJI Agras T25P costă aproximativ 45.000–55.000 EUR, DJI Agras T50 între 75.000–95.000 EUR, iar DJI Agras T100 depășește 110.000 EUR. Prețurile includ baterii, încărcător rapid și controler. Sunt eligibile pentru fonduri AFIR.',
+      },
+      {
+        question: 'Cum beneficiez de fonduri AFIR pentru cumpărarea unei drone?',
+        answer:
+          'Fondurile AFIR (submăsura 4.1, intervenția DR-29) acoperă 50–65% din costul dronei pentru fermele eligibile. Depui proiectul la AFIR, obții aprobarea, cumperi drona de la un dealer autorizat și primești rambursarea.',
+      },
+    ],
+  },
+  {
+    slug: 'seeding',
+    name: 'Semănat cu drona',
+    nameRo: 'Semănat și însămânțare cu dronă',
+    description: 'Semănat de culturi intermediare, ierburi, orez și reîmpădurire cu drona.',
+    longDescription:
+      'Semănatul cu drona este ideal pentru culturi intermediare (muștar, facelia, rapiță), ierburi, orez și proiecte de reîmpădurire. Dronele cu sistem de împrăștiere centrifugal pot însămânța 5–10 hectare pe oră cu o densitate controlată. Metoda este foarte eficientă pentru zone greu accesibile, terenuri umede sau culturi intercalate.',
+    icon: '🌾',
+    priceMinRon: 80,
+    priceMaxRon: 150,
+    priceUnit: 'RON/ha',
+    keywords: [
+      'semanat drona',
+      'insamantare drona',
+      'drona semanat orez',
+      'reimpadurire drona',
+      'culturi intermediare drona',
+    ],
+    faqs: [
+      {
+        question: 'Ce culturi pot fi semănate cu drona?',
+        answer:
+          'Dronele agricole pot însămânța eficient culturi cu semințe mici: muștar, facelia, trifoi, ierburi, orez, rapiță, amestecuri pentru culturi intermediare și semințe forestiere pentru reîmpădurire.',
+      },
+      {
+        question: 'Care este productivitatea dronei la semănat?',
+        answer:
+          'O dronă DJI Agras T50 cu încărcătură de 50 kg poate semăna 5–10 ha pe oră, în funcție de densitatea de semănat și terenul zburat.',
+      },
+    ],
+  },
+  {
+    slug: 'consultancy',
+    name: 'Consultanță agricolă',
+    nameRo: 'Consultanță agricolă drone',
+    description: 'Consultanță pentru agricultură de precizie, fonduri AFIR și implementare drone.',
+    longDescription:
+      'Consultanța agricolă pentru drone include elaborarea proiectelor AFIR, analize NDVI, planificarea tratamentelor, selecția echipamentelor și formarea echipelor. Consultanții colaborează cu fermierii pentru a implementa strategii de agricultură de precizie care reduc costurile cu 25–40% și cresc randamentul.',
+    icon: '📋',
+    priceMinRon: 300,
+    priceMaxRon: 2500,
+    priceUnit: 'RON/sesiune',
+    keywords: [
+      'consultanta drona agricola',
+      'proiect afir drona',
+      'consultanta agricultura precizie',
+      'analiza ndvi consultanta',
+    ],
+    faqs: [
+      {
+        question: 'Ce include consultanța pentru fonduri AFIR pe drone?',
+        answer:
+          'Consultanța AFIR include: analiza eligibilității, alegerea dronei potrivite, întocmirea studiului de fezabilitate, depunerea cererii, asistență în evaluare și decontare. Tariful este de 3–5% din valoarea proiectului.',
+      },
+      {
+        question: 'Cât costă un proiect de agricultură de precizie?',
+        answer:
+          'Un proiect complet (analiza inițială, planul tratamentelor, raportul NDVI, formarea personalului) pornește de la 1.500 RON pentru ferme mici și poate depăși 10.000 RON pentru exploatații de peste 500 ha.',
+      },
+    ],
+  },
+  {
+    slug: 'emergency',
+    name: 'Intervenție rapidă',
+    nameRo: 'Intervenție rapidă drone 24/7',
+    description: 'Tratamente de urgență pentru atacuri de dăunători și boli — intervenție în 24–48h.',
+    longDescription:
+      'Serviciul de intervenție rapidă cu drone este disponibil 24/7 pentru situații critice: atacuri masive de dăunători (gândac, omidă), infestări fungice rapide (mană, făinare) sau dezastre naturale. Echipele mobile ajung la fermă în maximum 24–48 ore și aplică tratamentele necesare pe suprafețe mari în câteva ore.',
+    icon: '🚨',
+    priceMinRon: 150,
+    priceMaxRon: 350,
+    priceUnit: 'RON/ha',
+    keywords: [
+      'interventie rapida drona',
+      'tratament urgenta drona',
+      'drona daunatori urgent',
+      'stropit urgent drona',
+    ],
+    faqs: [
+      {
+        question: 'În cât timp se face intervenția de urgență?',
+        answer:
+          'Operatorii specializați în intervenții de urgență garantează deplasarea în 24–48 ore pentru situații critice. În sezon, unii operatori au echipe de gardă disponibile 24/7.',
+      },
+      {
+        question: 'Cât costă intervenția de urgență cu drona?',
+        answer:
+          'Tariful este cu 30–70% mai mare decât prețul standard, în funcție de distanță, urgență și suprafață. Prețul mediu este de 200 RON/ha pentru cereale și 300 RON/ha pentru viticultură.',
+      },
+    ],
+  },
 ];
 
 export const serviceBySlug: Record<string, ServiceDefinition> = Object.fromEntries(

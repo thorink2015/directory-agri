@@ -6,7 +6,9 @@ export type ServiceType =
   | 'training'
   | 'rental'
   | 'sales'
-  | 'seeding';
+  | 'seeding'
+  | 'consultancy'
+  | 'emergency';
 
 export const SERVICE_LABELS: Record<ServiceType, string> = {
   spraying: 'Pulverizare',
@@ -17,22 +19,29 @@ export const SERVICE_LABELS: Record<ServiceType, string> = {
   rental: 'Închiriere drone',
   sales: 'Vânzare echipamente',
   seeding: 'Semănat',
+  consultancy: 'Consultanță agricolă',
+  emergency: 'Intervenție rapidă',
 };
 
 export interface Operator {
   slug: string;
-  name: string;
+  name: string;             // Full legal name (used on profile page)
+  shortName?: string;       // Short name for listings (max ~18 chars)
+  tagline?: string;         // 1-line pitch (max ~60 chars)
   description: string;
   country: 'RO' | 'MD';
   counties: string[];
+  moldovaRaioane?: string[]; // Moldova: raion slugs covered
   city: string;
   address?: string;
   phone?: string;
   email?: string;
   website?: string;
   facebook?: string;
-  youtube?: string;
   instagram?: string;
+  linkedin?: string;
+  tiktok?: string;
+  youtube?: string;
   founded?: number;
   services: ServiceType[];
   drones: string[];
@@ -43,13 +52,25 @@ export interface Operator {
   priceMaxMdl?: number;
   haTreated?: number;
   fleetSize?: number;
+  pilotsCount?: number;
   clientsCount?: number;
+  responseTimeHours?: number;     // Average response time
+  coverageRadiusKm?: number;      // Radius from base
+  languagesSpoken?: string[];     // ['ro', 'en', 'hu', 'ru']
+  paymentMethods?: string[];      // ['cash', 'transfer', 'card', 'leasing']
+  acceptsAfirFunds?: boolean;     // Accepts AFIR-funded payments
+  emergencyService?: boolean;     // 24/7 emergency service
   certAACR?: boolean;
   certDJI?: boolean;
   certXAG?: boolean;
-  certANSA?: boolean;
+  certANSA?: boolean;             // Moldova
+  iso9001?: boolean;              // Quality certification
+  gdprCompliant?: boolean;
+  cui?: string;                   // Romanian tax ID
+  regCom?: string;                // Registry number
   featured?: boolean;
   verified?: boolean;
+  logoUrl?: string;               // Path to logo image
   lat?: number;
   lng?: number;
 }
@@ -70,10 +91,13 @@ export interface County {
 export interface MoldovaRegion {
   slug: string;
   name: string;
+  region: string;               // North, Center, South, Găgăuzia, Transnistria
   lat: number;
   lng: number;
   agriculturalLandHa?: number;
   vineyardHa?: number;
+  orchardHa?: number;
+  mainCrops?: string[];
 }
 
 export interface Crop {
@@ -98,4 +122,21 @@ export interface DroneModel {
   priceEurMin?: number;
   priceEurMax?: number;
   afirEligible?: boolean;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  category: 'top-lists' | 'guide' | 'news' | 'case-study' | 'legislation';
+  publishedAt: string;          // ISO date
+  updatedAt?: string;
+  author: string;
+  readMinutes: number;
+  tags: string[];
+  relatedCounties?: string[];
+  relatedCrops?: string[];
+  relatedServices?: ServiceType[];
+  content: string;              // Markdown
+  featuredImage?: string;
 }
