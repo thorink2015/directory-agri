@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { counties, getCountyOperatorCount } from '@/data/counties';
+import { counties } from '@/data/counties';
 import CountyCard from '@/components/counties/CountyCard';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 

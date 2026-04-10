@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import { counties } from '@/data/counties';
-import { SERVICE_LABELS, ServiceType } from '@/data/types';
+import { SERVICE_LABELS } from '@/data/types';
 
 const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // Replace with actual Formspree form ID
 

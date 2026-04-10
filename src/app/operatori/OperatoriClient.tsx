@@ -354,7 +354,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
             <div className="flex flex-wrap gap-2 mb-4">
               {search && (
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-green-50 text-green-800 text-xs rounded-full border border-green-200">
-                  "{search}"
+                  &ldquo;{search}&rdquo;
                   <button onClick={() => setSearch('')}><X className="w-3 h-3" /></button>
                 </span>
               )}

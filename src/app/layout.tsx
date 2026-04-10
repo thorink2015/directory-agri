@@ -56,9 +56,15 @@ export default function RootLayout({
         <meta name="theme-color" content="#2D6A4F" />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-green-700 focus:text-white focus:rounded-lg focus:font-semibold"
+        >
+          Sari la conținut
+        </a>
         <GoogleAnalytics />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

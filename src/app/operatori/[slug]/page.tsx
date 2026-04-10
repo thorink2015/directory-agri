@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  Phone, Globe, Video, MapPin, CheckCircle, Calendar, Plane,
+  Phone, Globe, MapPin, CheckCircle, Calendar, Plane,
   Clock, Languages, CreditCard, Shield, Award, Zap, Users, ClipboardList,
 } from 'lucide-react';
 import {

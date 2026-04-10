@@ -26,5 +26,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://droneagricol.ro/sitemap.xml',
+    // llms.txt for AI engine optimization
+    // See: https://droneagricol.ro/llms.txt
   };
 }

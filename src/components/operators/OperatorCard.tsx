@@ -6,12 +6,11 @@ import { formatPrice, addUtmParams } from '@/lib/utils';
 interface OperatorCardProps {
   operator: Operator;
   showCounty?: boolean;
-  compact?: boolean;
 }
 
 const MAX_VISIBLE_TAGS = 3;
 
-export default function OperatorCard({ operator, showCounty = true, compact = false }: OperatorCardProps) {
+export default function OperatorCard({ operator, showCounty = true }: OperatorCardProps) {
   // Display shortName on cards for visual balance; fall back to full name
   const displayName = operator.shortName || operator.name;
   const visibleServices = operator.services.slice(0, MAX_VISIBLE_TAGS);
