@@ -7,6 +7,7 @@ import { blogPosts } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import NewsletterCTA from '@/components/ui/NewsletterCTA';
 
 export const metadata: Metadata = {
   title: 'Drone Agricole Moldova | Operatori, Raioane și Prețuri 2026',
@@ -42,6 +43,7 @@ export default function MoldovaPage() {
   const mdOps = getMdOperators();
 
   return (
+    <>
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Moldova' }]} />
 
@@ -172,18 +174,20 @@ export default function MoldovaPage() {
         <FAQAccordion faqs={moldovaFaqs} />
       </section>
 
-      <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
+      <div className="bg-white border border-blue-200 rounded-xl p-6 text-center mb-0">
         <h2 className="font-bold text-gray-900 mb-2">Ești operator de drone din Moldova?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Adaugă-te gratuit în directorul nostru și ajunge la fermieri din toată țara.
+          Adaugă-te gratuit în directorul nostru și ajunge la fermieri din toată Moldova.
         </p>
         <Link
           href="/adauga-operator"
-          className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
+          className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors text-sm"
         >
           Adaugă-te gratuit <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </div>
+    <NewsletterCTA variant="md" />
+    </>
   );
 }

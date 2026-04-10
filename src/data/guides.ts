@@ -4,6 +4,7 @@ export interface Guide {
   shortTitle: string;
   description: string;
   category: 'start' | 'legal' | 'funding' | 'technical';
+  country?: 'RO' | 'MD';   // defaults to 'RO' if absent
   readMinutes: number;
   lastUpdated: string;
   keywords: string[];
@@ -78,10 +79,37 @@ export const guides: Guide[] = [
     description:
       'Cum obții 50% subvenție pentru drona agricolă în Moldova prin AIPA. Anexa 3, documente, plafonul de 200.000 MDL.',
     category: 'funding',
+    country: 'MD',
     readMinutes: 9,
     lastUpdated: '2026-02-15',
     keywords: ['aipa moldova drona', 'subventie drona moldova', 'fonduri agricultura moldova'],
     icon: '🇲🇩',
+  },
+  {
+    slug: 'legislatie-ansa-moldova',
+    title: 'Legislația dronelor agricole în Moldova (2026) — reglementări ANSA',
+    shortTitle: 'Legislație ANSA Moldova',
+    description:
+      'Autorizarea și operarea dronelor agricole în Republica Moldova: cerințele ANSA, înregistrarea aparatelor de zbor și zonele permise.',
+    category: 'legal',
+    country: 'MD',
+    readMinutes: 8,
+    lastUpdated: '2026-03-01',
+    keywords: ['legislatie drona moldova', 'ansa drona', 'autorizare drona moldova'],
+    icon: '⚖️',
+  },
+  {
+    slug: 'cum-sa-devii-operator-moldova',
+    title: 'Cum devii operator de drone agricole în Moldova — ghid 2026',
+    shortTitle: 'Devii operator în Moldova',
+    description:
+      'Ghid pentru a lansa o afacere cu drone agricole în Moldova: autorizare ANSA, subvenție AIPA, primii clienți și prețuri.',
+    category: 'start',
+    country: 'MD',
+    readMinutes: 12,
+    lastUpdated: '2026-03-10',
+    keywords: ['operator drone moldova', 'afacere drone moldova 2026', 'drona agricola moldova start'],
+    icon: '🚀',
   },
 ];
 

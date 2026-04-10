@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, MapPin, CheckCircle, Sprout, BarChart3, Plane, Leaf } from 'lucide-react';
+import {
+  ArrowRight, MapPin, CheckCircle, Sprout, BarChart3, Plane, Leaf,
+  Droplets, Eye, Map, Search,
+} from 'lucide-react';
 import { getFeaturedOperators, operators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
@@ -9,18 +12,40 @@ import CountyCard from '@/components/counties/CountyCard';
 import SearchBar from '@/components/search/SearchBar';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import HomeSchema from '@/components/schema/HomeSchema';
+import NewsletterCTA from '@/components/ui/NewsletterCTA';
 
 const services = [
-  { icon: '💧', name: 'Pulverizare', desc: 'Tratamente fitosanitare precise', href: '/operatori' },
-  { icon: '🌿', name: 'Fertilizare', desc: 'Fertilizare foliară uniformă', href: '/operatori' },
-  { icon: '🗺️', name: 'Cartografiere', desc: 'Hărți NDVI și topografice', href: '/operatori' },
-  { icon: '👁️', name: 'Monitorizare', desc: 'Supraveghere culturi în timp real', href: '/operatori' },
-  { icon: '🌱', name: 'Semănat', desc: 'Semănat de precizie cu drona', href: '/operatori' },
-  { icon: '🚁', name: 'Închiriere', desc: 'Închiriezi dronă agricolă', href: '/operatori' },
+  { icon: Droplets, name: 'Pulverizare', desc: 'Tratamente fitosanitare precise', href: '/servicii/spraying' },
+  { icon: Leaf, name: 'Fertilizare', desc: 'Fertilizare foliară uniformă', href: '/servicii/spreading' },
+  { icon: Map, name: 'Cartografiere', desc: 'Hărți NDVI și topografice', href: '/servicii/mapping' },
+  { icon: Eye, name: 'Monitorizare', desc: 'Supraveghere culturi în timp real', href: '/servicii/monitoring' },
+  { icon: Sprout, name: 'Semănat', desc: 'Semănat de precizie cu drona', href: '/servicii/seeding' },
+  { icon: Plane, name: 'Închiriere', desc: 'Închiriezi dronă agricolă', href: '/servicii/rental' },
+];
+
+const howItWorks = [
+  {
+    step: '01',
+    icon: Search,
+    title: 'Alege județul',
+    desc: 'Selectează județul în care se află ferma ta și descoperă toți operatorii activi din zonă.',
+  },
+  {
+    step: '02',
+    icon: BarChart3,
+    title: 'Compară operatorii',
+    desc: 'Vizualizează profiluri, prețuri, servicii și zone de acoperire. Filtrează după cultură sau tip de serviciu.',
+  },
+  {
+    step: '03',
+    icon: CheckCircle,
+    title: 'Contactează direct',
+    desc: 'Ia legătura cu operatorul ales prin telefon sau email. Fără comisioane, fără intermediari.',
+  },
 ];
 
 export default function HomePage() {
-  const featured = getFeaturedOperators();
+  const featured = getFeaturedOperators().filter((op) => op.country === 'RO');
   const totalHa = operators.reduce((sum, op) => sum + (op.haTreated || 0), 0);
   const topCounties = counties.slice(0, 12);
   const allFaqs = [...pricingFAQs.slice(0, 2), ...generalFAQs];
@@ -32,7 +57,14 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
@@ -43,7 +75,7 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
             Directorul Operatorilor de
             <span className="text-yellow-400"> Drone Agricole</span>
-            <br />din România și Moldova
+            <br />din România
           </h1>
 
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -96,17 +128,24 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Servicii disponibile</h2>
           <p className="text-gray-500 text-center mb-8">Alege tipul de serviciu de care ai nevoie</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {services.map((s) => (
-              <Link
-                key={s.name}
-                href={s.href}
-                className="flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-sm transition-all text-center group"
-              >
-                <span className="text-3xl">{s.icon}</span>
-                <span className="font-semibold text-sm text-gray-900 group-hover:text-green-700">{s.name}</span>
-                <span className="text-xs text-gray-500 hidden sm:block">{s.desc}</span>
-              </Link>
-            ))}
+            {services.map((s) => {
+              const Icon = s.icon;
+              return (
+                <Link
+                  key={s.name}
+                  href={s.href}
+                  className="flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-sm transition-all text-center group"
+                >
+                  <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-green-700" />
+                  </div>
+                  <span className="font-semibold text-sm text-gray-900 group-hover:text-green-700 transition-colors">
+                    {s.name}
+                  </span>
+                  <span className="text-xs text-gray-500 hidden sm:block leading-tight">{s.desc}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -152,8 +191,12 @@ export default function HomePage() {
               >
                 <span className="text-2xl">{crop.icon}</span>
                 <div>
-                  <div className="font-medium text-gray-900 group-hover:text-green-700 text-sm">{crop.name}</div>
-                  <div className="text-xs text-gray-500">{crop.priceMinRon}–{crop.priceMaxRon} RON/ha</div>
+                  <div className="font-medium text-gray-900 group-hover:text-green-700 text-sm">
+                    {crop.name}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {crop.priceMinRon}–{crop.priceMaxRon} RON/ha
+                  </div>
                 </div>
               </Link>
             ))}
@@ -186,26 +229,51 @@ export default function HomePage() {
 
       {/* How it works */}
       <section className="py-14 bg-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Cum funcționează</h2>
-          <p className="text-gray-500 text-center mb-10">Simplu și rapid</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: '1', title: 'Alege județul', desc: 'Selectează județul din România sau Moldova în care se află ferma ta.', icon: MapPin },
-              { step: '2', title: 'Compară operatorii', desc: 'Vizualizează profiluri, prețuri, servicii și zone de acoperire ale operatorilor din zona ta.', icon: Plane },
-              { step: '3', title: 'Contactează direct', desc: 'Ia legătura direct cu operatorul ales prin telefon, email sau formularul de contact.', icon: CheckCircle },
-            ].map((item) => (
-              <div key={item.step} className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                  {item.step}
+          <p className="text-gray-500 text-center mb-12">Găsești operatorul potrivit în 3 pași simpli</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {/* Connecting line (desktop only) */}
+            <div className="hidden md:block absolute top-10 left-1/3 right-1/3 h-0.5 bg-green-200 z-0" />
+
+            {howItWorks.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.step}
+                  className="relative bg-white rounded-2xl border border-gray-200 p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                >
+                  {/* Step number badge */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-700 text-white text-xs font-bold px-3 py-0.5 rounded-full">
+                    Pasul {i + 1}
+                  </div>
+
+                  {/* Icon */}
+                  <div className="w-14 h-14 bg-green-50 border-2 border-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 mt-2">
+                    <Icon className="w-6 h-6 text-green-700" />
+                  </div>
+
+                  <h3 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/operatori"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors"
+            >
+              Caută operatori acum <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* Newsletter CTA */}
+      <NewsletterCTA variant="ro" />
 
       {/* FAQ */}
       <section className="py-14">
@@ -214,7 +282,10 @@ export default function HomePage() {
           <p className="text-gray-500 text-center mb-8">Tot ce trebuie să știi despre dronele agricole</p>
           <FAQAccordion faqs={allFaqs} />
           <div className="text-center mt-6">
-            <Link href="/preturi-pulverizare-drona" className="text-green-700 font-medium text-sm hover:underline">
+            <Link
+              href="/preturi-pulverizare-drona"
+              className="text-green-700 font-medium text-sm hover:underline"
+            >
               Vezi ghidul complet de prețuri →
             </Link>
           </div>
@@ -226,7 +297,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ești operator de drone agricole?</h2>
           <p className="text-green-100 mb-8 leading-relaxed">
-            Adaugă afacerea ta în cel mai complet director de drone agricole din România și Moldova.
+            Adaugă afacerea ta în cel mai complet director de drone agricole din România.
             Listarea este <strong className="text-white">100% gratuită</strong> și procesată în 48 de ore.
           </p>
           <Link

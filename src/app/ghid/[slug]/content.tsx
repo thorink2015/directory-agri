@@ -372,4 +372,124 @@ export const guideContent: Record<string, ReactNode> = {
       </ul>
     </div>
   ),
+
+  'legislatie-ansa-moldova': (
+    <div className="space-y-6">
+      <p>
+        Operarea dronelor agricole în Republica Moldova este reglementată de <strong>ANSA</strong> (Agenția Națională
+        pentru Siguranța Alimentelor) și de Autoritatea Aeronautică Civilă a Moldovei (AAC). Spre deosebire de
+        România (care aplică regulamentul EASA), Moldova are propriul cadru legislativ adaptat.
+      </p>
+
+      <h2>Cadrul legal de bază</h2>
+      <ul>
+        <li><strong>Hotărârea Guvernului nr. 647/2020</strong> — regulamentul general pentru UAS în Moldova</li>
+        <li><strong>ANSA</strong> — autorizează aplicarea produselor fitosanitare cu drona</li>
+        <li><strong>AAC Moldova</strong> — înregistrarea și licențierea operatorilor de zbor comercial</li>
+      </ul>
+
+      <h2>Autorizarea ANSA pentru tratamente fitosanitare</h2>
+      <p>
+        Orice operator care dorește să aplice pesticide, fungicide sau fertilizatori cu drona în Moldova
+        trebuie să obțină autorizare de la ANSA. Documentele necesare:
+      </p>
+      <ul>
+        <li>Cerere tip ANSA</li>
+        <li>Certificat de înregistrare a dronei la AAC</li>
+        <li>Licență pilot (sau certificat de competență)</li>
+        <li>Contractul cu producătorul/importatorul de drone</li>
+        <li>Lista produselor fitosanitare autorizate în Moldova</li>
+      </ul>
+
+      <h2>Înregistrarea dronei la AAC Moldova</h2>
+      <p>Toate aparatele de zbor cu greutatea peste 250 g trebuie înregistrate. Taxele sunt simbolice (200–500 MDL).</p>
+
+      <h2>Zone restricționate</h2>
+      <ul>
+        <li>5 km în jurul aeroporturilor (Chișinău, Bălți, Cahul)</li>
+        <li>Zonele de frontieră (fâșia de 5 km)</li>
+        <li>Zonele Transnistria</li>
+      </ul>
+
+      <h2>Diferențe față de România (AACR/EASA)</h2>
+      <ul>
+        <li>Moldova nu aplică regulamentul european EASA — are cadru propriu</li>
+        <li>Nu există clasele Open/Specific/Certified ca în UE</li>
+        <li>Autorizarea ANSA pentru pesticide este obligatorie (în RO este MADR)</li>
+        <li>Produsele fitosanitare trebuie să fie pe lista ANSA, nu EFSA</li>
+      </ul>
+
+      <h2>Resurse oficiale</h2>
+      <ul>
+        <li><ExtLink href="https://ansa.gov.md">ANSA — Agenția Națională pentru Siguranța Alimentelor</ExtLink></li>
+        <li><ExtLink href="https://www.caa.md">AAC Moldova — Autoritatea Aeronautică Civilă</ExtLink></li>
+        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+      </ul>
+    </div>
+  ),
+
+  'cum-sa-devii-operator-moldova': (
+    <div className="space-y-6">
+      <p>
+        Piața de drone agricole din Republica Moldova este la început, dar crește rapid. Fermele mari de viticultură
+        (100.000+ ha) și câmpurile de cereale din nordul și centrul țării reprezintă o oportunitate reală. În 2026,
+        mai puțin de 5% din suprafața agricolă este tratată cu drone — restul este piața ta.
+      </p>
+
+      <h2>1. Înțelege piața moldovenească</h2>
+      <ul>
+        <li>1,8 milioane ha teren agricol (câmpuri de cereale, viță de vie, livezi)</li>
+        <li>100.000+ ha de viticultură — principala piață pentru drone</li>
+        <li>Prețuri: 170–240 MDL/ha (€8.50–12/ha)</li>
+        <li>Principali clienți: exploatații mari 200–2000 ha, vinării, asociații agricole</li>
+      </ul>
+
+      <h2>2. Forma juridică</h2>
+      <ul>
+        <li><strong>SRL</strong> — forma recomandată, capital minim 5.400 MDL</li>
+        <li><strong>Î.I.</strong> (Întreprindere Individuală) — pentru operatori singuri, mai simplu fiscal</li>
+        <li>Înregistrare la <ExtLink href="https://egov.md">ASP (Agenția Servicii Publice)</ExtLink> — online sau la ghișeu</li>
+      </ul>
+
+      <h2>3. Autorizările necesare</h2>
+      <ul>
+        <li>Înregistrare dronă la <strong>AAC Moldova</strong></li>
+        <li>Autorizare <strong>ANSA</strong> pentru aplicarea produselor fitosanitare</li>
+        <li>Curs pilot (cursuri disponibile în Chișinău și Cluj pentru cetățenii moldoveni)</li>
+      </ul>
+
+      <h2>4. Finanțarea — subvenție AIPA 50%</h2>
+      <p>
+        Cel mai important avantaj față de alte piețe: AIPA subvenționează 50% din prețul dronei, cu plafon
+        200.000 MDL (~€10.000). O dronă DJI T25P costă ~€45.000 → plătești €22.500, AIPA returnează €10.000.
+      </p>
+      <ul>
+        <li>Depune cerere la AIPA înainte de achiziție</li>
+        <li>Drona trebuie să fie pe lista echipamentelor eligibile</li>
+        <li>Plata se face după achiziție și prezentarea facturilor</li>
+      </ul>
+
+      <h2>5. Primii clienți</h2>
+      <ul>
+        <li>Contactează direct vinăriile mari (Purcari, Cricova, Mileștii Mici, Château Vartely)</li>
+        <li>Asociațiile agricole din nordul Moldovei (Bălți, Edineț, Soroca)</li>
+        <li>Postează pe platformele agricole locale și grupurile Facebook de fermieri</li>
+        <li>Colaborează cu DRON Assistance pentru subcontractare la început</li>
+      </ul>
+
+      <h2>6. Concurența</h2>
+      <p>
+        Principalii operatori activi: DRON Assistance (lider național), BOSAL Solutions, AgroDron.md.
+        Piața are loc pentru mulți operatori noi, în special în zonele rurale și raioanele de sud.
+      </p>
+
+      <h2>Resurse oficiale Moldova</h2>
+      <ul>
+        <li><ExtLink href="https://aipa.gov.md">AIPA — Subvenții pentru echipamente</ExtLink></li>
+        <li><ExtLink href="https://ansa.gov.md">ANSA — Autorizare fitosanitară</ExtLink></li>
+        <li><ExtLink href="https://asp.gov.md">ASP — Înregistrare firmă</ExtLink></li>
+        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+      </ul>
+    </div>
+  ),
 };

@@ -5,14 +5,15 @@ import { guides, GUIDE_CATEGORIES } from '@/data/guides';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ghiduri Drone Agricole România și Moldova 2026 | DroneAgricol.ro',
+  title: 'Ghiduri Drone Agricole România 2026 | Legislație AACR, AFIR, Licențe',
   description:
-    'Ghiduri complete pentru operatori de drone agricole: legislație AACR, fonduri AFIR și AIPA, licențe pilot, alegerea dronei și cum să devii operator.',
+    'Ghiduri complete pentru operatori de drone agricole din România: legislație AACR, fonduri AFIR, licențe pilot, alegerea dronei și cum să devii operator.',
   alternates: { canonical: '/ghid' },
 };
 
 export default function GuidesHubPage() {
-  const byCategory = (cat: string) => guides.filter((g) => g.category === cat);
+  const roGuides = guides.filter((g) => !g.country || g.country === 'RO');
+  const byCategory = (cat: string) => roGuides.filter((g) => g.category === cat);
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -23,8 +24,8 @@ export default function GuidesHubPage() {
           Ghiduri pentru drone agricole
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Tot ce trebuie să știi pentru a începe și dezvolta o afacere cu drone agricole în România și
-          Moldova. Ghiduri actualizate pentru 2026, bazate pe reglementările oficiale AACR, AFIR și AIPA.
+          Tot ce trebuie să știi pentru a începe și dezvolta o afacere cu drone agricole în România.
+          Ghiduri actualizate pentru 2026, bazate pe reglementările oficiale AACR și AFIR.
         </p>
       </header>
 

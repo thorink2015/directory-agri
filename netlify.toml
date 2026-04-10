@@ -30,18 +30,20 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://formspree.io https://whatsapp.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self';"
 
-# Redirects — www to non-www (once you have the domain)
-# [[redirects]]
-#   from = "https://www.droneagricol.ro/*"
-#   to = "https://droneagricol.ro/:splat"
-#   status = 301
-#   force = true
+# www → non-www redirect (enforce canonical domain)
+[[redirects]]
+  from = "https://www.droneagricol.ro/*"
+  to = "https://droneagricol.ro/:splat"
+  status = 301
+  force = true
 
 # Preserve old URLs if you had any (add as needed)
 # [[redirects]]
