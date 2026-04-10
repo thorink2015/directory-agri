@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Globe, CheckCircle, Plane } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, addUtmParams } from '@/lib/utils';
 
 interface OperatorCardProps {
   operator: Operator;
@@ -95,7 +95,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
         )}
         {operator.website && (
           <a
-            href={operator.website}
+            href={addUtmParams(operator.website, operator.slug)}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5 text-gray-500 hover:text-green-700 transition-colors"
