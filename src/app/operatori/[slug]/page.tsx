@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Phone, Globe, Link2, Video, MapPin, CheckCircle, Calendar, Plane, Users } from 'lucide-react';
+import { Phone, Globe, Link2, Video, MapPin, CheckCircle, Calendar, Plane } from 'lucide-react';
 import { operators, getOperatorBySlug } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { CROP_NAME_MAP } from '@/data/crops';
@@ -10,6 +10,7 @@ import { formatPrice } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
+import ExternalLink from '@/components/ui/ExternalLink';
 
 interface Props {
   params: { slug: string };
@@ -247,37 +248,38 @@ export default function OperatorPage({ params }: Props) {
                   </a>
                 )}
                 {operator.website && (
-                  <a
+                  <ExternalLink
                     href={operator.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    operatorSlug={operator.slug}
+                    source="operator_profile"
                     className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors"
                   >
                     <Globe className="w-4 h-4 text-green-600" />
                     Website oficial
-                  </a>
+                  </ExternalLink>
                 )}
                 {operator.facebook && (
-                  <a
+                  <ExternalLink
                     href={operator.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    operatorSlug={operator.slug}
+                    source="operator_profile_facebook"
                     className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors"
                   >
                     <Link2 className="w-4 h-4 text-green-600" />
                     Facebook
-                  </a>
+                  </ExternalLink>
                 )}
                 {operator.youtube && (
-                  <a
+                  <ExternalLink
                     href={operator.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    operatorSlug={operator.slug}
+                    source="operator_profile_youtube"
+                    withUtm={false}
                     className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors"
                   >
                     <Video className="w-4 h-4 text-green-600" />
                     YouTube
-                  </a>
+                  </ExternalLink>
                 )}
               </div>
             </div>

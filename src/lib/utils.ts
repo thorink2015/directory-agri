@@ -30,3 +30,26 @@ export function formatHa(ha?: number): string {
   if (ha >= 1000) return `${(ha / 1000).toFixed(0)}.000 ha`;
   return `${ha} ha`;
 }
+
+/**
+ * Appends UTM tracking parameters to an external URL.
+ * All outbound links to operator websites use this to track referral traffic.
+ *
+ * @param url - The destination URL (e.g. https://example.com)
+ * @param operatorSlug - The operator slug (e.g. "riagro") used as utm_content
+ * @returns URL with UTM parameters appended
+ */
+export function addUtmParams(url: string, operatorSlug: string): string {
+  if (!url) return url;
+  try {
+    const parsed = new URL(url);
+    parsed.searchParams.set('utm_source', 'droneagricol.ro');
+    parsed.searchParams.set('utm_medium', 'directory');
+    parsed.searchParams.set('utm_campaign', 'operator-listing');
+    parsed.searchParams.set('utm_content', operatorSlug);
+    return parsed.toString();
+  } catch {
+    // If URL parsing fails, return original
+    return url;
+  }
+}
