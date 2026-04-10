@@ -7,6 +7,8 @@ import { services } from '@/data/services';
 import { droneModels } from '@/data/drone-models';
 import { cities } from '@/data/cities';
 import { wineRegions } from '@/data/wine-regions';
+import { guides } from '@/data/guides';
+import { blogPosts } from '@/data/blog-posts';
 import { SERVICE_LABELS } from '@/data/types';
 
 const BASE_URL = 'https://droneagricol.ro';
@@ -23,14 +25,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/servicii`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/drone`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/regiuni-viticole`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE_URL}/moldova`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/moldova`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/preturi-pulverizare-drona`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/ghid`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/unelte`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/adauga-operator`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
     { url: `${BASE_URL}/despre`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
   ];
 
-  // ─── Operator profiles (19 RO + 4 MD = 23) ──────────────────────────────
+  // ─── Operator profiles (23) ─────────────────────────────────────────────
   const operatorPages: MetadataRoute.Sitemap = operators.map((op) => ({
     url: `${BASE_URL}/operatori/${op.slug}`,
     lastModified: now,
@@ -38,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // ─── County pages (41 × 3 = 123) ─────────────────────────────────────────
+  // ─── County pages (41 × 2 = 82) ──────────────────────────────────────────
   const countyPages: MetadataRoute.Sitemap = counties.flatMap((c) => [
     {
       url: `${BASE_URL}/judete/${c.slug}`,
@@ -64,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  // ─── County + Service pages (41 × 6 = 246) ───────────────────────────────
+  // ─── County + Service pages (41 × N) ────────────────────────────────────
   const serviceKeys = Object.keys(SERVICE_LABELS);
   const countyServicePages: MetadataRoute.Sitemap = counties.flatMap((county) =>
     serviceKeys.map((serviceKey) => ({
@@ -83,7 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // ─── Service pages (6) ───────────────────────────────────────────────────
+  // ─── Service pages (10) ──────────────────────────────────────────────────
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${BASE_URL}/servicii/${s.slug}`,
     lastModified: now,
@@ -99,9 +104,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  // ─── City pages (20) ─────────────────────────────────────────────────────
+  // ─── City pages ──────────────────────────────────────────────────────────
   const cityPages: MetadataRoute.Sitemap = cities
-    .filter((c) => !c.county.includes('-md')) // RO cities only (MD handled separately)
+    .filter((c) => !c.county.includes('-md'))
     .map((c) => ({
       url: `${BASE_URL}/orase/${c.slug}`,
       lastModified: now,
@@ -117,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
-  // ─── Moldova region pages (8) ────────────────────────────────────────────
+  // ─── Moldova region pages (35) ───────────────────────────────────────────
   const moldovaPages: MetadataRoute.Sitemap = moldovaRegions.map((r) => ({
     url: `${BASE_URL}/moldova/${r.slug}`,
     lastModified: now,
@@ -125,18 +130,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // ─── Guide pages (6) ─────────────────────────────────────────────────────
+  const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
+    url: `${BASE_URL}/ghid/${g.slug}`,
+    lastModified: new Date(g.lastUpdated),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // ─── Tools pages (4) ─────────────────────────────────────────────────────
+  const toolPages: MetadataRoute.Sitemap = [
+    'calculator-pret-pulverizare',
+    'calculator-hectare',
+    'comparator-drone',
+    'calendar-tratamente',
+  ].map((slug) => ({
+    url: `${BASE_URL}/unelte/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.78,
+  }));
+
+  // ─── Blog posts (12+) ────────────────────────────────────────────────────
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+    url: `${BASE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.updatedAt || p.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
-    ...staticPages,       // 12
-    ...operatorPages,     // 23
-    ...countyPages,       // 82
-    ...countyCropPages,   // 328
-    ...countyServicePages,// 246 (using 6 SERVICE_LABELS keys)
-    ...cropPages,         // 8
-    ...servicePages,      // 6
-    ...dronePages,        // 5
-    ...cityPages,         // ~18
-    ...wineRegionPages,   // 6
-    ...moldovaPages,      // 8
-    // Total: ~742+ URLs
+    ...staticPages,        // 15
+    ...operatorPages,      // 23
+    ...countyPages,        // 82
+    ...countyCropPages,    // 328
+    ...countyServicePages, // 410 (41 × 10 services)
+    ...cropPages,          // 8
+    ...servicePages,       // 10
+    ...dronePages,         // 5
+    ...cityPages,          // ~18
+    ...wineRegionPages,    // 6
+    ...moldovaPages,       // 35
+    ...guidePages,         // 6
+    ...toolPages,          // 4
+    ...blogPages,          // 12
+    // Total: ~960+ URLs
   ];
 }
