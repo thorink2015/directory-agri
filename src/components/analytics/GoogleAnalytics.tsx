@@ -24,10 +24,11 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GA_MEASUREMENT_ID}', {
-            page_path: window.location.pathname,
             anonymize_ip: true,
-            cookie_flags: 'SameSite=None;Secure'
+            cookie_flags: 'SameSite=None;Secure',
+            send_page_view: false
           });
+          // page_view is handled by GAPageView component on each route change
         `}
       </Script>
     </>

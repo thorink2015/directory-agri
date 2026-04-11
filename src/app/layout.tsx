@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
+import GAPageView from '@/components/analytics/GAPageView';
 import { defaultMetadata } from '@/lib/seo';
 
 export const viewport: Viewport = {
@@ -69,6 +70,7 @@ export default function RootLayout({
           Sari la conținut
         </a>
         <GoogleAnalytics />
+        <GAPageView />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />

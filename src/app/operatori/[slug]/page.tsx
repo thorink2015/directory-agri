@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  Phone, Globe, MapPin, CheckCircle, Calendar, Plane,
+  Globe, MapPin, CheckCircle, Calendar, Plane,
   Clock, Languages, CreditCard, Shield, Award, Zap, Users, ClipboardList,
 } from 'lucide-react';
 import {
@@ -18,6 +18,7 @@ import { buildOperatorMetadata } from '@/lib/seo';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
 import ExternalLink from '@/components/ui/ExternalLink';
+import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
 
 interface Props {
   params: { slug: string };
@@ -395,24 +396,11 @@ export default function OperatorPage({ params }: Props) {
                 <Users className="w-4 h-4" /> Contact
               </h3>
               <div className="space-y-2">
-                {operator.phone && (
-                  <a
-                    href={`tel:${operator.phone}`}
-                    className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors"
-                  >
-                    <Phone className="w-4 h-4 text-green-600" />
-                    {operator.phone}
-                  </a>
-                )}
-                {operator.email && (
-                  <a
-                    href={`mailto:${operator.email}`}
-                    className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors break-all"
-                  >
-                    <span className="w-4 h-4 text-green-600 text-center flex-shrink-0">@</span>
-                    {operator.email}
-                  </a>
-                )}
+                <OperatorContactLinks
+                  operatorSlug={operator.slug}
+                  phone={operator.phone}
+                  email={operator.email}
+                />
                 {operator.website && (
                   <ExternalLink
                     href={operator.website}
