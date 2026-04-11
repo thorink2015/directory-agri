@@ -329,7 +329,7 @@ export default function Footer() {
                 <Link
                   key={item.slug}
                   href={isMd ? `/moldova/${item.slug}` : `/judete/${item.slug}`}
-                  className="hover:text-white transition-colors py-0.5"
+                  className="hover:text-white transition-colors py-1.5 block"
                 >
                   {item.name}
                 </Link>
@@ -343,14 +343,14 @@ export default function Footer() {
                 <Link
                   key={item.slug}
                   href={isMd ? `/moldova/${item.slug}` : `/judete/${item.slug}`}
-                  className="hover:text-white transition-colors py-0.5"
+                  className="hover:text-white transition-colors py-1.5 block"
                 >
                   {item.name}
                 </Link>
               ))}
               <button
                 onClick={() => setShowAll(true)}
-                className={`${accent.highlight} ${accent.hover} font-semibold text-left`}
+                className={`${accent.highlight} ${accent.hover} font-semibold text-left py-1.5`}
               >
                 + Vezi toate →
               </button>
