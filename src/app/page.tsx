@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     'Cel mai complet director de operatori de drone agricole din România și Moldova. 23 operatori verificați în 41 județe. Pulverizare, fertilizare, monitorizare NDVI.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'DroneAgricol.ro — Directorul Operatorilor de Drone Agricole',
-    description: '23 operatori verificați în toate cele 41 de județe. Prețuri actualizate, recenzii și contact direct.',
+    title: 'DroneAgricol.ro: Director Operatori Drone Agricole România',
+    description: '23 operatori verificați în toate cele 41 de județe. Prețuri actualizate și contact direct.',
     url: 'https://droneagricol.ro',
   },
 };
@@ -28,12 +28,12 @@ import HomeSchema from '@/components/schema/HomeSchema';
 import NewsletterCTA from '@/components/ui/NewsletterCTA';
 
 const services = [
-  { icon: Droplets, name: 'Pulverizare', desc: 'Tratamente fitosanitare precise', href: '/servicii/spraying' },
-  { icon: Leaf, name: 'Fertilizare', desc: 'Fertilizare foliară uniformă', href: '/servicii/spreading' },
-  { icon: Map, name: 'Cartografiere', desc: 'Hărți NDVI și topografice', href: '/servicii/mapping' },
-  { icon: Eye, name: 'Monitorizare', desc: 'Supraveghere culturi în timp real', href: '/servicii/monitoring' },
-  { icon: Sprout, name: 'Semănat', desc: 'Semănat de precizie cu drona', href: '/servicii/seeding' },
-  { icon: Plane, name: 'Închiriere', desc: 'Închiriezi dronă agricolă', href: '/servicii/rental' },
+  { icon: Droplets, name: 'Pulverizare', desc: 'Stropit culturi: fungicide, erbicide, insecticide', href: '/servicii/spraying' },
+  { icon: Leaf, name: 'Fertilizare', desc: 'Aplicare îngrășăminte foliare de precizie', href: '/servicii/spreading' },
+  { icon: Map, name: 'Cartografiere', desc: 'Hărți NDVI și ortofotoplanuri', href: '/servicii/mapping' },
+  { icon: Eye, name: 'Monitorizare', desc: 'Supraveghere culturi și identificare boli', href: '/servicii/monitoring' },
+  { icon: Sprout, name: 'Semănat', desc: 'Semănat de precizie cu drona agricolă', href: '/servicii/seeding' },
+  { icon: Plane, name: 'Închiriere', desc: 'Dronă cu sau fără operator inclus', href: '/servicii/rental' },
 ];
 
 const howItWorks = [
@@ -82,18 +82,17 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
             <CheckCircle className="w-4 h-4 text-yellow-400" />
-            Listare gratuită pentru operatori
+            {operators.filter((op) => op.verified).length} operatori verificați în România și Moldova
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
-            Directorul Operatorilor de
-            <span className="text-yellow-400"> Drone Agricole</span>
-            <br />din România
+            Operatori de
+            <span className="text-yellow-400"> drone agricole</span>
+            <br />din România și Moldova
           </h1>
 
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Găsește rapid operatori verificați de drone agricole în județul tău.
-            Servicii de pulverizare, cartografiere și monitorizare pentru fermieri.
+            Pulverizare, fertilizare și monitorizare NDVI. Prețuri de la 70 RON/ha, contact direct cu operatorul, fără comisioane.
           </p>
 
           <SearchBar />
@@ -123,7 +122,7 @@ export default function HomePage() {
               { value: `${operators.length}+`, label: 'Operatori listați', icon: Plane },
               { value: '41', label: 'Județe acoperite', icon: MapPin },
               { value: `${(totalHa / 1000).toFixed(0)}K+`, label: 'Hectare tratate', icon: Sprout },
-              { value: '70–200', label: 'RON/ha medie', icon: BarChart3 },
+              { value: '~100', label: 'RON/ha câmp', icon: BarChart3 },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-1">
                 <stat.icon className="w-6 h-6 text-green-600 mb-1" />

@@ -40,7 +40,7 @@ export default function MdlDroneComparator() {
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-sm text-gray-700">
         <strong className="text-blue-800">Subvenție AIPA:</strong> Toate modelele de mai jos sunt
         eligibile pentru subvenționarea AIPA prin Anexa 3 (50% din costul achiziției, maximum 200.000 MDL
-        per beneficiar). Achiziția se face de la dealeri autorizați — BOSAL Solutions sau DRON Assistance.
+        per beneficiar). Achiziția se face de la dealeri autorizați: BOSAL Solutions sau DRON Assistance.
       </div>
 
       <div className="overflow-x-auto bg-white border border-gray-200 rounded-xl mb-8">
@@ -94,7 +94,7 @@ export default function MdlDroneComparator() {
             <Link href="/drone/dji-agras-t25p" className="text-blue-700 font-medium hover:underline">
               DJI Agras T25P
             </Link>{' '}
-            — cel mai bun raport preț-productivitate. Ideal pentru startul în Moldova.
+: cel mai bun raport preț-productivitate. Ideal pentru startul în Moldova.
           </p>
         </div>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
@@ -103,7 +103,7 @@ export default function MdlDroneComparator() {
             <Link href="/drone/dji-agras-t50" className="text-blue-700 font-medium hover:underline">
               DJI Agras T50
             </Link>{' '}
-            — cel mai utilizat model în Moldova. Operatorii mari (DRON Assistance) au flotă întreagă T50.
+: cel mai utilizat model în Moldova. Operatorii mari (DRON Assistance) au flotă întreagă T50.
           </p>
         </div>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
@@ -112,7 +112,7 @@ export default function MdlDroneComparator() {
             <Link href="/drone/dji-agras-t100" className="text-blue-700 font-medium hover:underline">
               DJI Agras T100
             </Link>{' '}
-            — 75L rezervor, 40 ha/h. Rentabil pentru suprafețe &gt; 500 ha/sezon.
+: 75L rezervor, 40 ha/h. Rentabil pentru suprafețe &gt; 500 ha/sezon.
           </p>
         </div>
       </section>

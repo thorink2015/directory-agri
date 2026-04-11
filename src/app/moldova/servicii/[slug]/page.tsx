@@ -75,7 +75,7 @@ const MD_SERVICE_DATA: Record<string, {
       },
       {
         question: 'Ce precizie au hărțile realizate cu drona în Moldova?',
-        answer: 'Hărțile cu drone echipate GPS RTK/PPK ating 1–3 cm orizontal și 2–5 cm vertical — suficientă pentru aplicații cadastrale conforme cu standardele ARFC Moldova.',
+        answer: 'Hărțile cu drone echipate GPS RTK/PPK ating 1–3 cm orizontal și 2–5 cm vertical, suficientă pentru aplicații cadastrale conforme cu standardele ARFC Moldova.',
       },
     ],
   },
@@ -270,7 +270,7 @@ export default function MoldovaServicePage({ params }: Props) {
       {mdData?.faqs && mdData.faqs.length > 0 && (
         <div className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            Întrebări frecvente — {service.name.toLowerCase()} în Moldova
+            Întrebări frecvente despre {service.name.toLowerCase()} în Moldova
           </h2>
           <FAQAccordion faqs={mdData.faqs} />
         </div>

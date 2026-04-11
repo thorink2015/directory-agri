@@ -17,7 +17,7 @@ const moldovaServices = [
   {
     icon: Droplets,
     name: 'Pulverizare',
-    desc: 'Tratamente fitosanitare cu drona — fungicide, insecticide, erbicide autorizate ANSA.',
+    desc: 'Tratamente fitosanitare cu drona: fungicide, insecticide, erbicide autorizate ANSA.',
     price: '170–240 MDL/ha',
     href: '/moldova/servicii/spraying',
     highlight: true,

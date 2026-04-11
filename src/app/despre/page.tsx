@@ -41,7 +41,7 @@ export default function DesprePage() {
 
         <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">De ce am construit acest director?</h2>
         <p className="leading-relaxed">
-          Piața de drone agricole din România crește cu peste 40% pe an, dar fermierii nu aveau o resursă centralizată pentru a găsi operatori locali verificați. Întrebând «drone agricole [județ]» pe Google, găseai numai pagini generice sau magazine online — niciun director al prestatorilor de servicii.
+          Piața de drone agricole din România crește cu peste 40% pe an, dar fermierii nu aveau o resursă centralizată pentru a găsi operatori locali verificați. Întrebând «drone agricole [județ]» pe Google, găseai numai pagini generice sau magazine online, niciun director al prestatorilor de servicii.
         </p>
         <p className="leading-relaxed">
           Am construit DroneAgricol.ro pentru a umple acest gol: un director structurat, cu profiluri detaliate, prețuri orientative și posibilitatea de a contacta direct operatorul.
@@ -51,7 +51,7 @@ export default function DesprePage() {
           {[
             { icon: Target, title: 'Misiunea noastră', desc: 'Conectăm fermierii cu operatori de drone agricole verificați din zona lor.' },
             { icon: Shield, title: 'Calitate verificată', desc: 'Verificăm fiecare operator înainte de publicare: autorizații, servicii, contact.' },
-            { icon: Globe, title: 'Acoperire completă', desc: 'România — toate 41 de județe. Moldova — acoperire națională.' },
+            { icon: Globe, title: 'Acoperire completă', desc: 'România: toate 41 de județe. Moldova: acoperire națională.' },
             { icon: TrendingUp, title: 'Actualizat constant', desc: 'Directorul este actualizat cu noi operatori și prețuri actualizate regulat.' },
           ].map((b) => (
             <div key={b.title} className="flex gap-3 p-4 bg-white border border-gray-200 rounded-xl">

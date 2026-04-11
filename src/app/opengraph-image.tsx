@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'DroneAgricol.ro — Directorul Operatorilor de Drone Agricole din România și Moldova';
+export const alt = 'DroneAgricol.ro: Director Operatori Drone Agricole din România și Moldova';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

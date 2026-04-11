@@ -15,7 +15,7 @@ const tools = [
     slug: 'calculator-pret-pulverizare',
     name: 'Calculator preț pulverizare',
     description:
-      'Calculează costul total al pulverizării cu drona în lei moldovenești (MDL) — cereale, viță de vie, livezi.',
+      'Calculează costul total al pulverizării cu drona în lei moldovenești (MDL): cereale, viță de vie, livezi.',
     icon: Calculator,
     color: 'blue',
     badge: 'MDL',

@@ -112,7 +112,7 @@ export default function ServicePage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente — {service.name.toLowerCase()}
+          Întrebări frecvente despre {service.name.toLowerCase()}
         </h2>
         <FAQAccordion faqs={service.faqs} />
       </div>

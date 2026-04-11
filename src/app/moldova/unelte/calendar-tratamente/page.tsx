@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Calendar tratamente agricole Moldova 2026 — Când să stropești? | MDL',
+  title: 'Calendar tratamente agricole Moldova 2026: Când să stropești? | MDL',
   description:
     'Calendar lunar cu tratamentele recomandate pentru culturi din Moldova: grâu, porumb, rapiță, viță de vie, livezi. Produse autorizate ANSA.',
   alternates: { canonical: '/moldova/unelte/calendar-tratamente' },
@@ -50,7 +50,7 @@ const CALENDAR: Treatment[] = [
     month: 'Mai', monthNumber: 5,
     crops: [
       { crop: 'Viță de vie', treatment: 'Tratamente contra manei + făinării (critice)', urgency: 'high' },
-      { crop: 'Grâu', treatment: 'Fungicid T2 (protecția spicului — fuzarioze)', urgency: 'high' },
+      { crop: 'Grâu', treatment: 'Fungicid T2 (protecția spicului, fuzarioze)', urgency: 'high' },
       { crop: 'Rapiță', treatment: 'Tratament contra gărgăriței silicvei', urgency: 'high' },
       { crop: 'Floarea-soarelui', treatment: 'Erbicide postemergente', urgency: 'medium' },
     ],

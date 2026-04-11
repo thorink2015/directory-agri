@@ -30,7 +30,7 @@ const moldovaFaqs = [
   {
     question: 'Care sunt operatorii de drone agricole din Moldova?',
     answer:
-      'Principalii operatori din Republica Moldova sunt: DRON Assistance (droneagro.md) — liderul pieței cu 16 drone și 14 piloți certificați, susținut de UNDP; BOSAL Solutions — distribuitor autorizat DJI; AgroDron.md; DroneX Moldova. Piața este în creștere rapidă, cu estimativ 50.000+ ha tratate anual.',
+      'Principalii operatori din Republica Moldova sunt: DRON Assistance (droneagro.md), liderul pieței cu 16 drone și 14 piloți certificați, susținut de UNDP; BOSAL Solutions, distribuitor autorizat DJI; AgroDron.md; DroneX Moldova. Piața este în creștere rapidă, cu estimativ 50.000+ ha tratate anual.',
   },
   {
     question: 'În câte raioane operează operatorii de drone din Moldova?',
@@ -51,7 +51,7 @@ export default function MoldovaPage() {
       <header className="mb-8 border-l-4 border-blue-500 pl-4">
         <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full mb-3">
           <MapPin className="w-3.5 h-3.5" />
-          Director separat — Republica Moldova
+          Director separat pentru Republica Moldova
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
           Drone Agricole în Republica Moldova
@@ -170,7 +170,7 @@ export default function MoldovaPage() {
 
       {/* FAQ */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-5">Întrebări frecvente — Moldova</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-5">Întrebări frecvente despre drone agricole în Moldova</h2>
         <FAQAccordion faqs={moldovaFaqs} />
       </section>
 

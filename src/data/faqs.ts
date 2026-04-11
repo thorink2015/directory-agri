@@ -48,11 +48,11 @@ export const generalFAQs: FAQ[] = [
   {
     question: 'Cum găsesc un operator de drone agricole în județul meu?',
     answer:
-      'Folosiți filtrul de județ din directorul nostru pentru a găsi toți operatorii care acoperă zona dumneavoastră. Mulți operatori naționali acoperă mai multe județe și se deplasează la fermă. Puteți contacta direct operatorul prin formularul de pe profilul său sau prin telefon.',
+      'Folosește filtrul de județ din directorul nostru pentru a găsi toți operatorii care acoperă zona ta. Mulți operatori naționali acoperă mai multe județe și se deplasează la fermă. Poți contacta direct operatorul prin formularul de pe profilul său sau prin telefon.',
   },
   {
     question: 'Cum adaug afacerea mea în director?',
     answer:
-      'Listarea în directorul nostru este complet gratuită. Completați formularul de pe pagina „Adaugă Operator" cu datele companiei dumneavoastră: servicii oferite, județele acoperite, tipul dronelor și prețurile. Echipa noastră va verifica informațiile și va publica profilul în maxim 48 de ore.',
+      'Listarea în directorul nostru este complet gratuită. Completează formularul de pe pagina „Adaugă Operator" cu datele companiei tale: servicii oferite, județele acoperite, tipul dronelor și prețurile. Echipa noastră va verifica informațiile și va publica profilul în maxim 48 de ore.',
   },
 ];

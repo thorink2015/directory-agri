@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `Drone ${crop.name} ${county.name} | Pulverizare ${crop.name} cu Drona 2026`,
-    description: `Operatori de drone pentru ${crop.name.toLowerCase()} în județul ${county.name}. Prețuri ${formatPrice(crop.priceMinRon, crop.priceMaxRon)} — contactează direct operatorii verificați.`,
+    description: `Operatori de drone pentru ${crop.name.toLowerCase()} în județul ${county.name}. Prețuri ${formatPrice(crop.priceMinRon, crop.priceMaxRon)}, contactează direct operatorii verificați.`,
     alternates: {
       canonical: `/judete/${params.slug}/culturi/${params.crop}`,
     },
@@ -91,7 +91,7 @@ export default function CountyCropPage({ params }: Props) {
         <div className="flex items-start gap-4">
           <span className="text-4xl">{crop.icon}</span>
           <div>
-            <h2 className="font-semibold text-gray-900 mb-2">{crop.name} — Informații generale</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">Despre cultura {crop.name.toLowerCase()}</h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">{crop.description}</p>
             <div className="flex flex-wrap gap-4 text-sm">
               <div>
@@ -176,7 +176,7 @@ export default function CountyCropPage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente — drone {crop.name.toLowerCase()} {county.name}
+          Întrebări frecvente despre drone pentru {crop.name.toLowerCase()} în {county.name}
         </h2>
         <FAQAccordion faqs={faqs} />
       </div>

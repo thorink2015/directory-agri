@@ -38,7 +38,7 @@ export default function Footer() {
         {isMd && (
           <div className="bg-blue-800/50 border border-blue-700 rounded-xl px-4 py-3 mb-8 flex flex-wrap items-center justify-between gap-3">
             <span className="text-sm text-blue-100">
-              Director Drone Agricole — <strong>Republica Moldova</strong> · Prețuri MDL · Subvenții AIPA 50%
+              Director Drone Agricole, <strong>Republica Moldova</strong> · Prețuri MDL · Subvenții AIPA 50%
             </span>
             <Link href="/" className="text-xs text-blue-300 hover:text-white underline">
               → DroneAgricol.ro (România)
@@ -366,7 +366,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-sm text-green-300 hover:text-green-200 transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              Director România — DroneAgricol.ro
+              DroneAgricol.ro (România)
             </Link>
           ) : (
             <Link
@@ -384,7 +384,7 @@ export default function Footer() {
             isMd ? 'text-blue-200' : 'text-white'
           }`}
         >
-          <p>© 2026 DroneAgricol.ro — Toate drepturile rezervate</p>
+          <p>© 2026 DroneAgricol.ro. Toate drepturile rezervate.</p>
           <p>
             {isMd
               ? 'Listare gratuită pentru operatori din Moldova'

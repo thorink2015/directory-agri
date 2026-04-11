@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const pricingTable = [
-  { service: 'Pulverizare — cereale (grâu, porumb, orz)', min: 170, max: 220, note: 'Tarif standard' },
-  { service: 'Pulverizare — floarea-soarelui, soia', min: 180, max: 230, note: '' },
-  { service: 'Pulverizare — rapiță', min: 175, max: 225, note: '' },
-  { service: 'Pulverizare — viță de vie', min: 200, max: 280, note: 'Teren accidentat +20%' },
-  { service: 'Pulverizare — livezi', min: 200, max: 280, note: 'Pomicultură intensivă' },
+  { service: 'Pulverizare cereale (grâu, porumb, orz)', min: 170, max: 220, note: 'Tarif standard' },
+  { service: 'Pulverizare floarea-soarelui, soia', min: 180, max: 230, note: '' },
+  { service: 'Pulverizare rapiță', min: 175, max: 225, note: '' },
+  { service: 'Pulverizare viță de vie', min: 200, max: 280, note: 'Teren accidentat +20%' },
+  { service: 'Pulverizare livezi', min: 200, max: 280, note: 'Pomicultură intensivă' },
   { service: 'Fertilizare foliară', min: 150, max: 220, note: 'Orice cultură' },
   { service: 'Monitorizare NDVI', min: 100, max: 180, note: 'Raport PDF inclus' },
   { service: 'Cartografiere ortofoto', min: 120, max: 200, note: 'Fișiere GeoTIFF' },
@@ -193,7 +193,7 @@ export default function MoldovaPricingPage() {
             </li>
           </ul>
           <p className="mt-3 text-xs text-gray-500">
-            Comparativ: în România prețul mediu este 100–150 RON/ha (~€20–30/ha) — semnificativ mai mare.
+            Comparativ: în România prețul mediu este 100–150 RON/ha (~€20–30/ha), semnificativ mai mare.
           </p>
         </div>
       </section>

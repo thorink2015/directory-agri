@@ -75,7 +75,7 @@ export default function PricingPage() {
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
           <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100 bg-gray-50">
             <TrendingUp className="w-5 h-5 text-green-600" />
-            <h2 className="font-semibold text-gray-900">Prețuri pulverizare cu drona 2026 — pe tip de cultură</h2>
+            <h2 className="font-semibold text-gray-900">Prețuri pulverizare cu drona 2026, pe tip de cultură</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -126,7 +126,7 @@ export default function PricingPage() {
         {/* Comparison: drone vs airplane */}
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
           <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
-            <h2 className="font-semibold text-gray-900">Dronă vs. avion agricol — comparație costuri</h2>
+            <h2 className="font-semibold text-gray-900">Dronă vs. avion agricol: comparație costuri</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">

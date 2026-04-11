@@ -21,7 +21,7 @@ export default function GuidesHubPage() {
 
       <header className="mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Ghiduri pentru drone agricole
+          Ghiduri complete: drone agricole în România 2026
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
           Tot ce trebuie să știi pentru a începe și dezvolta o afacere cu drone agricole în România.

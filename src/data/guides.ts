@@ -14,7 +14,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: 'cum-sa-devii-operator',
-    title: 'Cum să devii operator de drone agricole în 2026 — ghid complet',
+    title: 'Cum să devii operator de drone agricole în 2026: ghid complet',
     shortTitle: 'Cum să devii operator',
     description:
       'Ghid pas cu pas pentru a începe o afacere cu drone agricole în România: licențe, fonduri, echipament, clienți.',
@@ -26,7 +26,7 @@ export const guides: Guide[] = [
   },
   {
     slug: 'legislatie-drone-agricole',
-    title: 'Legislația dronelor agricole în România (2026) — reglementări AACR complete',
+    title: 'Legislația dronelor agricole în România (2026): reglementări AACR complete',
     shortTitle: 'Legislație drone',
     description:
       'Toate reglementările AACR și EASA pentru operarea dronelor agricole: clase Open/Specific, zboruri comerciale, sancțiuni.',
@@ -38,7 +38,7 @@ export const guides: Guide[] = [
   },
   {
     slug: 'fonduri-afir-drone',
-    title: 'Fonduri AFIR pentru drone agricole 2026 — submăsura 4.1 și intervenția DR-29',
+    title: 'Fonduri AFIR pentru drone agricole 2026: submăsura 4.1 și intervenția DR-29',
     shortTitle: 'Fonduri AFIR',
     description:
       'Cum obții 50–65% rambursare pentru cumpărarea unei drone agricole prin AFIR. Eligibilitate, documente, pași.',
@@ -62,7 +62,7 @@ export const guides: Guide[] = [
   },
   {
     slug: 'alegerea-dronei-agricole',
-    title: 'Cum alegi drona agricolă potrivită — DJI vs XAG vs ADT (2026)',
+    title: 'Cum alegi drona agricolă potrivită: DJI vs XAG vs ADT (2026)',
     shortTitle: 'Alegerea dronei',
     description:
       'Compară DJI Agras T25P, T50, T100 cu XAG P100 și ADT Falcon. Bugete, capacitate, service, piese.',
@@ -87,7 +87,7 @@ export const guides: Guide[] = [
   },
   {
     slug: 'legislatie-ansa-moldova',
-    title: 'Legislația dronelor agricole în Moldova (2026) — reglementări ANSA',
+    title: 'Legislația dronelor agricole în Moldova (2026): reglementări ANSA',
     shortTitle: 'Legislație ANSA Moldova',
     description:
       'Autorizarea și operarea dronelor agricole în Republica Moldova: cerințele ANSA, înregistrarea aparatelor de zbor și zonele permise.',
@@ -100,7 +100,7 @@ export const guides: Guide[] = [
   },
   {
     slug: 'cum-sa-devii-operator-moldova',
-    title: 'Cum devii operator de drone agricole în Moldova — ghid 2026',
+    title: 'Cum devii operator de drone agricole în Moldova: ghid 2026',
     shortTitle: 'Devii operator în Moldova',
     description:
       'Ghid pentru a lansa o afacere cu drone agricole în Moldova: autorizare ANSA, subvenție AIPA, primii clienți și prețuri.',

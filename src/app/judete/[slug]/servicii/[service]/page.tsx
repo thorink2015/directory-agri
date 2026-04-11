@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${service.nameRo} ${county.name} | Operatori Drone Agricole 2026`,
-    description: `Servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}. Preț: ${formatPrice(service.priceMinRon, service.priceMaxRon, service.priceUnit.replace('RON/', '') === 'ha' ? 'RON' : 'RON')} — operatori verificați, contact direct.`,
+    description: `Servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}. Preț: ${formatPrice(service.priceMinRon, service.priceMaxRon, service.priceUnit.replace('RON/', '') === 'ha' ? 'RON' : 'RON')}, operatori verificați, contact direct.`,
     alternates: {
       canonical: `/judete/${params.slug}/servicii/${params.service}`,
     },
@@ -51,7 +51,7 @@ export default function CountyServicePage({ params }: Props) {
       answer:
         serviceOps.length > 0
           ? `Există ${serviceOps.length} operator${serviceOps.length !== 1 ? 'i' : ''} care oferă servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}: ${serviceOps.map((o) => o.name).join(', ')}.`
-          : `Momentan nu avem operatori specializați în ${service.name.toLowerCase()} listați direct în ${county.name}. Mulți operatori naționali acoperă întreaga țară — contactează-i pentru disponibilitate.`,
+          : `Momentan nu avem operatori specializați în ${service.name.toLowerCase()} listați direct în ${county.name}. Mulți operatori naționali acoperă întreaga țară, contactează-i pentru disponibilitate.`,
     },
   ];
 
@@ -82,7 +82,7 @@ export default function CountyServicePage({ params }: Props) {
         <div className="flex items-start gap-4">
           <span className="text-4xl">{service.icon}</span>
           <div className="flex-1">
-            <h2 className="font-semibold text-gray-900 mb-2">{service.name} cu drona — descriere</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">Cum funcționează {service.name.toLowerCase()} cu drona</h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">{service.longDescription}</p>
             {(service.priceMinRon || service.priceMaxRon) && (
               <div className="text-sm">
@@ -137,7 +137,7 @@ export default function CountyServicePage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente — {service.name.toLowerCase()} cu drona în {county.name}
+          Întrebări frecvente despre {service.name.toLowerCase()} cu drona în {county.name}
         </h2>
         <FAQAccordion faqs={faqs} />
       </div>
