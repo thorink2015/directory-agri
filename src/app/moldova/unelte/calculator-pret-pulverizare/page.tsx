@@ -60,7 +60,7 @@ export default function MdlPriceCalculatorPage() {
           <strong>50% din costul achiziției</strong>, plafon 200.000 MDL (~€10.000).
         </p>
         <Link
-          href="/ghid/subventii-moldova-aipa"
+          href="/moldova/ghid/subventii-moldova-aipa"
           className="inline-flex items-center gap-2 text-sm text-blue-700 font-medium hover:underline"
         >
           Citește ghidul complet AIPA →

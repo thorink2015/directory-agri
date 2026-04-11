@@ -153,7 +153,7 @@ export default function MdlTreatmentCalendarPage() {
         <strong className="text-blue-800">Important ANSA:</strong> Toate produsele fitosanitare aplicate
         cu drona trebuie să fie autorizate de Agenția Națională pentru Siguranța Alimentelor (ANSA) pentru
         aplicare aeriană în Moldova. Operatorul de dronă trebuie să fie autorizat ANSA separat.{' '}
-        <Link href="/ghid/legislatie-ansa-moldova" className="text-blue-700 font-medium hover:underline">
+        <Link href="/moldova/ghid/legislatie-ansa-moldova" className="text-blue-700 font-medium hover:underline">
           Vezi cerințele complete →
         </Link>
       </div>
