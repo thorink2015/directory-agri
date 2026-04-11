@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | DroneAgricol.ro Blog`,
+    title: `${post.title} | TerraDron.ro Blog`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
@@ -56,8 +56,8 @@ export default function BlogPostPage({ params }: Props) {
             author: { '@type': 'Organization', name: post.author },
             publisher: {
               '@type': 'Organization',
-              name: 'DroneAgricol.ro',
-              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/opengraph-image' },
+              name: 'TerraDron.ro',
+              logo: { '@type': 'ImageObject', url: 'https://terradron.ro/opengraph-image' },
             },
             keywords: post.tags.join(', '),
           }),

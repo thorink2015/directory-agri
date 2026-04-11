@@ -41,7 +41,7 @@ export default function Footer() {
               Director Drone Agricole, <strong>Republica Moldova</strong> · Prețuri MDL · Subvenții AIPA 50%
             </span>
             <Link href="/" className="text-xs text-blue-300 hover:text-white underline">
-              → DroneAgricol.ro (România)
+              → TerraDron.ro (România)
             </Link>
           </div>
         )}
@@ -56,7 +56,7 @@ export default function Footer() {
                 <Plane className="w-5 h-5 text-white rotate-45" />
               </div>
               <span className="font-bold text-lg text-white">
-                DroneAgricol
+                TerraDron
                 <span className={isMd ? 'text-blue-300' : 'text-yellow-400'}>
                   {isMd ? '.md' : '.ro'}
                 </span>
@@ -366,7 +366,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-sm text-green-300 hover:text-green-200 transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              DroneAgricol.ro (România)
+              TerraDron.ro (România)
             </Link>
           ) : (
             <Link
@@ -384,7 +384,7 @@ export default function Footer() {
             isMd ? 'text-blue-200' : 'text-white'
           }`}
         >
-          <p>© 2026 DroneAgricol.ro. Toate drepturile rezervate.</p>
+          <p>© 2026 TerraDron.ro. Toate drepturile rezervate.</p>
           <p>
             {isMd
               ? 'Listare gratuită pentru operatori din Moldova'

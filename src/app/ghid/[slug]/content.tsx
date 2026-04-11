@@ -69,7 +69,7 @@ export const guideContent: Record<string, ReactNode> = {
         Cele mai eficiente canale de achiziție clienți în 2026:
       </p>
       <ul>
-        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">DroneAgricol.ro</a>: gratuit)</li>
+        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">TerraDron.ro</a>: gratuit)</li>
         <li>Grupuri Facebook de fermieri (ex: &quot;Agricultori România&quot;)</li>
         <li>Colaborare cu magazine agro (Agrosem, Agro Rural)</li>
         <li>Parteneriate cu consultanți fitosanitari</li>

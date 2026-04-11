@@ -13,12 +13,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  metadataBase: new URL('https://droneagricol.ro'),
+  metadataBase: new URL('https://terradron.ro'),
   openGraph: {
     type: 'website',
     locale: 'ro_RO',
-    url: 'https://droneagricol.ro',
-    siteName: 'DroneAgricol.ro',
+    url: 'https://terradron.ro',
+    siteName: 'TerraDron.ro',
     title: 'Directorul Operatorilor de Drone Agricole din România și Moldova',
     description:
       'Găsește rapid operatori verificați de drone agricole în județul tău. Servicii de pulverizare, fertilizare, cartografiere și monitorizare.',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Directorul Operatorilor de Drone Agricole | DroneAgricol.ro',
+    title: 'Directorul Operatorilor de Drone Agricole | TerraDron.ro',
     description:
       'Găsește operatori verificați de drone agricole în România și Moldova.',
     images: ['/opengraph-image'],

@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     'Prețurile pulverizării cu drona în România: 70–120 RON/ha pentru culturi de câmp și 120–200 RON/ha pentru vii și livezi. Ghid complet cu tabele și factori de influență.',
   alternates: { canonical: '/preturi-pulverizare-drona' },
   openGraph: {
-    title: 'Prețuri Pulverizare Dronă 2026 | 70–200 RON/ha | DroneAgricol.ro',
+    title: 'Prețuri Pulverizare Dronă 2026 | 70–200 RON/ha | TerraDron.ro',
     description: 'Cât costă pulverizarea cu drona? Tabele complete cu prețuri RON/ha pe culturi, regiuni și factori de influență.',
-    url: 'https://droneagricol.ro/preturi-pulverizare-drona',
+    url: 'https://terradron.ro/preturi-pulverizare-drona',
   },
 };
 

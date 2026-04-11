@@ -11,7 +11,7 @@ import { guides } from '@/data/guides';
 import { blogPosts } from '@/data/blog-posts';
 import { SERVICE_LABELS } from '@/data/types';
 
-const BASE_URL = 'https://droneagricol.ro';
+const BASE_URL = 'https://terradron.ro';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

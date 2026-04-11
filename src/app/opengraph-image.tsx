@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'DroneAgricol.ro: Director Operatori Drone Agricole din România și Moldova';
+export const alt = 'TerraDron.ro: Director Operatori Drone Agricole din România și Moldova';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -33,7 +33,7 @@ export default async function Image() {
           fontSize: 18,
           letterSpacing: 1,
         }}>
-          droneagricol.ro
+          terradron.ro
         </div>
 
         {/* Main logo */}
@@ -52,7 +52,7 @@ export default async function Image() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ fontSize: 68, fontWeight: 800, color: '#ffffff', letterSpacing: -2, lineHeight: 1 }}>
-              DroneAgricol
+              TerraDron
               <span style={{ color: '#FFD166' }}>.ro</span>
             </div>
           </div>
