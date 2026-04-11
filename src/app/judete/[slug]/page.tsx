@@ -140,15 +140,24 @@ export default function CountyPage({ params }: Props) {
             Culturi tratate cu drona în {county.name}
           </h2>
           <div className="flex flex-wrap gap-2">
-            {county.mainCrops.map((crop) => (
-              <Link
-                key={crop}
-                href={`/culturi/${crop}`}
-                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
-              >
-                {CROP_NAME_MAP[crop] || crop}
-              </Link>
-            ))}
+            {county.mainCrops.map((crop) =>
+              CROP_NAME_MAP[crop] ? (
+                <Link
+                  key={crop}
+                  href={`/culturi/${crop}`}
+                  className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
+                >
+                  {CROP_NAME_MAP[crop]}
+                </Link>
+              ) : (
+                <span
+                  key={crop}
+                  className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                >
+                  {crop}
+                </span>
+              )
+            )}
           </div>
         </div>
 

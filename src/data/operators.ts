@@ -400,6 +400,26 @@ export const operators: Operator[] = [
     lat: 47.0722,
     lng: 21.9217,
   },
+  {
+    slug: 'hortidrones',
+    name: 'Hortidrones',
+    shortName: 'Hortidrones',
+    tagline: 'Specialist horticultură • Vii & livezi',
+    description:
+      'Operator specializat în tratamente cu drona pentru culturi horticole: viță de vie, livezi, legume și culturi intensive. Echipamente DJI Agras calibrate pentru volume mici și acoperire uniformă în plantații dense.',
+    country: 'RO',
+    counties: ['prahova', 'ilfov', 'dambovita', 'arges', 'buzau'],
+    city: 'Ploiești',
+    services: ['spraying', 'monitoring'],
+    drones: ['dji-agras-t25p'],
+    crops: ['vita-de-vie', 'livada', 'floarea-soarelui'],
+    priceMinRon: 120,
+    priceMaxRon: 200,
+    fleetSize: 2,
+    verified: false,
+    languagesSpoken: ['ro'],
+    paymentMethods: ['transfer'],
+  },
   // Moldova operators
   {
     slug: 'dron-assistance-moldova',
