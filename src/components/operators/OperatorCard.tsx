@@ -1,7 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { MapPin, Phone, Globe, CheckCircle, Plane, Zap, Shield } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
 import { formatPrice, addUtmParams } from '@/lib/utils';
+import {
+  trackOperatorWebsiteClick,
+  trackOperatorPhoneClick,
+} from '@/components/analytics/events';
 
 interface OperatorCardProps {
   operator: Operator;
@@ -141,6 +147,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             rel="noopener noreferrer sponsored"
             className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-white border border-green-700 text-green-700 text-xs font-semibold rounded-lg hover:bg-green-50 transition-colors"
             aria-label={`Website ${operator.name}`}
+            onClick={() => trackOperatorWebsiteClick(operator.slug, 'operator_card')}
           >
             <Globe className="w-3.5 h-3.5" /> Website
           </a>
@@ -149,6 +156,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             href={`tel:${operator.phone}`}
             className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-white border border-green-700 text-green-700 text-xs font-semibold rounded-lg hover:bg-green-50 transition-colors"
             aria-label={`Telefon ${operator.name}`}
+            onClick={() => trackOperatorPhoneClick(operator.slug)}
           >
             <Phone className="w-3.5 h-3.5" /> Telefon
           </a>
