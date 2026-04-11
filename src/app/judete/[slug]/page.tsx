@@ -39,7 +39,7 @@ export default function CountyPage({ params }: Props) {
       question: `Câți operatori de drone agricole sunt în ${county.name}?`,
       answer: ops.length > 0
         ? `În prezent există ${ops.length} operatori activi de drone agricole listați în județul ${county.name}: ${ops.map(o => o.name).join(', ')}. Contactează-i direct pentru oferte și disponibilitate.`
-        : `Momentan nu avem operatori listați direct în județul ${county.name}. Mulți operatori naționali acoperă însă întreaga țară — vezi operatorii din județele vecine sau contactează-ne pentru a adăuga un operator local.`,
+        : `Momentan nu avem operatori listați direct în județul ${county.name}. Mulți operatori naționali acoperă întreaga țară, vezi operatorii din județele vecine sau contactează-ne pentru a adăuga un operator local.`,
     },
     {
       question: `Cât costă pulverizarea cu drona în ${county.name}?`,
@@ -155,7 +155,7 @@ export default function CountyPage({ params }: Props) {
         {/* FAQ */}
         <div className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            Întrebări frecvente — drone agricole {county.name}
+            Întrebări frecvente despre drone agricole în {county.name}
           </h2>
           <FAQAccordion faqs={faqs} />
         </div>

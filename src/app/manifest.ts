@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'DroneAgricol.ro — Director Drone Agricole',
+    name: 'DroneAgricol.ro: Director Drone Agricole',
     short_name: 'DroneAgricol',
     description: 'Directorul operatorilor de drone agricole din România și Moldova',
     start_url: '/',

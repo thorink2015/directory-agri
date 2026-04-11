@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props) {
   const crop = getCropBySlug(params.slug);
   if (!crop) return {};
   return {
-    title: `Tratamente cu Drona pentru ${crop.name} — Ghid Complet 2026`,
+    title: `Tratamente cu Drona pentru ${crop.name}: Ghid Complet 2026`,
     description: `Ghid complet pentru tratamentele cu drona agricolă pe ${crop.name.toLowerCase()}. Prețuri ${crop.priceMinRon}–${crop.priceMaxRon} RON/ha, calendar de tratamente, operatori disponibili.`,
     alternates: { canonical: `/culturi/${params.slug}` },
   };
@@ -62,7 +62,7 @@ export default function CropPage({ params }: Props) {
         <span className="text-5xl">{crop.icon}</span>
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Tratamente cu drona pentru {crop.name} — Ghid 2026
+            Tratamente cu drona pentru {crop.name}: Ghid 2026
           </h1>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="flex items-center gap-1.5 bg-green-100 text-green-800 px-3 py-1 rounded-full">
@@ -127,7 +127,7 @@ export default function CropPage({ params }: Props) {
             </thead>
             <tbody className="divide-y divide-green-100">
               <tr>
-                <td className="py-2 font-medium text-gray-900">{crop.name} — pulverizare</td>
+                <td className="py-2 font-medium text-gray-900">{crop.name}: pulverizare</td>
                 <td className="py-2 text-green-700">{crop.priceMinRon} RON/ha</td>
                 <td className="py-2 text-green-700 font-semibold">{Math.round((crop.priceMinRon + crop.priceMaxRon) / 2)} RON/ha</td>
                 <td className="py-2 text-green-700">{crop.priceMaxRon} RON/ha</td>

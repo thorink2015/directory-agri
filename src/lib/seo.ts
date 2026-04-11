@@ -16,7 +16,7 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
     : `Acoperire în ${operator.counties.length} județe din România.`;
   return {
     title: `${operator.name} | Servicii Drone Agricole ${operator.city} | Prețuri și Contact`,
-    description: `${operator.name} — operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. ${coverage} Contact direct.`,
+    description: `${operator.name}, operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. ${coverage} Contact direct.`,
     alternates: { canonical: `/operatori/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | DroneAgricol.ro`,

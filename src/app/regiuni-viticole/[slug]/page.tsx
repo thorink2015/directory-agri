@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `Drone Agricole ${region.name} | Pulverizare Viță de Vie 2026`,
-    description: `Operatori de drone agricole în podgoria ${region.name}. Tratamente fungicide viță de vie — preț ${formatPrice(120, 200)}. Contacte directe.`,
+    description: `Operatori de drone agricole în podgoria ${region.name}. Tratamente fungicide viță de vie, preț ${formatPrice(120, 200)}. Contacte directe.`,
     alternates: {
       canonical: `/regiuni-viticole/${params.slug}`,
     },
@@ -71,7 +71,7 @@ export default function WineRegionPage({ params }: Props) {
       <div className="mb-8">
         <div className="flex items-center gap-2 text-green-700 text-sm font-medium mb-2">
           <MapPin className="w-4 h-4" />
-          <span>🍇 Podgorie — {region.vineyardHa.toLocaleString('ro')} ha viță de vie</span>
+          <span>🍇 Podgorie cu {region.vineyardHa.toLocaleString('ro')} ha viță de vie</span>
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
           Drone agricole în podgoria {region.name}
@@ -149,7 +149,7 @@ export default function WineRegionPage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente — drone viticultură {region.name}
+          Întrebări frecvente despre drone în viticultura {region.name}
         </h2>
         <FAQAccordion faqs={faqs} />
       </div>

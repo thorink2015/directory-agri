@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!drone) return {};
 
   return {
-    title: `${drone.name} | Dronă Agricolă ${drone.manufacturer} — Specificații și Operatori`,
+    title: `${drone.name} | Dronă Agricolă ${drone.manufacturer}: Specificații și Operatori`,
     description: `${drone.name}: capacitate rezervor ${drone.tankCapacityL}L, acoperire ${drone.coverageHaPerHour} ha/h. Găsește operatori care folosesc ${drone.name} în România.`,
     alternates: {
       canonical: `/drone/${params.slug}`,
@@ -96,7 +96,7 @@ export default function DronePage({ params }: Props) {
             { label: 'Acoperire câmp', value: `${drone.coverageHaPerHour} ha/h (condiții optime)` },
             { label: 'Ha pe zi (8h)', value: `${drone.coverageHaPerHour * 8} ha/zi (estimat)` },
             { label: 'Preț achiziție', value: drone.priceEurMin && drone.priceEurMax ? `${drone.priceEurMin.toLocaleString()}–${drone.priceEurMax.toLocaleString()} EUR` : 'Contact dealer' },
-            { label: 'Eligibil fonduri AFIR', value: drone.afirEligible ? 'Da — verificați subprogramul aplicabil' : 'Nu (momentan)' },
+            { label: 'Eligibil fonduri AFIR', value: drone.afirEligible ? 'Da, verificați subprogramul aplicabil' : 'Nu (momentan)' },
           ].map(({ label, value }) => (
             <div key={label} className="flex justify-between py-2.5 text-sm">
               <span className="text-gray-500">{label}</span>

@@ -24,13 +24,13 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>2. Alegerea formei juridice</h2>
       <ul>
-        <li><strong>SRL</strong> — recomandat pentru activitate comercială (răspundere limitată)</li>
-        <li><strong>PFA</strong> — viabil pentru operatori individuali cu cifră de afaceri sub 100.000 EUR</li>
-        <li><strong>Cooperativă agricolă</strong> — avantaje fiscale și eligibilitate AFIR extinsă</li>
+        <li><strong>SRL</strong>: recomandat pentru activitate comercială (răspundere limitată)</li>
+        <li><strong>PFA</strong>: viabil pentru operatori individuali cu cifră de afaceri sub 100.000 EUR</li>
+        <li><strong>Cooperativă agricolă</strong>: avantaje fiscale și eligibilitate AFIR extinsă</li>
       </ul>
       <p>
         Înregistrarea unei SRL se face online la{' '}
-        <ExtLink href="https://portal.onrc.ro">Oficiul Național al Registrului Comerțului (ONRC)</ExtLink> —
+        <ExtLink href="https://portal.onrc.ro">Oficiul Național al Registrului Comerțului (ONRC)</ExtLink>,
         durează 3–5 zile lucrătoare.
       </p>
 
@@ -69,7 +69,7 @@ export const guideContent: Record<string, ReactNode> = {
         Cele mai eficiente canale de achiziție clienți în 2026:
       </p>
       <ul>
-        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">DroneAgricol.ro</a> — gratuit)</li>
+        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">DroneAgricol.ro</a>: gratuit)</li>
         <li>Grupuri Facebook de fermieri (ex: &quot;Agricultori România&quot;)</li>
         <li>Colaborare cu magazine agro (Agrosem, Agro Rural)</li>
         <li>Parteneriate cu consultanți fitosanitari</li>
@@ -84,10 +84,10 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Resurse oficiale</h2>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR — Autoritatea Aeronautică Civilă Română</ExtLink></li>
-        <li><ExtLink href="https://portal.afir.info">AFIR — Agenția pentru Finanțarea Investițiilor Rurale</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro">MADR — Ministerul Agriculturii</ExtLink></li>
-        <li><ExtLink href="https://portal.onrc.ro">ONRC — Registrul Comerțului</ExtLink></li>
+        <li><ExtLink href="https://www.caa.ro">AACR: Autoritatea Aeronautică Civilă Română</ExtLink></li>
+        <li><ExtLink href="https://portal.afir.info">AFIR: Agenția pentru Finanțarea Investițiilor Rurale</ExtLink></li>
+        <li><ExtLink href="https://www.madr.ro">MADR: Ministerul Agriculturii</ExtLink></li>
+        <li><ExtLink href="https://portal.onrc.ro">ONRC: Registrul Comerțului</ExtLink></li>
       </ul>
     </div>
   ),
@@ -102,15 +102,15 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Clasificarea operațiilor</h2>
       <ul>
-        <li><strong>Clasa Open</strong> — drone &lt; 25 kg, zboruri până la 120 m, fără autorizație specială</li>
-        <li><strong>Clasa Specific</strong> — obligatorie pentru drone &gt; 25 kg sau operații comerciale de pulverizare — necesită autorizație AACR</li>
-        <li><strong>Clasa Certified</strong> — aplicabilă dronelor de transport pasageri (nu vizează agricultura)</li>
+        <li><strong>Clasa Open</strong>: drone &lt; 25 kg, zboruri până la 120 m, fără autorizație specială</li>
+        <li><strong>Clasa Specific</strong>: obligatorie pentru drone &gt; 25 kg sau operații comerciale de pulverizare: necesită autorizație AACR</li>
+        <li><strong>Clasa Certified</strong>: aplicabilă dronelor de transport pasageri (nu vizează agricultura)</li>
       </ul>
 
       <h2>Cerințe pentru operatori comerciali</h2>
       <ol>
         <li>Înregistrare ca operator la AACR (gratuit online)</li>
-        <li>Obținerea numărului de operator — trebuie afișat pe dronă</li>
+        <li>Obținerea numărului de operator: trebuie afișat pe dronă</li>
         <li>Pilotul trebuie să dețină certificat de competență A1/A3 sau A2</li>
         <li>Pentru pulverizare comercială: autorizație STS-01 sau autorizație Specific individuală</li>
         <li>Asigurare de răspundere civilă obligatorie (min. 1 mil. EUR)</li>
@@ -136,14 +136,14 @@ export const guideContent: Record<string, ReactNode> = {
       <h2>Sancțiuni</h2>
       <p>
         Operarea fără autorizație se sancționează cu amenzi de la 1.500 RON la 30.000 RON și posibilă
-        confiscare a echipamentului (conform Codului Aerian — Legea 21/2020).
+        confiscare a echipamentului (conform Codului Aerian: Legea 21/2020).
       </p>
 
       <h2>Resurse oficiale</h2>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR — Legislație drone</ExtLink></li>
-        <li><ExtLink href="https://www.easa.europa.eu/en/domains/civil-drones">EASA — Reglementări drone UE</ExtLink></li>
-        <li><ExtLink href="https://legislatie.just.ro">legislatie.just.ro — Codul Aerian</ExtLink></li>
+        <li><ExtLink href="https://www.caa.ro">AACR: Legislație drone</ExtLink></li>
+        <li><ExtLink href="https://www.easa.europa.eu/en/domains/civil-drones">EASA: Reglementări drone UE</ExtLink></li>
+        <li><ExtLink href="https://legislatie.just.ro">legislatie.just.ro: Codul Aerian</ExtLink></li>
       </ul>
     </div>
   ),
@@ -159,9 +159,9 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Submăsuri aplicabile</h2>
       <ul>
-        <li><strong>DR-29 (Investiții în exploatații agricole)</strong> — intensitate ajutor 50–65%, buget max. 300.000 EUR</li>
-        <li><strong>DR-30 (Tineri fermieri)</strong> — pachet forfetar 60.000–70.000 EUR + bonus 10%</li>
-        <li><strong>Submăsura 4.1 (PNDR)</strong> — pentru cereri depuse anterior 2023</li>
+        <li><strong>DR-29 (Investiții în exploatații agricole)</strong>: intensitate ajutor 50–65%, buget max. 300.000 EUR</li>
+        <li><strong>DR-30 (Tineri fermieri)</strong>: pachet forfetar 60.000–70.000 EUR + bonus 10%</li>
+        <li><strong>Submăsura 4.1 (PNDR)</strong>: pentru cereri depuse anterior 2023</li>
       </ul>
 
       <h2>Condiții de eligibilitate</h2>
@@ -188,9 +188,9 @@ export const guideContent: Record<string, ReactNode> = {
         AFIR-eligible în 2026:
       </p>
       <ul>
-        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a> — 50.000 EUR</li>
-        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a> — 85.000 EUR</li>
-        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a> — 115.000 EUR</li>
+        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: 50.000 EUR</li>
+        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: 85.000 EUR</li>
+        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: 115.000 EUR</li>
       </ul>
 
       <h2>Sfaturi pentru aprobarea proiectului</h2>
@@ -204,8 +204,8 @@ export const guideContent: Record<string, ReactNode> = {
       <h2>Resurse oficiale</h2>
       <ul>
         <li><ExtLink href="https://portal.afir.info">Portalul AFIR</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro/pndr-2014-2020.html">MADR — Program Național de Dezvoltare Rurală</ExtLink></li>
-        <li><ExtLink href="https://www.apia.org.ro">APIA — Agenția de Plăți și Intervenție</ExtLink></li>
+        <li><ExtLink href="https://www.madr.ro/pndr-2014-2020.html">MADR: Program Național de Dezvoltare Rurală</ExtLink></li>
+        <li><ExtLink href="https://www.apia.org.ro">APIA: Agenția de Plăți și Intervenție</ExtLink></li>
       </ul>
     </div>
   ),
@@ -219,16 +219,16 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Tipuri de certificate</h2>
       <ul>
-        <li><strong>A1/A3 (Open)</strong> — test online gratuit pe <ExtLink href="https://dronetest.caa.ro">dronetest.caa.ro</ExtLink></li>
-        <li><strong>A2 (Open)</strong> — curs teoretic + examen + autoverificare (250 RON taxa examen)</li>
-        <li><strong>STS-01 / Specific</strong> — curs complet + examen practic la un centru autorizat</li>
+        <li><strong>A1/A3 (Open)</strong>: test online gratuit pe <ExtLink href="https://dronetest.caa.ro">dronetest.caa.ro</ExtLink></li>
+        <li><strong>A2 (Open)</strong>: curs teoretic + examen + autoverificare (250 RON taxa examen)</li>
+        <li><strong>STS-01 / Specific</strong>: curs complet + examen practic la un centru autorizat</li>
       </ul>
 
       <h2>Pași pentru certificat STS-01 (recomandat pentru agricultură)</h2>
       <ol>
         <li>Înscriere la un <a href="/operatori?service=training" className="text-green-700 hover:underline font-medium">centru autorizat AACR</a></li>
         <li>Parcurgere curs teoretic (25–40 ore): legislație, meteorologie, operațiuni</li>
-        <li>Curs practic pe drona agricolă (8–16 ore) — pe teren</li>
+        <li>Curs practic pe drona agricolă (8–16 ore): pe teren</li>
         <li>Examen teoretic (60 întrebări, min. 75% corect)</li>
         <li>Examen practic (demonstrație de zbor și proceduri de siguranță)</li>
         <li>Obținere certificat AACR (valid 5 ani)</li>
@@ -251,8 +251,8 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Resurse oficiale</h2>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR — Certificare piloți drone</ExtLink></li>
-        <li><ExtLink href="https://dronetest.caa.ro">DroneTest — Examen online A1/A3</ExtLink></li>
+        <li><ExtLink href="https://www.caa.ro">AACR: Certificare piloți drone</ExtLink></li>
+        <li><ExtLink href="https://dronetest.caa.ro">DroneTest: Examen online A1/A3</ExtLink></li>
       </ul>
     </div>
   ),
@@ -265,28 +265,28 @@ export const guideContent: Record<string, ReactNode> = {
         XAG (6%) și ADT Falcon (3%).
       </p>
 
-      <h2>DJI Agras — Opțiunea populară</h2>
+      <h2>DJI Agras: Opțiunea populară</h2>
       <ul>
-        <li><strong>T25P</strong> — 20L, 17 ha/oră, 45–55.000 EUR. Pentru ferme mici și medii.</li>
-        <li><strong>T50</strong> — 40L, 40 ha/oră, 75–95.000 EUR. Cea mai vândută dronă în România.</li>
-        <li><strong>T100</strong> — 75L, 70 ha/oră, 110–130.000 EUR. Pentru ferme mari (&gt; 500 ha).</li>
+        <li><strong>T25P</strong>: 20L, 17 ha/oră, 45–55.000 EUR. Pentru ferme mici și medii.</li>
+        <li><strong>T50</strong>: 40L, 40 ha/oră, 75–95.000 EUR. Cea mai vândută dronă în România.</li>
+        <li><strong>T100</strong>: 75L, 70 ha/oră, 110–130.000 EUR. Pentru ferme mari (&gt; 500 ha).</li>
       </ul>
       <p>
         Avantaje DJI: service excelent în România (Nik-ro, BOSAL, RIAGRO), rețea de piese de schimb, software
         matur. Dezavantaje: preț mai mare decât XAG.
       </p>
 
-      <h2>XAG — Alternativa tehnică</h2>
+      <h2>XAG: Alternativa tehnică</h2>
       <ul>
-        <li><strong>P100 Pro</strong> — 50L, 32 ha/oră, 70–85.000 EUR. Tehnologie avansată.</li>
-        <li><strong>V40</strong> — 16L, 16 ha/oră, 40–50.000 EUR. Pentru începători.</li>
+        <li><strong>P100 Pro</strong>: 50L, 32 ha/oră, 70–85.000 EUR. Tehnologie avansată.</li>
+        <li><strong>V40</strong>: 16L, 16 ha/oră, 40–50.000 EUR. Pentru începători.</li>
       </ul>
       <p>
         Avantaje XAG: AI integrat, planificare automată, preț mai bun. Dezavantaje: service mai slab în
         România, piese de schimb greu de găsit.
       </p>
 
-      <h2>ADT Falcon — Opțiunea robustă</h2>
+      <h2>ADT Falcon: Opțiunea robustă</h2>
       <p>
         Producător chinez mai puțin cunoscut, dar cu drone robuste și prețuri competitive (40–70.000 EUR).
         Reprezentat în România de LandTech și câțiva dealeri regionali.
@@ -327,7 +327,7 @@ export const guideContent: Record<string, ReactNode> = {
         Dezvoltare a Agriculturii și Mediului Rural (FNDAMR).
       </p>
 
-      <h2>Programul principal — Anexa 3</h2>
+      <h2>Programul principal: Anexa 3</h2>
       <p>
         Fermierii moldoveni pot beneficia de o subvenție de <strong>50% din costul dronei agricole</strong>,
         plafonată la 200.000 MDL (~10.000 EUR) per beneficiar. Programul este finanțat parțial de UE prin
@@ -353,8 +353,8 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Dealeri autorizați în Moldova</h2>
       <ul>
-        <li><a href="/operatori/bosal-solutions" className="text-green-700 hover:underline font-medium">BOSAL Solutions</a> — dealer oficial DJI</li>
-        <li><a href="/operatori/dron-assistance-moldova" className="text-green-700 hover:underline font-medium">DRON Assistance</a> — vânzări + servicii integrate</li>
+        <li><a href="/operatori/bosal-solutions" className="text-green-700 hover:underline font-medium">BOSAL Solutions</a>: dealer oficial DJI</li>
+        <li><a href="/operatori/dron-assistance-moldova" className="text-green-700 hover:underline font-medium">DRON Assistance</a>: vânzări + servicii integrate</li>
       </ul>
 
       <h2>Sfaturi</h2>
@@ -366,8 +366,8 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Resurse oficiale</h2>
       <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA — Subvenții agricole Moldova</ExtLink></li>
-        <li><ExtLink href="https://www.eu4moldova.md">EU4Moldova — Programul UE</ExtLink></li>
+        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții agricole Moldova</ExtLink></li>
+        <li><ExtLink href="https://www.eu4moldova.md">EU4Moldova: Programul UE</ExtLink></li>
         <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii și Industriei Alimentare</ExtLink></li>
       </ul>
     </div>
@@ -383,9 +383,9 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Cadrul legal de bază</h2>
       <ul>
-        <li><strong>Hotărârea Guvernului nr. 647/2020</strong> — regulamentul general pentru UAS în Moldova</li>
-        <li><strong>ANSA</strong> — autorizează aplicarea produselor fitosanitare cu drona</li>
-        <li><strong>AAC Moldova</strong> — înregistrarea și licențierea operatorilor de zbor comercial</li>
+        <li><strong>Hotărârea Guvernului nr. 647/2020</strong>: regulamentul general pentru UAS în Moldova</li>
+        <li><strong>ANSA</strong>: autorizează aplicarea produselor fitosanitare cu drona</li>
+        <li><strong>AAC Moldova</strong>: înregistrarea și licențierea operatorilor de zbor comercial</li>
       </ul>
 
       <h2>Autorizarea ANSA pentru tratamente fitosanitare</h2>
@@ -413,7 +413,7 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Diferențe față de România (AACR/EASA)</h2>
       <ul>
-        <li>Moldova nu aplică regulamentul european EASA — are cadru propriu</li>
+        <li>Moldova nu aplică regulamentul european EASA: are cadru propriu</li>
         <li>Nu există clasele Open/Specific/Certified ca în UE</li>
         <li>Autorizarea ANSA pentru pesticide este obligatorie (în RO este MADR)</li>
         <li>Produsele fitosanitare trebuie să fie pe lista ANSA, nu EFSA</li>
@@ -421,8 +421,8 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Resurse oficiale</h2>
       <ul>
-        <li><ExtLink href="https://ansa.gov.md">ANSA — Agenția Națională pentru Siguranța Alimentelor</ExtLink></li>
-        <li><ExtLink href="https://www.caa.md">AAC Moldova — Autoritatea Aeronautică Civilă</ExtLink></li>
+        <li><ExtLink href="https://ansa.gov.md">ANSA: Agenția Națională pentru Siguranța Alimentelor</ExtLink></li>
+        <li><ExtLink href="https://www.caa.md">AAC Moldova: Autoritatea Aeronautică Civilă</ExtLink></li>
         <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
       </ul>
     </div>
@@ -433,22 +433,22 @@ export const guideContent: Record<string, ReactNode> = {
       <p>
         Piața de drone agricole din Republica Moldova este la început, dar crește rapid. Fermele mari de viticultură
         (100.000+ ha) și câmpurile de cereale din nordul și centrul țării reprezintă o oportunitate reală. În 2026,
-        mai puțin de 5% din suprafața agricolă este tratată cu drone — restul este piața ta.
+        mai puțin de 5% din suprafața agricolă este tratată cu drone: restul este piața ta.
       </p>
 
       <h2>1. Înțelege piața moldovenească</h2>
       <ul>
         <li>1,8 milioane ha teren agricol (câmpuri de cereale, viță de vie, livezi)</li>
-        <li>100.000+ ha de viticultură — principala piață pentru drone</li>
+        <li>100.000+ ha de viticultură: principala piață pentru drone</li>
         <li>Prețuri: 170–240 MDL/ha (€8.50–12/ha)</li>
         <li>Principali clienți: exploatații mari 200–2000 ha, vinării, asociații agricole</li>
       </ul>
 
       <h2>2. Forma juridică</h2>
       <ul>
-        <li><strong>SRL</strong> — forma recomandată, capital minim 5.400 MDL</li>
-        <li><strong>Î.I.</strong> (Întreprindere Individuală) — pentru operatori singuri, mai simplu fiscal</li>
-        <li>Înregistrare la <ExtLink href="https://egov.md">ASP (Agenția Servicii Publice)</ExtLink> — online sau la ghișeu</li>
+        <li><strong>SRL</strong>: forma recomandată, capital minim 5.400 MDL</li>
+        <li><strong>Î.I.</strong> (Întreprindere Individuală): pentru operatori singuri, mai simplu fiscal</li>
+        <li>Înregistrare la <ExtLink href="https://egov.md">ASP (Agenția Servicii Publice)</ExtLink>, online sau la ghișeu</li>
       </ul>
 
       <h2>3. Autorizările necesare</h2>
@@ -458,7 +458,7 @@ export const guideContent: Record<string, ReactNode> = {
         <li>Curs pilot (cursuri disponibile în Chișinău și Cluj pentru cetățenii moldoveni)</li>
       </ul>
 
-      <h2>4. Finanțarea — subvenție AIPA 50%</h2>
+      <h2>4. Finanțarea: subvenție AIPA 50%</h2>
       <p>
         Cel mai important avantaj față de alte piețe: AIPA subvenționează 50% din prețul dronei, cu plafon
         200.000 MDL (~€10.000). O dronă DJI T25P costă ~€45.000 → plătești €22.500, AIPA returnează €10.000.
@@ -485,9 +485,9 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Resurse oficiale Moldova</h2>
       <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA — Subvenții pentru echipamente</ExtLink></li>
-        <li><ExtLink href="https://ansa.gov.md">ANSA — Autorizare fitosanitară</ExtLink></li>
-        <li><ExtLink href="https://asp.gov.md">ASP — Înregistrare firmă</ExtLink></li>
+        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții pentru echipamente</ExtLink></li>
+        <li><ExtLink href="https://ansa.gov.md">ANSA: Autorizare fitosanitară</ExtLink></li>
+        <li><ExtLink href="https://asp.gov.md">ASP: Înregistrare firmă</ExtLink></li>
         <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
       </ul>
     </div>

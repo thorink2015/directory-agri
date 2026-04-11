@@ -3,7 +3,7 @@ import { Operator } from './types';
 export const operators: Operator[] = [
   {
     slug: 'riagro',
-    name: 'RIAGRO — Drone Agricole',
+    name: 'RIAGRO Drone Agricole',
     shortName: 'RIAGRO',
     tagline: 'Lider de piață • Record 1.000 ha/noapte',
     description:
@@ -119,7 +119,7 @@ export const operators: Operator[] = [
     shortName: 'Appia Drones',
     tagline: 'Unicul producător român • Eligibil AFIR',
     description:
-      'Singurul producător român de drone agricole (brandul ADT — Appia Drone Tech). Appia Drones produce ADT Aquila S (20L), ADT Falcon (30L și 50L), eligibile pentru fonduri AFIR. Oferă și echipamente DJI, închiriere, reparații și școala de pilotaj Easy Drone School.',
+      'Singurul producător român de drone agricole (brandul ADT, Appia Drone Tech). Appia Drones produce ADT Aquila S (20L), ADT Falcon (30L și 50L), eligibile pentru fonduri AFIR. Oferă și echipamente DJI, închiriere, reparații și școala de pilotaj Easy Drone School.',
     country: 'RO',
     counties: ['mures', 'cluj', 'alba', 'sibiu', 'brasov', 'harghita', 'covasna', 'bistrita-nasaud'],
     city: 'Târgu Mureș',
@@ -296,7 +296,7 @@ export const operators: Operator[] = [
     shortName: 'Nik-ro',
     tagline: 'Dealer exclusiv XAG P100 Pro',
     description:
-      'Dealer exclusiv XAG în România. Nik-ro comercializează dronele XAG P100 Pro și oferă servicii de pulverizare cu această tehnologie. Client de referință: Ferma Agriserv din Ialomița — 800+ ha tratate în primul an cu XAG P100 Pro.',
+      'Dealer exclusiv XAG în România. Nik-ro comercializează dronele XAG P100 Pro și oferă servicii de pulverizare cu această tehnologie. Client de referință: Ferma Agriserv din Ialomița, 800+ ha tratate în primul an cu XAG P100 Pro.',
     country: 'RO',
     counties: ['ialomita', 'calarasi', 'braila', 'galati', 'constanta', 'buzau'],
     city: 'București',
@@ -319,7 +319,7 @@ export const operators: Operator[] = [
     slug: 'casmart-agro',
     name: 'CasMart Agro',
     shortName: 'CasMart Agro',
-    tagline: 'Erbicidare cu drona — Oltenia',
+    tagline: 'Erbicidare cu drona în Oltenia',
     description:
       'Operator activ de servicii drone agricole, prezent în rezultatele de căutare pentru „tratamente cu drona" și „erbicidare cu drona". Servicii de pulverizare și erbicidare pentru fermieri din sudul și centrul României.',
     country: 'RO',

@@ -48,13 +48,13 @@ export const blogContent: Record<string, ReactNode> = {
         DJI oficială.
       </p>
       <h2>6. <Op slug="landtech">LandTech</Op></h2>
-      <p>Spraying și închiriere drone agricole — o opțiune flexibilă pentru fermieri mici.</p>
+      <p>Spraying și închiriere drone agricole, o opțiune flexibilă pentru fermieri mici.</p>
       <h2>7. <Op slug="agro-drona">Agro Drona</Op></h2>
       <p>Cunoscut pentru productivitate ridicată: 20 ha/h în condiții optime.</p>
       <h2>8. <Op slug="nik-ro">Nik-ro</Op></h2>
       <p>Principalul distribuitor XAG în România, cu sediu la București.</p>
       <h2>9. <Op slug="agronix">Agronix</Op></h2>
-      <p>Combină pulverizarea cu cursurile de formare — excelent pentru începători.</p>
+      <p>Combină pulverizarea cu cursurile de formare, excelent pentru începători.</p>
       <h2>10. <Op slug="hortidrones">Hortidrones</Op></h2>
       <p>Specializat pe horticultură, livezi și viticultură.</p>
       <p className="mt-6">
@@ -103,7 +103,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <h2>3. DJI Agras T25P</h2>
       <p>
-        Rezervor 20L. Pentru ferme sub 100 ha. Preț 8.000–11.000 EUR — cea mai bună opțiune pentru începători.
+        Rezervor 20L. Pentru ferme sub 100 ha. Preț 8.000–11.000 EUR, cea mai bună opțiune pentru începători.
       </p>
       <h2>4. XAG P100 Pro</h2>
       <p>Rezervor 50L, AI integrat. Alternativă tehnică serioasă la DJI, cu preț similar.</p>
@@ -157,16 +157,16 @@ export const blogContent: Record<string, ReactNode> = {
         viticole și operatorii de drone cei mai activi în fiecare.
       </p>
       <ol className="space-y-3">
-        <li><strong><Cnt slug="vrancea">1. Vrancea</Cnt></strong> — ~24.000 ha vie. Cea mai mare regiune viticolă a României.</li>
-        <li><strong><Cnt slug="prahova">2. Prahova</Cnt></strong> — ~10.000 ha, regiunea Dealu Mare.</li>
-        <li><strong><Cnt slug="buzau">3. Buzău</Cnt></strong> — ~9.000 ha, cunoscută pentru vinuri roșii.</li>
-        <li><strong><Cnt slug="iasi">4. Iași</Cnt></strong> — ~8.000 ha, regiunea Cotnari.</li>
-        <li><strong><Cnt slug="galati">5. Galați</Cnt></strong> — ~7.500 ha.</li>
-        <li><strong><Cnt slug="tulcea">6. Tulcea</Cnt></strong> — ~7.000 ha, Sarica Niculițel.</li>
-        <li><strong><Cnt slug="alba">7. Alba</Cnt></strong> — ~6.500 ha, Târnave.</li>
-        <li><strong><Cnt slug="constanta">8. Constanța</Cnt></strong> — ~6.000 ha, Murfatlar.</li>
-        <li><strong><Cnt slug="bihor">9. Bihor</Cnt></strong> — ~5.000 ha.</li>
-        <li><strong><Cnt slug="vaslui">10. Vaslui</Cnt></strong> — ~4.500 ha.</li>
+        <li><strong><Cnt slug="vrancea">1. Vrancea</Cnt></strong>: ~24.000 ha vie. Cea mai mare regiune viticolă a României.</li>
+        <li><strong><Cnt slug="prahova">2. Prahova</Cnt></strong>: ~10.000 ha, regiunea Dealu Mare.</li>
+        <li><strong><Cnt slug="buzau">3. Buzău</Cnt></strong>: ~9.000 ha, cunoscută pentru vinuri roșii.</li>
+        <li><strong><Cnt slug="iasi">4. Iași</Cnt></strong>: ~8.000 ha, regiunea Cotnari.</li>
+        <li><strong><Cnt slug="galati">5. Galați</Cnt></strong>: ~7.500 ha.</li>
+        <li><strong><Cnt slug="tulcea">6. Tulcea</Cnt></strong>: ~7.000 ha, Sarica Niculițel.</li>
+        <li><strong><Cnt slug="alba">7. Alba</Cnt></strong>: ~6.500 ha, Târnave.</li>
+        <li><strong><Cnt slug="constanta">8. Constanța</Cnt></strong>: ~6.000 ha, Murfatlar.</li>
+        <li><strong><Cnt slug="bihor">9. Bihor</Cnt></strong>: ~5.000 ha.</li>
+        <li><strong><Cnt slug="vaslui">10. Vaslui</Cnt></strong>: ~4.500 ha.</li>
       </ol>
     </div>
   ),
@@ -177,13 +177,13 @@ export const blogContent: Record<string, ReactNode> = {
         Prețurile dronelor agricole au scăzut cu 15–20% față de 2024, iar concurența între DJI și XAG a făcut
         piața mai accesibilă pentru fermierii români. Iată prețurile actualizate pentru 2026.
       </p>
-      <h2>DJI Agras — Lider de piață</h2>
+      <h2>DJI Agras: Lider de piață</h2>
       <ul>
         <li>DJI Agras T25P: 8.000–11.000 EUR (fără accesorii)</li>
         <li>DJI Agras T50: 15.000–19.000 EUR</li>
         <li>DJI Agras T100: 28.000–35.000 EUR</li>
       </ul>
-      <h2>XAG — Alternativă</h2>
+      <h2>XAG: Alternativă</h2>
       <ul>
         <li>XAG P100 Pro: 16.000–20.000 EUR</li>
         <li>XAG V40: 9.000–12.000 EUR</li>
@@ -253,11 +253,11 @@ export const blogContent: Record<string, ReactNode> = {
         vii importante la Murfatlar și Sarica Niculițel. Iată top operatori activi în zonă:
       </p>
       <ol>
-        <li><Op slug="riagro">RIAGRO</Op> — acoperire națională, prezență puternică în Dobrogea</li>
-        <li><Op slug="agro-drona">Agro Drona</Op> — productivitate înaltă, ideal pentru cereale</li>
-        <li><Op slug="agridrone-romania">Agridrone România</Op> — Bucureștean cu echipe mobile</li>
-        <li><Op slug="landtech">LandTech</Op> — flexibilitate prin închiriere</li>
-        <li><Op slug="nik-ro">Nik-ro</Op> — distribuție XAG, servicii pentru viticultori</li>
+        <li><Op slug="riagro">RIAGRO</Op>: acoperire națională, prezență puternică în Dobrogea</li>
+        <li><Op slug="agro-drona">Agro Drona</Op>: productivitate înaltă, ideal pentru cereale</li>
+        <li><Op slug="agridrone-romania">Agridrone România</Op>: Bucureștean cu echipe mobile</li>
+        <li><Op slug="landtech">LandTech</Op>: flexibilitate prin închiriere</li>
+        <li><Op slug="nik-ro">Nik-ro</Op>: distribuție XAG, servicii pentru viticultori</li>
       </ol>
       <p>
         Vezi toți operatorii din <Cnt slug="constanta">Constanța</Cnt>, <Cnt slug="tulcea">Tulcea</Cnt>,{' '}
@@ -298,10 +298,10 @@ export const blogContent: Record<string, ReactNode> = {
         mai activi operatori:
       </p>
       <ol>
-        <li><Op slug="skygrid">SkyGrid</Op> (Cluj) — pionier regional, tehnologie inovatoare</li>
-        <li><Op slug="appia-drones">Appia Drones</Op> (Târgu Mureș) — producător ADT Falcon</li>
-        <li><Op slug="riagro">RIAGRO</Op> (Brașov) — lider național cu sediu în Transilvania</li>
-        <li><Op slug="agronix">Agronix</Op> — cursuri + pulverizare</li>
+        <li><Op slug="skygrid">SkyGrid</Op> (Cluj): pionier regional, tehnologie inovatoare</li>
+        <li><Op slug="appia-drones">Appia Drones</Op> (Târgu Mureș): producător ADT Falcon</li>
+        <li><Op slug="riagro">RIAGRO</Op> (Brașov): lider național cu sediu în Transilvania</li>
+        <li><Op slug="agronix">Agronix</Op>: cursuri + pulverizare</li>
       </ol>
       <p>
         Județele cu cea mai mare cerere: <Cnt slug="cluj">Cluj</Cnt>, <Cnt slug="mures">Mureș</Cnt>,{' '}
@@ -328,12 +328,12 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <h2>Cazul 3: Cooperativa AgroFlor (Timiș)</h2>
       <p>
-        O cooperativă de 12 fermieri a obținut finanțare pentru 2 drone DJI T50 și 1 DJI T100 — total proiect
+        O cooperativă de 12 fermieri a obținut finanțare pentru 2 drone DJI T50 și 1 DJI T100, total proiect
         280.000 EUR, rambursare 154.000 EUR (55%).
       </p>
       <h2>Cazul 4: Mihai P., livezi 80 ha (Argeș)</h2>
       <p>
-        Rambursare 65% pentru T25P + echipamente — total 45.000 EUR, rambursare 29.250 EUR. A folosit drona și
+        Rambursare 65% pentru T25P + echipamente, total 45.000 EUR, rambursare 29.250 EUR. A folosit drona și
         pentru închiriere către vecini.
       </p>
       <h2>Cazul 5: Ferma de Legume BioVerde (Giurgiu)</h2>

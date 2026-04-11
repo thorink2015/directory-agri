@@ -83,21 +83,21 @@ export default function DroneComparator() {
           <h3 className="font-bold text-gray-900 mb-2">Ferme mici (&lt; 100 ha)</h3>
           <p className="text-sm text-gray-700">
             Recomandăm <Link href="/drone/dji-agras-t25p" className="text-green-700 font-medium hover:underline">DJI Agras T25P</Link>
-            — cel mai bun raport preț-productivitate.
+: cel mai bun raport preț-productivitate.
           </p>
         </div>
         <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
           <h3 className="font-bold text-gray-900 mb-2">Ferme medii (100–500 ha)</h3>
           <p className="text-sm text-gray-700">
             Cel mai popular este <Link href="/drone/dji-agras-t50" className="text-green-700 font-medium hover:underline">DJI Agras T50</Link>
-            — 90% din operatorii români îl folosesc.
+: 90% din operatorii români îl folosesc.
           </p>
         </div>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
           <h3 className="font-bold text-gray-900 mb-2">Ferme mari (&gt; 500 ha)</h3>
           <p className="text-sm text-gray-700">
             <Link href="/drone/dji-agras-t100" className="text-green-700 font-medium hover:underline">DJI Agras T100</Link>
-            — 75L rezervor, 40 ha/h.
+: 75L rezervor, 40 ha/h.
           </p>
         </div>
       </section>

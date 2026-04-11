@@ -19,7 +19,7 @@ export const services: ServiceDefinition[] = [
     slug: 'spraying',
     name: 'Pulverizare',
     nameRo: 'Pulverizare cu dronă',
-    description: 'Tratamente fitosanitare cu drona agricolă — fungicide, insecticide, erbicide.',
+    description: 'Tratamente fitosanitare cu drona agricolă: fungicide, insecticide, erbicide.',
     longDescription:
       'Pulverizarea cu drona agricolă este cea mai eficientă metodă de aplicare a produselor fitosanitare pe culturi. Dronele agricole moderne pot trata între 10 și 20 de hectare pe oră, cu o precizie de centimetri. Sistemul de pulverizare centrifugal asigură o acoperire uniformă și reduce consumul de substanțe active cu până la 30% față de metodele tradiționale.',
     icon: '💧',
@@ -147,7 +147,7 @@ export const services: ServiceDefinition[] = [
     slug: 'training',
     name: 'Formare piloți',
     nameRo: 'Formare piloți drone agricole',
-    description: 'Cursuri autorizate pentru piloți de drone agricole — AACR și practic.',
+    description: 'Cursuri autorizate pentru piloți de drone agricole, AACR și practic.',
     longDescription:
       'Cursurile de formare pentru piloți de drone agricole acoperă legislația aviației civile, operarea practică a dronelor agricole DJI și XAG, planificarea misiunilor, calibrarea echipamentelor și proceduri de siguranță. La absolvire se obține brevetul AACR pentru operații în clasa Open A1/A3 sau clasa Specific.',
     icon: '🎓',
@@ -178,7 +178,7 @@ export const services: ServiceDefinition[] = [
     slug: 'rental',
     name: 'Închiriere drone',
     nameRo: 'Închiriere drone agricole',
-    description: 'Închiriere drone agricole cu sau fără operator — DJI, XAG, ADT.',
+    description: 'Închiriere drone agricole cu sau fără operator: DJI, XAG, ADT.',
     longDescription:
       'Închirierea dronelor agricole este o alternativă viabilă pentru fermierii care doresc să opereze propriile echipamente fără a investi în achiziție. Dronele de închiriat sunt disponibile cu sau fără operator, pe zi sau pe sezon. Tariful include asigurarea echipamentului și suport tehnic.',
     icon: '🚁',
@@ -208,7 +208,7 @@ export const services: ServiceDefinition[] = [
     slug: 'sales',
     name: 'Vânzare drone',
     nameRo: 'Vânzare drone agricole',
-    description: 'Vânzare drone agricole DJI, XAG, ADT — dealeri autorizați România și Moldova.',
+    description: 'Vânzare drone agricole DJI, XAG, ADT prin dealeri autorizați din România și Moldova.',
     longDescription:
       'Dealerii autorizați DJI Agras, XAG și ADT din România și Moldova comercializează drone agricole noi cu garanție producător, service post-vânzare și consultanță pentru eligibilitatea AFIR. Prețurile variază de la 45.000 EUR (DJI Agras T25P) până la 120.000 EUR (pachete complete DJI Agras T100 + stații de încărcare).',
     icon: '🛒',
@@ -300,7 +300,7 @@ export const services: ServiceDefinition[] = [
     slug: 'emergency',
     name: 'Intervenție rapidă',
     nameRo: 'Intervenție rapidă drone 24/7',
-    description: 'Tratamente de urgență pentru atacuri de dăunători și boli — intervenție în 24–48h.',
+    description: 'Tratamente de urgență pentru atacuri de dăunători și boli, intervenție în 24–48h.',
     longDescription:
       'Serviciul de intervenție rapidă cu drone este disponibil 24/7 pentru situații critice: atacuri masive de dăunători (gândac, omidă), infestări fungice rapide (mană, făinare) sau dezastre naturale. Echipele mobile ajung la fermă în maximum 24–48 ore și aplică tratamentele necesare pe suprafețe mari în câteva ore.',
     icon: '🚨',

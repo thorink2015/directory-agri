@@ -5,7 +5,7 @@ import { droneModels } from '@/data/drone-models';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Drone Agricole — Modele și Specificații | DJI, XAG, ADT',
+  title: 'Drone Agricole: Modele și Specificații | DJI, XAG, ADT',
   description:
     'Comparație drone agricole disponibile în România: DJI Agras T50, T25P, T100, XAG P100 Pro, ADT Falcon 50P. Specificații, prețuri și operatori.',
   alternates: {

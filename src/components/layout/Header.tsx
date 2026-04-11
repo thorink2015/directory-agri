@@ -172,7 +172,7 @@ export default function Header() {
           <div className="lg:hidden pb-4 border-t border-gray-100 mt-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
             {isMd && (
               <div className="mx-3 mt-3 mb-2 px-3 py-2 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-700 font-medium">
-                Director Moldova — DroneAgricol.md
+                Director Moldova (DroneAgricol.md)
               </div>
             )}
             <nav className="flex flex-col gap-1 pt-2">
