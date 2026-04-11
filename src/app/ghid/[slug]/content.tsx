@@ -157,19 +157,24 @@ export const guideContent: Record<string, ReactNode> = {
         dronă în 2026.
       </p>
 
-      <h2>Submăsuri aplicabile</h2>
+      <h2>Intervențiile PNS 2023–2027 aplicabile dronelor</h2>
       <ul>
-        <li><strong>DR-29 (Investiții în exploatații agricole)</strong>: intensitate ajutor 50–65%, buget max. 300.000 EUR</li>
-        <li><strong>DR-30 (Tineri fermieri)</strong>: pachet forfetar 60.000–70.000 EUR + bonus 10%</li>
-        <li><strong>Submăsura 4.1 (PNDR)</strong>: pentru cereri depuse anterior 2023</li>
+        <li><strong>DR-12 (Modernizarea exploatațiilor agricole)</strong>: până la 80% finanțare nerambursabilă pentru tineri fermieri (sub 41 ani), buget max. 200.000 EUR. Ideal pentru prima dronă agricolă.</li>
+        <li><strong>DR-14 (Investiții în exploatații mici)</strong>: pentru ferme cu 4.000–12.000 SO. Finanțare 80%, buget forfetar 75.000 EUR. Potrivit pentru DJI Agras T25P.</li>
+        <li><strong>DR-16 (Investiții în sectorul legumicol)</strong>: finanțare 65–80% pentru producători de legume și cartofi care achiziționează drone pentru monitorizare și tratamente.</li>
+        <li><strong>DR-29 (Investiții în exploatații agricole)</strong>: intensitate ajutor 50–65%, buget max. 300.000 EUR. Cel mai accesibil pentru ferme medii și mari.</li>
+        <li><strong>DR-30 (Tineri fermieri)</strong>: pachet forfetar 60.000–70.000 EUR + bonus 10% pentru fermierii sub 41 de ani care se instalează pentru prima dată.</li>
+        <li><strong>Submăsura 4.1 (PNDR)</strong>: pentru cereri depuse anterior 2023, cu dosare în evaluare sau rambursare.</li>
       </ul>
 
       <h2>Condiții de eligibilitate</h2>
       <ul>
-        <li>Solicitant: fermă cu minim 8.000 SO (standard output)</li>
+        <li>Solicitant: fermă cu minim 8.000 SO (standard output) — pentru DR-29, DR-12</li>
+        <li>DR-14: ferme între 4.000–12.000 SO</li>
         <li>Înregistrat la APIA și ONRC</li>
         <li>Ferma activă de minim 12 luni</li>
         <li>Fără datorii la bugetul de stat</li>
+        <li>Drona trebuie să fie nouă, certificată CE, cu factura de la dealer autorizat</li>
       </ul>
 
       <h2>Pașii procesului</h2>
@@ -489,6 +494,80 @@ export const guideContent: Record<string, ReactNode> = {
         <li><ExtLink href="https://ansa.gov.md">ANSA: Autorizare fitosanitară</ExtLink></li>
         <li><ExtLink href="https://asp.gov.md">ASP: Înregistrare firmă</ExtLink></li>
         <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+      </ul>
+    </div>
+  ),
+
+  'roi-drona-agricola': (
+    <div className="space-y-6">
+      <p>
+        Cea mai frecventă întrebare pe care o pun fermierii este: <strong>merită să cumpăr propria dronă sau
+        mai bine apelez la un prestator de servicii?</strong> Răspunsul depinde de suprafața ta, numărul de
+        tratamente pe an și disponibilitatea operatorilor din zonă.
+      </p>
+
+      <h2>Scenariul 1: Fermă de 200 ha, 3 tratamente/an</h2>
+      <ul>
+        <li><strong>Cost serviciu extern:</strong> 200 ha × 3 tratamente × 100 RON/ha = <strong>60.000 RON/an</strong></li>
+        <li><strong>Investiție DJI Agras T25P:</strong> ~200.000 RON (50.000 EUR)</li>
+        <li><strong>Costuri operare anuale:</strong> ~15.000 RON (baterii, mentenanță, asigurare)</li>
+        <li><strong>Economie anuală netă:</strong> ~45.000 RON</li>
+        <li><strong>Amortizare estimată: 4–5 sezoane</strong></li>
+        <li><strong>Beneficiu adăugat:</strong> fără tasare sol (recuperezi 5–8% din recoltă)</li>
+      </ul>
+      <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
+        Concluzie: la 200 ha, drona proprie devine rentabilă dacă tratezi și suprafețele altor fermieri
+        din zonă. Poți acoperi 1.000 ha/sezon cu T25P, generând 100.000 RON venituri suplimentare.
+      </p>
+
+      <h2>Scenariul 2: Fermă de 500 ha, 3–4 tratamente/an</h2>
+      <ul>
+        <li><strong>Cost serviciu extern:</strong> 500 ha × 4 × 100 RON/ha = <strong>200.000 RON/an</strong></li>
+        <li><strong>Investiție DJI Agras T50 (pachet complet):</strong> ~350.000 RON (85.000 EUR)</li>
+        <li><strong>Costuri operare anuale:</strong> ~30.000 RON</li>
+        <li><strong>Economie anuală netă:</strong> ~170.000 RON</li>
+        <li><strong>Amortizare estimată: 2 sezoane</strong></li>
+        <li><strong>Fond AFIR DR-29 (50%):</strong> reducere investiție la ~175.000 RON</li>
+      </ul>
+
+      <h2>Scenariul 3: Operator de servicii profesionist</h2>
+      <ul>
+        <li><strong>Suprafața tratată/sezon:</strong> 3.000 ha (100 ha/zi × 30 zile lucrătoare)</li>
+        <li><strong>Venituri brute:</strong> 3.000 ha × 100 RON/ha = <strong>300.000 RON/sezon</strong></li>
+        <li><strong>Costuri totale (operare + depreciere):</strong> ~80.000 RON/sezon</li>
+        <li><strong>Profit net estimat:</strong> ~220.000 RON/sezon</li>
+        <li><strong>Amortizare DJI T50: 1–2 sezoane</strong></li>
+      </ul>
+
+      <h2>Beneficii necontabilizate ale dronei proprii</h2>
+      <ul>
+        <li><strong>Eliminarea tasării solului:</strong> tractorul cu bara de stropit distruge 5–8% din cultură prin călcare. La 500 ha grâu cu recoltă medie de 5 t/ha × 600 RON/t, pierderile sunt 7.500–12.000 RON/sezon.</li>
+        <li><strong>Normă ULV:</strong> drona folosește 8–20 L/ha față de 200–300 L/ha la tractor, economie de apă și timp de umplere.</li>
+        <li><strong>Flexibilitate maximă:</strong> drona poate trata oricând (noapte, după ploaie, câmpuri izolate) fără dependența de disponibilitatea unui operator extern.</li>
+        <li><strong>Date NDVI:</strong> cu o cameră multispectrală atașată, poți monitoriza sănătatea culturilor și aplica tratamente diferențiate (VRA).</li>
+      </ul>
+
+      <h2>Când NU merită drona proprie</h2>
+      <ul>
+        <li>Suprafața sub 150 ha cu un singur tip de cultură</li>
+        <li>Nu ai personal instruit sau nu vrei să investești în cursuri pilot AACR</li>
+        <li>Există operatori de servicii calificați disponibili rapid în zona ta</li>
+        <li>Nu ești eligibil pentru fonduri AFIR și nu ai capital pentru investiție</li>
+      </ul>
+
+      <h2>Fonduri AFIR disponibile pentru achiziție dronă</h2>
+      <p>
+        Prin intervențiile PNS 2023–2027, poți obține 50–80% rambursare din costul dronei. Citește{' '}
+        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul complet AFIR pentru drone agricole</a>{' '}
+        și consultă{' '}
+        <a href="/operatori?service=consultancy" className="text-green-700 hover:underline font-medium">un consultant AFIR din directorul nostru</a>.
+      </p>
+
+      <h2>Resurse utile</h2>
+      <ul>
+        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Comparator drone agricole: DJI, XAG, ADT</a></li>
+        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Prețuri pulverizare cu drona în România 2026</a></li>
+        <li><a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">Ghid fonduri AFIR pentru drone</a></li>
       </ul>
     </div>
   ),

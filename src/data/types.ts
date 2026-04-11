@@ -111,6 +111,9 @@ export interface Crop {
   haRomania?: number;
   haMoldova?: number;
   icon: string;
+  mainPests?: string[];           // Top pests/diseases (search terms farmers use)
+  uvlNormLHa?: string;            // Ultra-low volume norm (e.g. "8-15 L/ha")
+  yieldGainPct?: number;          // Estimated yield gain from drone use vs. trampling
 }
 
 export interface DroneModel {
@@ -119,9 +122,16 @@ export interface DroneModel {
   manufacturer: string;
   tankCapacityL: number;
   coverageHaPerHour: number;
+  haPerDay?: number;              // Practical daily coverage (8h operation)
+  flowRateLPerMin?: number;       // Max spray flow rate
+  workWidthM?: number;            // Spray work width (meters)
+  spreadingCapacityKg?: number;   // Granule/seed spreading payload (kg)
+  weightKg?: number;              // Empty weight (kg)
+  ipRating?: string;              // Ingress protection (IP67 etc.)
   priceEurMin?: number;
   priceEurMax?: number;
   afirEligible?: boolean;
+  highlightFeature?: string;      // Key selling point for comparisons
 }
 
 export interface BlogPost {

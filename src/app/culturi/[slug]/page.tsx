@@ -82,7 +82,37 @@ export default function CropPage({ params }: Props) {
       {/* Description */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
         <p className="text-gray-700 leading-relaxed">{crop.description}</p>
+        {crop.uvlNormLHa && (
+          <div className="mt-4 flex flex-wrap gap-3 text-xs">
+            <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
+              Normă ULV: {crop.uvlNormLHa}
+            </span>
+            {crop.yieldGainPct && crop.yieldGainPct > 0 ? (
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full">
+                Câștig producție: +{crop.yieldGainPct}% (fără tasare sol)
+              </span>
+            ) : null}
+          </div>
+        )}
       </div>
+
+      {/* Pests / diseases */}
+      {crop.mainPests && crop.mainPests.length > 0 && (
+        <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <h2 className="font-semibold text-gray-900 mb-3">Dăunători și boli principale</h2>
+          <ul className="space-y-1.5">
+            {crop.mainPests.map((pest) => (
+              <li key={pest} className="flex items-start gap-2 text-sm text-gray-700">
+                <span className="text-red-500 mt-0.5 flex-shrink-0">⚠</span>
+                {pest}
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-gray-500 mt-3">
+            Drona poate interveni rapid la apariția oricăruia din acești dăunători, chiar și pe câmpuri cu acces dificil.
+          </p>
+        </div>
+      )}
 
       {/* Treatment calendar */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
