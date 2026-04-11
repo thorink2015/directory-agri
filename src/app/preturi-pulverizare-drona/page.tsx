@@ -123,34 +123,87 @@ export default function PricingPage() {
           </div>
         </div>
 
+        {/* Farm-size tiered pricing */}
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
+          <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
+            <h2 className="font-semibold text-gray-900">Preț pulverizare dronă în funcție de suprafață</h2>
+          </div>
+          <div className="divide-y divide-gray-100">
+            {[
+              { segment: 'Fermă mică', size: 'sub 50 ha', price: '120–150 RON/ha', note: 'Suprafețe fragmentate, teren dificil' },
+              { segment: 'Fermă medie', size: '100–500 ha', price: '85–110 RON/ha', note: 'Prețul standard al pieței' },
+              { segment: 'Fermă mare', size: '500–1.000 ha', price: '70–85 RON/ha', note: 'Contract sezonier avantajos' },
+              { segment: 'Industrial', size: 'peste 1.000 ha', price: '65–75 RON/ha', note: 'Contract anual, prioritate la programare' },
+            ].map((row) => (
+              <div key={row.segment} className="flex items-center gap-3 px-5 py-3.5 text-sm">
+                <div className="flex-1">
+                  <span className="font-semibold text-gray-900">{row.segment}</span>
+                  <span className="text-gray-500 ml-2">({row.size})</span>
+                </div>
+                <div className="font-bold text-green-700 text-right">{row.price}</div>
+                <div className="text-xs text-gray-400 hidden sm:block w-48 text-right">{row.note}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ROI / amortizare section */}
+        <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+          <h2 className="font-semibold text-gray-900 mb-3">Merită drona agricolă? Calcul ROI rapid</h2>
+          <p className="text-sm text-gray-700 mb-4">
+            Pentru o fermă de 500 ha cu 3 tratamente/an, costul stropitului cu prestator este de <strong>150.000 RON/an</strong> (100 RON/ha × 500 ha × 3). O dronă DJI T50 costă ~85.000 EUR (350.000 RON). Fără tasare sol, recuperezi 5–8% din recoltă (valoare estimată: 50.000–80.000 RON/an). <strong>Amortizare estimată: 2–3 sezoane.</strong>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+            {[
+              { label: 'Economie apă', value: '90%', sub: 'ULV vs. tractor clasic' },
+              { label: 'Câștig recoltă', value: '+5–8%', sub: 'fără tasare sol' },
+              { label: 'Amortizare', value: '2–3 sez.', sub: 'fermă 500+ ha' },
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white rounded-lg p-3 border border-green-100">
+                <div className="font-bold text-green-700 text-xl">{stat.value}</div>
+                <div className="text-xs text-gray-600 mt-0.5">{stat.label}</div>
+                <div className="text-xs text-gray-400">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-4">
+            Calcul orientativ. Rentabilitatea reală depinde de numărul de hectare tratate, culturi și sezon.{' '}
+            <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline">Fonduri AFIR 50–65% pentru achiziția dronei →</a>
+          </p>
+        </div>
+
         {/* Comparison: drone vs airplane */}
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
           <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
-            <h2 className="font-semibold text-gray-900">Dronă vs. avion agricol: comparație costuri</h2>
+            <h2 className="font-semibold text-gray-900">Dronă vs. avion agricol vs. tractor cu bară</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="text-left px-5 py-3 font-semibold text-gray-700">Criteriu</th>
-                  <th className="text-center px-4 py-3 font-semibold text-green-800">Dronă agricolă</th>
-                  <th className="text-center px-4 py-3 font-semibold text-gray-700">Avion agricol</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Criteriu</th>
+                  <th className="text-center px-3 py-3 font-semibold text-green-800 bg-green-50">Dronă agricolă</th>
+                  <th className="text-center px-3 py-3 font-semibold text-gray-700">Avion agricol</th>
+                  <th className="text-center px-3 py-3 font-semibold text-gray-700">Tractor cu bară</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  ['Preț mediu/ha', '100 RON (~€20)', '80 RON (~€16)'],
-                  ['Precizie GPS', '> 95%', '85–90%'],
-                  ['Suprafața minimă', 'Orice suprafață', '> 50 ha recomandat'],
-                  ['Tasare sol', 'Zero', 'Zero'],
-                  ['Acces terenuri fragmentate', '✅ Excelent', '❌ Limitat'],
-                  ['Vii și livezi', '✅ Da', '❌ Nu'],
-                  ['Disponibilitate', 'Rapid (1–2 zile)', 'Planificare 1–2 săptămâni'],
-                ].map(([criteriu, drona, avion]) => (
+                  ['Preț mediu/ha (serviciu)', '100 RON', '80 RON', '50–70 RON'],
+                  ['Normă apă', '8–20 L/ha', '20–40 L/ha', '200–300 L/ha'],
+                  ['Tasare sol', '✅ Zero', '✅ Zero', '❌ 5–8% cultură distrusă'],
+                  ['Suprafața minimă', 'Orice', '> 50 ha', 'Orice'],
+                  ['Condiții ploioase', '✅ Da', '✅ Da', '❌ Nu (noroi)'],
+                  ['Precizie GPS', '> 95%', '85–90%', '> 98%'],
+                  ['Vii și livezi', '✅ Da', '❌ Nu', '❌ Dificil'],
+                  ['Culturi înalte (porumb)', '✅ Da', '✅ Da', '❌ Nu'],
+                  ['Disponibilitate rapidă', '1–2 zile', '1–2 săptămâni', 'Imediat (dacă ai)'],
+                ].map(([criteriu, drona, avion, tractor]) => (
                   <tr key={criteriu} className="hover:bg-gray-50">
-                    <td className="px-5 py-3 text-gray-700 font-medium">{criteriu}</td>
-                    <td className="px-4 py-3 text-center text-green-700">{drona}</td>
-                    <td className="px-4 py-3 text-center text-gray-600">{avion}</td>
+                    <td className="px-4 py-3 text-gray-700 font-medium text-sm">{criteriu}</td>
+                    <td className="px-3 py-3 text-center text-green-700 bg-green-50/50 font-medium">{drona}</td>
+                    <td className="px-3 py-3 text-center text-gray-600">{avion}</td>
+                    <td className="px-3 py-3 text-center text-gray-600">{tractor}</td>
                   </tr>
                 ))}
               </tbody>

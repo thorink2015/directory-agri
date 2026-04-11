@@ -88,16 +88,26 @@ export default function DronePage({ params }: Props) {
       {/* Extended specs */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
         <h2 className="font-semibold text-gray-900 mb-4">Specificații tehnice complete</h2>
+        {drone.highlightFeature && (
+          <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-2.5 mb-4 text-sm text-green-800 font-medium">
+            {drone.highlightFeature}
+          </div>
+        )}
         <div className="divide-y divide-gray-100">
-          {[
+          {([
             { label: 'Producător', value: drone.manufacturer },
             { label: 'Model', value: drone.name },
-            { label: 'Capacitate rezervor', value: `${drone.tankCapacityL} L` },
-            { label: 'Acoperire câmp', value: `${drone.coverageHaPerHour} ha/h (condiții optime)` },
-            { label: 'Ha pe zi (8h)', value: `${drone.coverageHaPerHour * 8} ha/zi (estimat)` },
+            { label: 'Capacitate rezervor lichide', value: `${drone.tankCapacityL} L` },
+            ...(drone.spreadingCapacityKg ? [{ label: 'Capacitate granule/semințe', value: `${drone.spreadingCapacityKg} kg` }] : []),
+            ...(drone.flowRateLPerMin ? [{ label: 'Debit pulverizare (max)', value: `${drone.flowRateLPerMin} L/min` }] : []),
+            ...(drone.workWidthM ? [{ label: 'Lățime de lucru', value: `până la ${drone.workWidthM} m` }] : []),
+            { label: 'Productivitate (condiții optime)', value: `${drone.coverageHaPerHour} ha/oră` },
+            { label: 'Productivitate practică/zi', value: drone.haPerDay ? `~${drone.haPerDay} ha/zi` : `~${drone.coverageHaPerHour * 8} ha/zi (estimat)` },
+            ...(drone.weightKg ? [{ label: 'Greutate fără baterie', value: `${drone.weightKg} kg` }] : []),
+            ...(drone.ipRating ? [{ label: 'Grad protecție', value: drone.ipRating }] : []),
             { label: 'Preț achiziție', value: drone.priceEurMin && drone.priceEurMax ? `${drone.priceEurMin.toLocaleString()}–${drone.priceEurMax.toLocaleString()} EUR` : 'Contact dealer' },
             { label: 'Eligibil fonduri AFIR', value: drone.afirEligible ? 'Da, verificați subprogramul aplicabil' : 'Nu (momentan)' },
-          ].map(({ label, value }) => (
+          ] as { label: string; value: string }[]).map(({ label, value }) => (
             <div key={label} className="flex justify-between py-2.5 text-sm">
               <span className="text-gray-500">{label}</span>
               <span className="font-medium text-gray-900 text-right max-w-[60%]">{value}</span>

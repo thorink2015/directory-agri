@@ -73,6 +73,18 @@ export const guides: Guide[] = [
     icon: '🚁',
   },
   {
+    slug: 'roi-drona-agricola',
+    title: 'Merită să cumperi o dronă agricolă? Calcul ROI complet 2026',
+    shortTitle: 'ROI dronă agricolă',
+    description:
+      'Calculator de rentabilitate pentru drona agricolă: cât costă, cât câștigați, în cât timp se amortizează. Calcul real pentru ferme de 100–1.000 ha.',
+    category: 'technical',
+    readMinutes: 10,
+    lastUpdated: '2026-04-01',
+    keywords: ['merita drona agricola', 'amortizare drona', 'roi drona agricola', 'drona vs tractor cost'],
+    icon: '📊',
+  },
+  {
     slug: 'subventii-moldova-aipa',
     title: 'Subvenții AIPA pentru drone agricole în Moldova (2026)',
     shortTitle: 'Subvenții AIPA Moldova',
