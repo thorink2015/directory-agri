@@ -81,7 +81,7 @@ export default function Header() {
             </div>
             <span className={`font-bold text-xl ${isMd ? 'text-blue-900' : 'text-green-900'} group-hover:opacity-80 transition-opacity`}>
               TerraDron
-              <span className={isMd ? 'text-blue-600' : 'text-yellow-600'}>
+              <span className={isMd ? 'text-blue-700' : 'text-yellow-700'}>
                 {isMd ? '.md' : '.ro'}
               </span>
             </span>
