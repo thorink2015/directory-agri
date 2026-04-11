@@ -52,9 +52,19 @@ export default function PricingPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Acasă', item: 'https://terradron.ro' },
+      { '@type': 'ListItem', position: 2, name: 'Prețuri pulverizare cu drona', item: 'https://terradron.ro/preturi-pulverizare-drona' },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={[{ label: 'Prețuri pulverizare cu drona' }]} />

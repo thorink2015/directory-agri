@@ -48,7 +48,44 @@ export default function CropPage({ params }: Props) {
     },
   ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Acasă', item: 'https://terradron.ro' },
+      { '@type': 'ListItem', position: 2, name: 'Culturi', item: 'https://terradron.ro/culturi' },
+      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://terradron.ro/culturi/${crop.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `Tratamente cu drona pentru ${crop.name}: Ghid 2026`,
+    description: crop.description,
+    url: `https://terradron.ro/culturi/${crop.slug}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'TerraDron.ro',
+      url: 'https://terradron.ro',
+    },
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
@@ -198,5 +235,6 @@ export default function CropPage({ params }: Props) {
         </div>
       )}
     </div>
+    </>
   );
 }
