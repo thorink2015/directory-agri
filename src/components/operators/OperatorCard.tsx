@@ -129,6 +129,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       <footer className="flex items-stretch gap-2 mt-3 pt-3 border-t border-gray-100">
         <Link
           href={`/operatori/${operator.slug}`}
+          aria-label={`Vezi profil ${operator.name}`}
           className="flex-1 text-center px-3 py-2 bg-green-700 text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-colors"
         >
           Vezi profil
