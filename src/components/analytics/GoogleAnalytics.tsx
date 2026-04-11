@@ -20,14 +20,16 @@ export default function GoogleAnalytics() {
       />
       <Script id="ga-init" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}', {
-            anonymize_ip: true,
-            cookie_flags: 'SameSite=None;Secure',
-            send_page_view: false
-          });
+          if (window.location.hostname === 'terradron.ro') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              anonymize_ip: true,
+              cookie_flags: 'SameSite=None;Secure',
+              send_page_view: false
+            });
+          }
           // page_view is handled by GAPageView component on each route change
         `}
       </Script>
