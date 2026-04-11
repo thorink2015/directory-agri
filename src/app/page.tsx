@@ -7,9 +7,9 @@ export const metadata: Metadata = {
     'Cel mai complet director de operatori de drone agricole din România și Moldova. 23 operatori verificați în 41 județe. Pulverizare, fertilizare, monitorizare NDVI.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'DroneAgricol.ro: Director Operatori Drone Agricole România',
+    title: 'TerraDron.ro: Director Operatori Drone Agricole România',
     description: '23 operatori verificați în toate cele 41 de județe. Prețuri actualizate și contact direct.',
-    url: 'https://droneagricol.ro',
+    url: 'https://terradron.ro',
   },
 };
 import {

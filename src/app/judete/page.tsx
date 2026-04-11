@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     'Găsește operatori de drone agricole în oricare dintre cele 41 de județe ale României. Filtrare după regiune și servicii disponibile.',
   alternates: { canonical: '/judete' },
   openGraph: {
-    title: 'Drone Agricole în toate cele 41 de Județe | DroneAgricol.ro',
+    title: 'Drone Agricole în toate cele 41 de Județe | TerraDron.ro',
     description: 'Harta completă a operatorilor de drone agricole din România. Selectează județul tău.',
-    url: 'https://droneagricol.ro/judete',
+    url: 'https://terradron.ro/judete',
   },
 };
 

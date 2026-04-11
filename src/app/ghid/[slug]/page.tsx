@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug);
   if (!guide || guide.country === 'MD') return {};
   return {
-    title: `${guide.title} | DroneAgricol.ro`,
+    title: `${guide.title} | TerraDron.ro`,
     description: guide.description,
     alternates: { canonical: `/ghid/${guide.slug}` },
     openGraph: {
@@ -59,11 +59,11 @@ export default function GuidePage({ params }: Props) {
             description: guide.description,
             datePublished: guide.lastUpdated,
             dateModified: guide.lastUpdated,
-            author: { '@type': 'Organization', name: 'DroneAgricol.ro' },
+            author: { '@type': 'Organization', name: 'TerraDron.ro' },
             publisher: {
               '@type': 'Organization',
-              name: 'DroneAgricol.ro',
-              logo: { '@type': 'ImageObject', url: 'https://droneagricol.ro/opengraph-image' },
+              name: 'TerraDron.ro',
+              logo: { '@type': 'ImageObject', url: 'https://terradron.ro/opengraph-image' },
             },
           }),
         }}

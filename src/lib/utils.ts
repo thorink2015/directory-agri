@@ -43,7 +43,7 @@ export function addUtmParams(url: string, operatorSlug: string): string {
   if (!url) return url;
   try {
     const parsed = new URL(url);
-    parsed.searchParams.set('utm_source', 'droneagricol.ro');
+    parsed.searchParams.set('utm_source', 'terradron.ro');
     parsed.searchParams.set('utm_medium', 'directory');
     parsed.searchParams.set('utm_campaign', 'operator-listing');
     parsed.searchParams.set('utm_content', operatorSlug);

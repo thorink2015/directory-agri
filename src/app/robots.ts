@@ -25,8 +25,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://droneagricol.ro/sitemap.xml',
+    sitemap: 'https://terradron.ro/sitemap.xml',
     // llms.txt for AI engine optimization
-    // See: https://droneagricol.ro/llms.txt
+    // See: https://terradron.ro/llms.txt
   };
 }

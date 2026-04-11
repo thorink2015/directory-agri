@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { Operator } from '@/data/types';
 import { County } from '@/data/types';
 
-const SITE_URL = 'https://droneagricol.ro';
-const SITE_NAME = 'DroneAgricol.ro';
+const SITE_URL = 'https://terradron.ro';
+const SITE_NAME = 'TerraDron.ro';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
   const price = operator.priceMinRon
@@ -19,7 +19,7 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
     description: `${operator.name}, operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. ${coverage} Contact direct.`,
     alternates: { canonical: `/operatori/${operator.slug}` },
     openGraph: {
-      title: `${operator.name} | DroneAgricol.ro`,
+      title: `${operator.name} | TerraDron.ro`,
       description: operator.description.slice(0, 155),
       url: `${SITE_URL}/operatori/${operator.slug}`,
       siteName: SITE_NAME,
@@ -41,7 +41,7 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
     description: desc,
     alternates: { canonical: `/judete/${county.slug}` },
     openGraph: {
-      title: `Drone Agricole ${county.name} | DroneAgricol.ro`,
+      title: `Drone Agricole ${county.name} | TerraDron.ro`,
       description: `Operatori verificați de drone agricole în ${county.name}. Pulverizare, cartografiere și monitorizare pentru fermieri.`,
       url: `${SITE_URL}/judete/${county.slug}`,
       siteName: SITE_NAME,
@@ -58,8 +58,8 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Directorul Operatorilor de Drone Agricole din România și Moldova | DroneAgricol.ro',
-    template: '%s | DroneAgricol.ro',
+    default: 'Directorul Operatorilor de Drone Agricole din România și Moldova | TerraDron.ro',
+    template: '%s | TerraDron.ro',
   },
   description:
     'Cel mai complet director de operatori de drone agricole din România și Moldova. Găsește operatori verificați pentru pulverizare, cartografiere și monitorizare în toată țara.',

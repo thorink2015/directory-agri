@@ -80,7 +80,7 @@ export default function Header() {
               <Plane className="w-5 h-5 text-white rotate-45" />
             </div>
             <span className={`font-bold text-xl ${isMd ? 'text-blue-900' : 'text-green-900'} group-hover:opacity-80 transition-opacity`}>
-              DroneAgricol
+              TerraDron
               <span className={isMd ? 'text-blue-500' : 'text-yellow-500'}>
                 {isMd ? '.md' : '.ro'}
               </span>
@@ -172,7 +172,7 @@ export default function Header() {
           <div className="lg:hidden pb-4 border-t border-gray-100 mt-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
             {isMd && (
               <div className="mx-3 mt-3 mb-2 px-3 py-2 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-700 font-medium">
-                Director Moldova (DroneAgricol.md)
+                Director Moldova (TerraDron.md)
               </div>
             )}
             <nav className="flex flex-col gap-1 pt-2">
@@ -213,7 +213,7 @@ export default function Header() {
                 {isMd ? (
                   <Link href="/" className="flex items-center gap-2 text-sm text-green-700 font-medium" onClick={() => setOpen(false)}>
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                    Mergi la DroneAgricol.ro (România)
+                    Mergi la TerraDron.ro (România)
                   </Link>
                 ) : (
                   <Link href="/moldova" className="flex items-center gap-2 text-sm text-blue-700 font-medium" onClick={() => setOpen(false)}>

@@ -4,8 +4,8 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Contact | DroneAgricol.ro',
-  description: 'Contactează echipa DroneAgricol.ro pentru întrebări, sugestii sau adăugarea unui nou operator în director.',
+  title: 'Contact | TerraDron.ro',
+  description: 'Contactează echipa TerraDron.ro pentru întrebări, sugestii sau adăugarea unui nou operator în director.',
   alternates: { canonical: '/contact' },
 };
 
@@ -24,8 +24,8 @@ export default function ContactPage() {
           <Mail className="w-6 h-6 text-green-600 flex-shrink-0" />
           <div>
             <div className="font-semibold text-gray-900 mb-1">Email general</div>
-            <a href="mailto:contact@droneagricol.ro" className="text-green-700 hover:underline text-sm">
-              contact@droneagricol.ro
+            <a href="mailto:contact@terradron.ro" className="text-green-700 hover:underline text-sm">
+              contact@terradron.ro
             </a>
           </div>
         </div>

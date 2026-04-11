@@ -30,7 +30,7 @@ export default function SubmitForm() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        setError('A apărut o eroare. Vă rugăm trimiteți un email direct la contact@droneagricol.ro');
+        setError('A apărut o eroare. Vă rugăm trimiteți un email direct la contact@terradron.ro');
       }
     } catch {
       setError('A apărut o eroare de rețea. Încercați din nou.');
@@ -226,7 +226,7 @@ export default function SubmitForm() {
       </button>
 
       <p className="text-xs text-gray-500 text-center">
-        Prin trimiterea acestui formular, ești de acord ca informațiile să fie publicate în directorul DroneAgricol.ro.
+        Prin trimiterea acestui formular, ești de acord ca informațiile să fie publicate în directorul TerraDron.ro.
         Listarea este gratuită și permanentă.
       </p>
     </form>

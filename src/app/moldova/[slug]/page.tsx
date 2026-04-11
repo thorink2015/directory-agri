@@ -63,7 +63,7 @@ export default function MoldovaRegionPage({ params }: Props) {
             '@type': 'CollectionPage',
             name: `Drone Agricole ${region.name}`,
             description: `Operatori de drone agricole în ${region.name}, Republica Moldova`,
-            isPartOf: { '@type': 'WebSite', name: 'DroneAgricol.ro', url: 'https://droneagricol.ro' },
+            isPartOf: { '@type': 'WebSite', name: 'TerraDron.ro', url: 'https://terradron.ro' },
             mainEntity: {
               '@type': 'ItemList',
               numberOfItems: ops.length,
@@ -73,7 +73,7 @@ export default function MoldovaRegionPage({ params }: Props) {
                 item: {
                   '@type': 'ProfessionalService',
                   name: op.name,
-                  url: `https://droneagricol.ro/operatori/${op.slug}`,
+                  url: `https://terradron.ro/operatori/${op.slug}`,
                 },
               })),
             },
