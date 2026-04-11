@@ -18,17 +18,21 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
           <button
             onClick={() => setOpen(open === i ? null : i)}
             className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded={open === i}
           >
             <span className="font-medium text-gray-900 text-sm">{faq.question}</span>
             <ChevronDown
-              className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`}
+              className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
             />
           </button>
-          {open === i && (
+          <div
+            className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+            style={{ maxHeight: open === i ? '500px' : '0px' }}
+          >
             <div className="px-5 pb-4">
               <p className="text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>
