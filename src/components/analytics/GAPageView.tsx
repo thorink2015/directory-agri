@@ -15,6 +15,7 @@ export default function GAPageView() {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !window.gtag) return;
+    if (window.location.hostname !== 'terradron.ro') return;
     window.gtag('event', 'page_view', {
       page_path: pathname,
       page_title: document.title,
