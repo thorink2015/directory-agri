@@ -14,6 +14,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   ...defaultMetadata,
   metadataBase: new URL('https://terradron.ro'),
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    other: {
+      'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION ?? '',
+      'yandex-verification': process.env.NEXT_PUBLIC_YANDEX_VERIFICATION ?? '',
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'ro_RO',
