@@ -51,10 +51,10 @@ export default function MoldovaPage() {
       <header className="mb-8 border-l-4 border-blue-500 pl-4">
         <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full mb-3">
           <MapPin className="w-3.5 h-3.5" />
-          Director separat pentru Republica Moldova
+          Pagină dedicată Republicii Moldova
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Drone Agricole în Republica Moldova
+          Operatori de drone agricole din Republica Moldova
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl">
           {mdOps.length} operatori verificați cu acoperire în toate cele {moldovaRegions.length} raioane,

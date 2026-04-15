@@ -82,13 +82,13 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
             <CheckCircle className="w-4 h-4 text-yellow-400" />
-            {operators.filter((op) => op.verified).length} operatori verificați în România și Moldova
+            20 operatori verificați în România
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
             Operatori de
             <span className="text-yellow-400"> drone agricole</span>
-            <br />din România și Moldova
+            <br />din România
           </h1>
 
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
