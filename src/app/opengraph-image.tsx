@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'TerraDron.ro: Director Operatori Drone Agricole din România și Moldova';
+export const alt = 'TerraDron.ro: Operatori de Drone Agricole din România';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -67,7 +67,7 @@ export default async function Image() {
           lineHeight: 1.45,
           marginBottom: 44,
         }}>
-          Directorul complet al operatorilor de drone agricole din România și Moldova
+          Platforma completă a operatorilor de drone agricole din România
         </div>
 
         {/* Stats */}

@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     locale: 'ro_RO',
     url: 'https://terradron.ro',
     siteName: 'TerraDron.ro',
-    title: 'Directorul Operatorilor de Drone Agricole din România și Moldova',
+    title: 'Platforma Operatorilor de Drone Agricole din România',
     description:
       'Găsește rapid operatori verificați de drone agricole în județul tău. Servicii de pulverizare, fertilizare, cartografiere și monitorizare.',
     images: ['/opengraph-image'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Directorul Operatorilor de Drone Agricole | TerraDron.ro',
+    title: 'Operatori de Drone Agricole în România | TerraDron.ro',
     description:
-      'Găsește operatori verificați de drone agricole în România și Moldova.',
+      'Găsește operatori verificați de drone agricole în România.',
     images: ['/opengraph-image'],
   },
   robots: {

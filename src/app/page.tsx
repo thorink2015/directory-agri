@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Drone Agricole România și Moldova | Director Operatori Verificați 2026',
+  title: 'Drone Agricole România | Lista Operatorilor Verificați 2026',
   description:
-    'Cel mai complet director de operatori de drone agricole din România și Moldova. 23 operatori verificați în 41 județe. Pulverizare, fertilizare, monitorizare NDVI.',
+    'Cea mai completă platformă de operatori de drone agricole din România. 20 operatori verificați în 41 județe. Pulverizare, fertilizare, monitorizare NDVI.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'TerraDron.ro: Director Operatori Drone Agricole România',
+    title: 'TerraDron.ro: Operatori de Drone Agricole în România',
     description: '23 operatori verificați în toate cele 41 de județe. Prețuri actualizate și contact direct.',
     url: 'https://terradron.ro',
   },
@@ -309,7 +309,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ești operator de drone agricole?</h2>
           <p className="text-green-100 mb-8 leading-relaxed">
-            Adaugă afacerea ta în cel mai complet director de drone agricole din România.
+            Adaugă afacerea ta în cea mai completă platformă de drone agricole din România.
             Listarea este <strong className="text-white">100% gratuită</strong> și procesată în 48 de ore.
           </p>
           <Link

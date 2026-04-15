@@ -181,7 +181,7 @@ export default function MoldovaRegionPage({ params }: Props) {
             href="/moldova"
             className="inline-flex items-center gap-1 text-blue-700 font-medium text-sm hover:underline"
           >
-            <ArrowRight className="w-4 h-4 rotate-180" /> Înapoi la directorul Moldova
+            <ArrowRight className="w-4 h-4 rotate-180" /> Înapoi la lista Moldova
           </Link>
         </div>
       </div>

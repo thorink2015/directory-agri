@@ -58,14 +58,14 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Directorul Operatorilor de Drone Agricole din România și Moldova | TerraDron.ro',
+    default: 'Operatori de Drone Agricole din România | TerraDron.ro',
     template: '%s | TerraDron.ro',
   },
   description:
-    'Cel mai complet director de operatori de drone agricole din România și Moldova. Găsește operatori verificați pentru pulverizare, cartografiere și monitorizare în toată țara.',
+    'Cea mai completă platformă de operatori de drone agricole din România. Găsește operatori verificați pentru pulverizare, cartografiere și monitorizare în toată țara.',
   keywords: [
     'drone agricole', 'operatori drone agricole', 'pulverizare cu drona',
-    'tratamente cu drona', 'drone agricole Romania', 'director drone agricole',
+    'tratamente cu drona', 'drone agricole Romania', 'platforma drone agricole',
   ],
   openGraph: {
     siteName: SITE_NAME,

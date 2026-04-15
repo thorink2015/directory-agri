@@ -28,7 +28,7 @@ export default function BlogHub() {
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
           Topuri de operatori, ghiduri de tratamente, noutăți legislative și studii de caz despre drone
-          agricole din România și Moldova. Actualizat săptămânal.
+          agricole din România. Actualizat săptămânal.
         </p>
       </header>
 

@@ -51,7 +51,7 @@ export default function JudetsPage() {
       <div className="mt-8 p-6 bg-green-50 rounded-xl border border-green-200 text-center">
         <h2 className="font-semibold text-gray-900 mb-2">Nu găsești operatori în județul tău?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Fii primul operator listat sau ajută-ne să completăm directorul.
+          Fii primul operator listat sau ajută-ne să completăm lista.
         </p>
         <Link
           href="/adauga-operator"

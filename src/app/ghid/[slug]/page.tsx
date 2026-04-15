@@ -116,7 +116,7 @@ export default function GuidePage({ params }: Props) {
         <div className="mt-8 bg-green-50 border border-green-200 rounded-xl p-6 text-center">
           <h2 className="font-bold text-gray-900 mb-2">Cauți un operator de drone agricole?</h2>
           <p className="text-sm text-gray-600 mb-4">
-            Vezi cei peste 20 de operatori verificați din România și Moldova.
+            Vezi cei peste 20 de operatori verificați din România.
           </p>
           <Link
             href="/operatori"

@@ -148,7 +148,7 @@ export default function DronePage({ params }: Props) {
       <div className="p-6 bg-blue-50 border border-blue-200 rounded-xl text-center">
         <h2 className="font-semibold text-gray-900 mb-2">Ești dealer sau operezi cu {drone.name}?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Adaugă-ți firma gratuit în director și atrage clienți care caută operatori cu {drone.name}.
+          Adaugă-ți firma gratuit pe TerraDron.ro și atrage clienți care caută operatori cu {drone.name}.
         </p>
         <Link
           href="/adauga-operator"
