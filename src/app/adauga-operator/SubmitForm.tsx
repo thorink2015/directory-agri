@@ -226,7 +226,7 @@ export default function SubmitForm() {
       </button>
 
       <p className="text-xs text-gray-500 text-center">
-        Prin trimiterea acestui formular, ești de acord ca informațiile să fie publicate în directorul TerraDron.ro.
+        Prin trimiterea acestui formular, ești de acord ca informațiile să fie publicate pe platforma TerraDron.ro.
         Listarea este gratuită și permanentă.
       </p>
     </form>

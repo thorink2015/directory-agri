@@ -128,7 +128,7 @@ export default function BlogPostPage({ params }: Props) {
 
         <div className="mt-10 bg-green-50 border border-green-200 rounded-xl p-6 text-center">
           <h2 className="font-bold text-gray-900 mb-2">Cauți un operator de drone?</h2>
-          <p className="text-sm text-gray-600 mb-4">Descoperă peste 20 de operatori verificați din România și Moldova.</p>
+          <p className="text-sm text-gray-600 mb-4">Descoperă peste 20 de operatori verificați din România.</p>
           <Link
             href="/operatori"
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"

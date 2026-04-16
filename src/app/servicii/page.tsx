@@ -71,7 +71,7 @@ export default function ServiciiPage() {
       <div className="mt-10 p-6 bg-green-50 rounded-xl border border-green-200 text-center">
         <h2 className="font-semibold text-gray-900 mb-2">Ești operator de drone?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Adaugă-ți serviciile gratuit în cel mai complet director de drone agricole din România.
+          Adaugă-ți serviciile gratuit pe cea mai completă platformă de drone agricole din România.
         </p>
         <Link
           href="/adauga-operator"

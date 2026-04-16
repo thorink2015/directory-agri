@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Contact | TerraDron.ro',
-  description: 'Contactează echipa TerraDron.ro pentru întrebări, sugestii sau adăugarea unui nou operator în director.',
+  description: 'Contactează echipa TerraDron.ro pentru întrebări, sugestii sau adăugarea unui nou operator pe platformă.',
   alternates: { canonical: '/contact' },
 };
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
           <div>
             <div className="font-semibold text-gray-900 mb-1">Adaugă / corectează o listare</div>
             <p className="text-sm text-gray-600 mb-2">
-              Dacă ești operator sau dacă ai informații incorecte în director, completează formularul dedicat.
+              Dacă ești operator sau dacă ai informații incorecte pe platformă, completează formularul dedicat.
             </p>
             <Link
               href="/adauga-operator"

@@ -141,13 +141,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  // ─── Guide pages ─────────────────────────────────────────────────────────
-  const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
-    url: `${BASE_URL}/ghid/${g.slug}`,
-    lastModified: new Date(g.lastUpdated),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }));
+  // ─── Guide pages (RO only — MD guides live at /moldova/ghid/[slug]) ────────
+  const guidePages: MetadataRoute.Sitemap = guides
+    .filter((g) => !g.country || g.country === 'RO')
+    .map((g) => ({
+      url: `${BASE_URL}/ghid/${g.slug}`,
+      lastModified: new Date(g.lastUpdated),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }));
 
   // ─── Moldova guide detail pages (MD guides only) ─────────────────────────
   const moldovaGuidePages: MetadataRoute.Sitemap = guides

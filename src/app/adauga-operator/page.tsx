@@ -6,7 +6,7 @@ import SubmitForm from './SubmitForm';
 export const metadata: Metadata = {
   title: 'Adaugă Operator de Drone Agricole | Listare Gratuită',
   description:
-    'Adaugă afacerea ta de drone agricole în directorul nostru gratuit. Procesare în 48 de ore. Acoperire în toată România și Moldova.',
+    'Adaugă afacerea ta de drone agricole pe platforma noastră gratuită. Procesare în 48 de ore. Acoperire în toată România.',
   alternates: { canonical: '/adauga-operator' },
 };
 
@@ -17,7 +17,7 @@ export default function AdaugaOperatorPage() {
 
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
-          Adaugă afacerea ta în director
+          Adaugă afacerea ta pe TerraDron.ro
         </h1>
         <p className="text-gray-600 text-lg">
           Listarea este <strong>100% gratuită</strong> și procesată în maxim 48 de ore.

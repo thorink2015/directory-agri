@@ -4,13 +4,13 @@ import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
 
 export const metadata: Metadata = {
-  title: 'Toți Operatorii de Drone Agricole din România și Moldova',
+  title: 'Toți Operatorii de Drone Agricole din România',
   description:
-    'Caută și filtrează toți operatorii de drone agricole din România și Moldova. Filtrare după județ, serviciu și tipul de cultură.',
+    'Caută și filtrează toți operatorii de drone agricole din România. Filtrare după județ, serviciu și tipul de cultură.',
   alternates: { canonical: '/operatori' },
   openGraph: {
     title: 'Toți Operatorii de Drone Agricole | TerraDron.ro',
-    description: 'Director complet: 23 operatori verificați din România și Moldova. Filtrare după județ și serviciu.',
+    description: 'Lista completă: 20 operatori verificați din România. Filtrare după județ și serviciu.',
     url: 'https://terradron.ro/operatori',
   },
 };

@@ -12,7 +12,7 @@ import NewsletterCTA from '@/components/ui/NewsletterCTA';
 export const metadata: Metadata = {
   title: 'Drone Agricole Moldova | Operatori, Raioane și Prețuri 2026',
   description:
-    'Director complet de operatori de drone agricole din Republica Moldova. Acoperire în toate cele 32 de raioane + municipalități + UTA Găgăuzia. Prețuri în MDL.',
+    'Lista completă a operatorilor de drone agricole din Republica Moldova. Acoperire în toate cele 32 de raioane + municipalități + UTA Găgăuzia. Prețuri în MDL.',
   alternates: { canonical: '/moldova' },
 };
 
@@ -177,7 +177,7 @@ export default function MoldovaPage() {
       <div className="bg-white border border-blue-200 rounded-xl p-6 text-center mb-0">
         <h2 className="font-bold text-gray-900 mb-2">Ești operator de drone din Moldova?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Adaugă-te gratuit în directorul nostru și ajunge la fermieri din toată Moldova.
+          Adaugă-te gratuit pe platforma noastră și ajunge la fermieri din toată Moldova.
         </p>
         <Link
           href="/adauga-operator"
