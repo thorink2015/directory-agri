@@ -71,6 +71,14 @@ export const defaultMetadata: Metadata = {
     siteName: SITE_NAME,
     type: 'website',
     locale: 'ro_RO',
+    images: [
+      {
+        url: `${SITE_URL}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: 'TerraDron.ro — Operatori de Drone Agricole din România',
+      },
+    ],
   },
   robots: {
     index: true,

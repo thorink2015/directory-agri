@@ -30,14 +30,22 @@ export const metadata: Metadata = {
     title: 'Platforma Operatorilor de Drone Agricole din România',
     description:
       'Găsește rapid operatori verificați de drone agricole în județul tău. Servicii de pulverizare, fertilizare, cartografiere și monitorizare.',
-    images: ['/opengraph-image'],
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'TerraDron.ro — Operatori de Drone Agricole din România',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@terradronro',
     title: 'Operatori de Drone Agricole în România | TerraDron.ro',
     description:
-      'Găsește operatori verificați de drone agricole în România.',
-    images: ['/opengraph-image'],
+      'Găsește operatori verificați de drone agricole în România. 20 operatori, 41 județe.',
+    images: ['/twitter-image'],
   },
   robots: {
     index: true,
