@@ -12,6 +12,8 @@ Read this file at the start of every session before making any changes.
 - Merges to `main` are done by the user via the **GitHub web interface** — never instruct them to run `git merge` or `git push`.
 - When changes are ready to deploy: push to `claude/build-agri-drone-directory-K8coy`, then tell the user to go to GitHub → open a Pull Request → merge it there.
 
+**GitHub repository:** `thorink2015/romanian-agri-directory` (renamed from `directory-agri`)
+
 ---
 
 ## Project Overview
