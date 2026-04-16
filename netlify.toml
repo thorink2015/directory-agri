@@ -45,8 +45,18 @@
   status = 301
   force = true
 
-# Preserve old URLs if you had any (add as needed)
-# [[redirects]]
-#   from = "/old-path"
-#   to = "/new-path"
-#   status = 301
+# MD guides were previously served at /ghid/ — redirect to correct /moldova/ghid/ path
+[[redirects]]
+  from = "/ghid/subventii-moldova-aipa"
+  to = "/moldova/ghid/subventii-moldova-aipa"
+  status = 301
+
+[[redirects]]
+  from = "/ghid/legislatie-ansa-moldova"
+  to = "/moldova/ghid/legislatie-ansa-moldova"
+  status = 301
+
+[[redirects]]
+  from = "/ghid/cum-sa-devii-operator-moldova"
+  to = "/moldova/ghid/cum-sa-devii-operator-moldova"
+  status = 301
