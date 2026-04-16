@@ -26,12 +26,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(params.service as ServiceType);
   if (!county || !service) return {};
 
+  const allCountyOps = getOperatorsByCounty(county.slug);
+  const hasContent = allCountyOps.length > 0;
+
   return {
     title: `${service.nameRo} ${county.name} | Operatori Drone Agricole 2026`,
     description: `Servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}. Preț: ${formatPrice(service.priceMinRon, service.priceMaxRon, service.priceUnit.replace('RON/', '') === 'ha' ? 'RON' : 'RON')}, operatori verificați, contact direct.`,
     alternates: {
       canonical: `/judete/${params.slug}/servicii/${params.service}`,
     },
+    ...(hasContent ? {} : { robots: { index: false, follow: false } }),
   };
 }
 
