@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { operators } from '@/data/operators';
+import { operators, getOperatorsByCounty } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { moldovaRegions } from '@/data/regions-moldova';
@@ -80,16 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  // ─── County + Service pages (41 × N) ────────────────────────────────────
+  // ─── County + Service pages — only counties that have at least 1 operator ──
   const serviceKeys = Object.keys(SERVICE_LABELS);
-  const countyServicePages: MetadataRoute.Sitemap = counties.flatMap((county) =>
-    serviceKeys.map((serviceKey) => ({
-      url: `${BASE_URL}/judete/${county.slug}/servicii/${serviceKey}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
-  );
+  const countyServicePages: MetadataRoute.Sitemap = counties
+    .filter((county) => getOperatorsByCounty(county.slug).length > 0)
+    .flatMap((county) =>
+      serviceKeys.map((serviceKey) => ({
+        url: `${BASE_URL}/judete/${county.slug}/servicii/${serviceKey}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    );
 
   // ─── Crop pages (8) ───────────────────────────────────────────────────────
   const cropPages: MetadataRoute.Sitemap = crops.map((c) => ({
