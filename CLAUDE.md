@@ -5,6 +5,15 @@ Read this file at the start of every session before making any changes.
 
 ---
 
+## User Preferences (IMPORTANT — always follow)
+
+- **NEVER give the user terminal commands to run.** The user does not use the terminal.
+- All git operations (commits, pushes) must be done by Claude using the Bash tool.
+- Merges to `main` are done by the user via the **GitHub web interface** — never instruct them to run `git merge` or `git push`.
+- When changes are ready to deploy: push to `claude/build-agri-drone-directory-K8coy`, then tell the user to go to GitHub → open a Pull Request → merge it there.
+
+---
+
 ## Project Overview
 
 **droneagricol.ro** — the most complete directory of agricultural drone operators in Romania and Moldova.
